@@ -155,4 +155,11 @@ Deliverables:
 - Clear notebook outputs before commit
 - Minimum 3–5 commits per active development day
 
+  ## Project Goal
+
+Build an IoT-based Predictive Maintenance System.
+
+Target KPI:
+Macro F1 Score >= 0.85
+
 
