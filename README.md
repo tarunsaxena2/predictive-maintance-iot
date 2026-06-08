@@ -74,3 +74,9 @@ predictive-maintenance-iot/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+
+## Development Environment
+
+- Python virtual environment configured
+- Project folders initialized
+- Dependencies installation in progress
