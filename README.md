@@ -95,9 +95,6 @@ Target:
 - Verified environment setup and package installation.
 - Committed changes to GitHub repository.
 
-**Commit Message**
-```bash
-feat: initialize project folder structure and virtual environment (fixes #1)
 
 
 ## Member 2 – ML Engineer (Vaibhav Gautam)
@@ -127,10 +124,7 @@ feat: initialize project folder structure and virtual environment (fixes #1)
 - `week1_eda.ipynb` notebook created with required headers and structure.
 - Initial EDA workspace ready for Week 1 analysis tasks.
 
-### Commit Message
 
-```bash
-feat: setup jupyter environment and nbstripout hook (fixes #1)
 
 
 ## Member 3 – Context & Integration Engineer (Vaibhav Gautam)
@@ -162,10 +156,6 @@ feat: setup jupyter environment and nbstripout hook (fixes #1)
 - AI4I dataset documentation reviewed and understood.
 - Integration workflow prepared for upcoming project phases.
 
-### Commit Message
-
-```bash
-feat: setup week2 notebook skeleton and review dataset docs (fixes #1)
 
 
 
@@ -209,10 +199,7 @@ feat: setup week2 notebook skeleton and review dataset docs (fixes #1)
 - All project issues created, labeled, and assigned.
 - Team workflow structure prepared for future development activities.
 
-### Commit Message
 
-```bash
-feat: initialize github repo with gitignore, README, Kanban board and all issues (fixes #1)
 
 ### Project stucture
 ```text
