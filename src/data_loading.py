@@ -19,3 +19,6 @@ print(df.columns)
 
 print("\nData Types:")
 print(df.dtypes)
+
+print("\nFirst 5 Rows of the Dataset:")
+print(df.head())    
