@@ -1,10 +1,12 @@
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
+
 data/
 models/
 
-__pycache__/
-*.pyc
-
-.venv/
-env/
-
-.ipynb_checkpoints/
+.DS_Store
+.vscode/
+.idea/
