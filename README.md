@@ -54,27 +54,6 @@ Target:
 
 ---
 
-## Project Structure
-
-```text
-predictive-maintenance-iot/
-│
-├── data/
-├── notebooks/
-├── src/
-│   ├── preprocessing/
-│   ├── training/
-│   ├── evaluation/
-│   └── deployment/
-│
-├── models/
-├── reports/
-├── tests/
-│
-├── README.md
-├── requirements.txt
-└── .gitignore
-
 ## Development Environment
 
 - Python virtual environment configured
@@ -234,3 +213,23 @@ feat: setup week2 notebook skeleton and review dataset docs (fixes #1)
 
 ```bash
 feat: initialize github repo with gitignore, README, Kanban board and all issues (fixes #1)
+
+### Project stucture
+```text
+predictive-maintenance-iot/
+│
+├── data/
+├── notebooks/
+├── src/
+│   ├── preprocessing/
+│   ├── training/
+│   ├── evaluation/
+│   └── deployment/
+│
+├── models/
+├── reports/
+├── tests/
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
