@@ -80,3 +80,14 @@ predictive-maintenance-iot/
 - Python virtual environment configured
 - Project folders initialized
 - Dependencies installation in progress
+
+## Installed Dependencies
+
+- pandas
+- numpy
+- lightgbm
+- imbalanced-learn
+- shap
+- matplotlib
+- seaborn
+- scikit-learn
