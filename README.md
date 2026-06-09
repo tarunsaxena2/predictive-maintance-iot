@@ -199,7 +199,133 @@ Target:
 - All project issues created, labeled, and assigned.
 - Team workflow structure prepared for future development activities.
 
+**Week 1 – Day 2 Progress Report**
 
+**Member 1 – Data Engineer (Tarun Saxena)**
+
+--#Tasks Completed
+
+* Downloaded the **AI4I 2020 Predictive Maintenance Dataset**.
+* Stored the dataset in the project data directory for analysis.
+* Created a Python data loading script using **Pandas**.
+* Loaded the dataset into a Pandas DataFrame.
+* Performed initial dataset inspection and validation.
+
+--Dataset Inspection Results
+
+* Dataset Shape: **10,000 rows × 14 columns**
+* Verified successful dataset loading.
+* Inspected all column names.
+* Checked data types of all features.
+* Displayed and reviewed the first 5 rows of the dataset.
+* Confirmed the presence of the target variable **Machine Failure**.
+
+--Key Features Identified
+
+* Product ID
+* Type
+* Air Temperature [K]
+* Process Temperature [K]
+* Rotational Speed [rpm]
+* Torque [Nm]
+* Tool Wear [min]
+* Machine Failure
+* TWF, HDF, PWF, OSF, RNF failure indicators
+
+--Tools & Technologies Used
+
+* Python
+* Pandas
+* VS Code
+* Git & GitHub
+
+
+
+--Outcome
+
+The AI4I 2020 Predictive Maintenance dataset was successfully downloaded, loaded, and inspected. The dataset structure, feature names, data types, and sample records were verified, confirming that the data is ready for data quality assessment and exploratory data analysis in the next phase.
+
+
+
+**Member 2 – ML Engineer (Vaibhav Gautam)**
+# Tasks Completed
+* Opened `week1_eda.ipynb` notebook for exploratory data analysis
+* Loaded AI4I 2020 Predictive Maintenance dataset (10,000 rows, 14 columns)
+* Plotted class distribution using Seaborn countplot
+* Calculated class frequencies:
+  * No Failure (0): 9,661 samples — 96.61%
+  * Failure (1): 339 samples — 3.39%
+* Computed class imbalance ratio: **28.5:1**
+* Added markdown commentary explaining:
+  * What class imbalance is
+  * Why it is a challenge for predictive maintenance
+  * How it biases models toward majority class
+  * Future solution: SMOTE will be used in Week 3
+* Fixed and cleaned notebook — removed error cell
+* Cleared all notebook outputs before committing
+* Committed and pushed to GitHub branch `dev/vaibhav-gautam`
+
+# Deliverables
+* `notebooks/week1_eda.ipynb`
+  * Class distribution countplot
+  * Imbalance ratio calculation (28.5:1)
+  * Markdown explanation of class imbalance problem
+
+# Outcome
+Successfully completed Day 2 EDA tasks. Dataset imbalance clearly identified and documented. Foundation ready for correlation heatmap analysis on Day 3.
+
+
+**Member 3 – Context & Integration (Vaibhav Gautam)**
+# Tasks Completed
+* Created `src/feature_engineering.py` from scratch
+* Defined centralized `SENSOR_COLUMNS` list:
+  * Air temperature [K]
+  * Process temperature [K]
+  * Rotational speed [rpm]
+  * Torque [Nm]
+  * Tool wear [min]
+* Implemented `sort_and_reset()` function:
+  * Sorts DataFrame by index
+  * Resets index after sorting
+  * Ensures chronological ordering for time-series processing
+* Written `rolling_feature_generator()` skeleton:
+  * Accepts DataFrame and window size parameter
+  * Framework ready for rolling mean, std, variance implementation
+  * Will be fully implemented on Day 3
+* Added proper docstrings and inline comments
+* Committed and pushed to GitHub branch `dev/vaibhav-gautam`
+
+# Deliverables
+* `src/feature_engineering.py`
+  * Sensor column definitions
+  * `sort_and_reset()` utility function
+  * Rolling feature generator skeleton
+  * Full documentation and comments
+
+
+# Outcome
+Successfully established foundational feature engineering framework. Sensor columns standardized and sorting utility implemented. Rolling feature pipeline skeleton ready for full implementation on Day 3.
+
+
+**Member 4 – Evaluation & Deployment Lead (Tarun Saxena)**
+
+--Tasks Completed
+
+Reviewed and synchronized the project repository.
+Created AGENTS.md file with detailed role definitions for all four team members.
+Documented responsibilities, assigned issues, deliverables, and workflow for each project role.
+Added project governance and GitHub contribution guidelines.
+Updated repository documentation to support team collaboration and project tracking.
+Committed and pushed AGENTS documentation to the repository.
+File Added
+AGENTS.md
+
+
+--Outcome
+
+Team structure and responsibilities are clearly defined.
+Project documentation has been improved.
+Collaboration and task ownership are now documented for the entire project team.
 
 ### Project stucture
 ```text
