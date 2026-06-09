@@ -18,3 +18,16 @@ Binary Classification
 
 Evaluation Metric:
 Macro F1 Score
+
+Dataset Size:
+10000 records
+
+Failure Types:
+- TWF (Tool Wear Failure)
+- HDF (Heat Dissipation Failure)
+- PWF (Power Failure)
+- OSF (Overstrain Failure)
+- RNF (Random Failure)
+
+Source:
+UCI Machine Learning Repository
