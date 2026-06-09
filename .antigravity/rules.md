@@ -1,0 +1,19 @@
+# Project Rules
+
+## Git Rules
+- Every commit must reference an issue.
+- Minimum 3-5 commits per day.
+- No bulk commits.
+- Use semantic commit messages.
+
+## Data Rules
+- Do not commit data/ folder.
+- Do not commit models/ folder.
+
+## Notebook Rules
+- Clear notebook outputs before commit.
+- Use nbstripout.
+
+## Branch Rules
+- Work on feature branches.
+- Create Pull Requests before merge.
