@@ -1,0 +1,18 @@
+# Project Context
+
+Project Name: Contextual Predictive Maintenance
+
+Goal:
+Predict machine failures using IoT sensor data.
+
+Dataset:
+AI4I 2020 Predictive Maintenance Dataset
+
+Target Metric:
+Macro F1 Score >= 0.85
+
+Team Size:
+4 Members
+
+Role:
+Member 4 - Eval & Deploy Lead
