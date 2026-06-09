@@ -16,3 +16,11 @@ Team Size:
 
 Role:
 Member 4 - Eval & Deploy Lead
+
+Repository: predictive-maintenance-iot
+
+Week 1 Goal:
+EDA and rolling feature engineering
+
+Issue Assignment:
+Member 4 -> Issues #1, #10, #15, #19, #20
