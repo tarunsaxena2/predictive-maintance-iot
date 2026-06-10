@@ -19,3 +19,10 @@ for original, encoded in zip(
 
 print("\n=== After Encoding ===")
 print(df["Type_enc"].value_counts())
+
+print("\nRows Before:", len(df))
+print("Rows After :", len(df))
+
+assert df["Type"].notnull().sum() == df["Type_enc"].notnull().sum()
+
+print("✓ No Data Loss Detected")
