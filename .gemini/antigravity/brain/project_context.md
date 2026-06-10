@@ -24,3 +24,13 @@ EDA and rolling feature engineering
 
 Issue Assignment:
 Member 4 -> Issues #1, #10, #15, #19, #20
+
+## Planned Pipeline
+
+Data Collection
+-> Cleaning
+-> Feature Engineering
+-> Context Integration
+-> Model Training
+-> Evaluation
+-> Deployment
