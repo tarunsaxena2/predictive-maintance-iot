@@ -17,3 +17,13 @@
 ## Branch Rules
 - Work on feature branches.
 - Create Pull Requests before merge.
+
+## Evaluation Rules
+- Use StratifiedKFold cross validation.
+- Use Macro F1 as primary metric.
+- Document all evaluation results.
+
+## Deployment Rules
+- Maintain reproducible environments.
+- Track model versions.
+- Document deployment assumptions.

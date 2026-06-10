@@ -24,3 +24,24 @@ EDA and rolling feature engineering
 
 Issue Assignment:
 Member 4 -> Issues #1, #10, #15, #19, #20
+
+## Planned Pipeline
+
+Data Collection
+-> Cleaning
+-> Feature Engineering
+-> Context Integration
+-> Model Training
+-> Evaluation
+-> Deployment
+
+## Deployment Objectives
+
+- Low latency inference
+- Reproducible predictions
+- Model monitoring support
+
+## Success Criteria
+
+- Macro F1 >= 0.85
+- Stable cross-validation performance
