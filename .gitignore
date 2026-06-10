@@ -3,8 +3,9 @@ __pycache__/
 .env
 venv/
 .venv/
-# data/
-# models/
+
+data/
+models/
 
 .DS_Store
 .vscode/
