@@ -4,10 +4,18 @@ from sklearn.preprocessing import LabelEncoder
 # Load dataset
 df = pd.read_csv("data/ai4i2020.csv")
 
-# Create LabelEncoder
+print("=== Before Encoding ===")
+print(df["Type"].value_counts())
+
 encoder = LabelEncoder()
 
-# Encode Type column
 df["Type_enc"] = encoder.fit_transform(df["Type"])
 
-print("Encoding completed successfully")
+print("\n=== Encoding Mapping ===")
+for original, encoded in zip(
+        encoder.classes_,
+        encoder.transform(encoder.classes_)):
+    print(f"{original} -> {encoded}")
+
+print("\n=== After Encoding ===")
+print(df["Type_enc"].value_counts())
