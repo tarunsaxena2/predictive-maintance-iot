@@ -26,3 +26,11 @@ print("Rows After :", len(df))
 assert df["Type"].notnull().sum() == df["Type_enc"].notnull().sum()
 
 print("✓ No Data Loss Detected")
+
+print("\n=== Preview ===")
+print(df[["Type", "Type_enc"]].head())
+
+# Save encoded dataset
+df.to_csv("data/cleaned_ai4i.csv", index=False)
+
+print("\nFile saved successfully.")
