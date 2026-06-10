@@ -31,3 +31,15 @@ Failure Types:
 
 Source:
 UCI Machine Learning Repository
+
+## Planned Engineered Features
+
+- Rolling Mean
+- Rolling Standard Deviation
+- Rolling Variance
+
+## Context Features
+
+- Ambient Temperature
+- Humidity
+- Factory Load
