@@ -71,8 +71,11 @@ Target:
 - seaborn
 - scikit-learn
 
-# Week 1 – Day 1 Progress Report
+# Week 1 
+
 ## Predictive Maintenance IoT Project
+
+**Day 1 Progress Report**
 
 ### Member 1 – Data Engineer (Tarun Saxena)
 
@@ -94,7 +97,7 @@ Target:
   - scikit-learn
 - Verified environment setup and package installation.
 - Committed changes to GitHub repository.
-
+Status:✅ Completed
 
 
 ## Member 2 – ML Engineer (Vaibhav Gautam)
@@ -124,7 +127,7 @@ Target:
 - `week1_eda.ipynb` notebook created with required headers and structure.
 - Initial EDA workspace ready for Week 1 analysis tasks.
 
-
+Status:✅ Completed
 
 
 ## Member 3 – Context & Integration Engineer (Vaibhav Gautam)
@@ -156,7 +159,7 @@ Target:
 - AI4I dataset documentation reviewed and understood.
 - Integration workflow prepared for upcoming project phases.
 
-
+Status:✅ Completed
 
 
 ## Member 4 – Evaluation & Deployment Lead (Tarun Saxena)
@@ -198,8 +201,9 @@ Target:
 - Kanban board established for project tracking.
 - All project issues created, labeled, and assigned.
 - Team workflow structure prepared for future development activities.
+- Status:✅ Completed
 
-**Week 1 – Day 2 Progress Report**
+**Day 2 Progress Report**
 
 **Member 1 – Data Engineer (Tarun Saxena)**
 
@@ -245,7 +249,7 @@ Target:
 
 The AI4I 2020 Predictive Maintenance dataset was successfully downloaded, loaded, and inspected. The dataset structure, feature names, data types, and sample records were verified, confirming that the data is ready for data quality assessment and exploratory data analysis in the next phase.
 
-
+Status:✅ Completed
 
 **Member 2 – ML Engineer (Vaibhav Gautam)**
 # Tasks Completed
@@ -273,7 +277,7 @@ The AI4I 2020 Predictive Maintenance dataset was successfully downloaded, loaded
 
 # Outcome
 Successfully completed Day 2 EDA tasks. Dataset imbalance clearly identified and documented. Foundation ready for correlation heatmap analysis on Day 3.
-
+Status:✅ Completed
 
 **Member 3 – Context & Integration (Vaibhav Gautam)**
 # Tasks Completed
@@ -305,7 +309,7 @@ Successfully completed Day 2 EDA tasks. Dataset imbalance clearly identified and
 
 # Outcome
 Successfully established foundational feature engineering framework. Sensor columns standardized and sorting utility implemented. Rolling feature pipeline skeleton ready for full implementation on Day 3.
-
+Status:✅ Completed
 
 **Member 4 – Evaluation & Deployment Lead (Tarun Saxena)**
 
@@ -326,23 +330,110 @@ AGENTS.md
 Team structure and responsibilities are clearly defined.
 Project documentation has been improved.
 Collaboration and task ownership are now documented for the entire project team.
+Status:✅ Completed
 
-### Project stucture
-```text
-predictive-maintenance-iot/
-│
-├── data/
-├── notebooks/
-├── src/
-│   ├── preprocessing/
-│   ├── training/
-│   ├── evaluation/
-│   └── deployment/
-│
-├── models/
-├── reports/
-├── tests/
-│
-├── README.md
-├── requirements.txt
-└── .gitignore
+**Day 3 Progress**
+
+**Mamber 1 : Data Engineer(Tarun Saxena)**
+Tasks Completed:
+
+*Loaded and validated the AI4I Predictive Maintenance dataset.
+* Verified dataset structure, dimensions, and column information.
+* Performed missing value analysis across all dataset features.
+* Conducted duplicate row detection and validation.
+* Documented data quality findings and observations.
+* Prepared final validation summary for the dataset.
+
+Outcome:
+
+* No missing values found in the dataset.
+* No duplicate records detected.
+* Dataset structure successfully verified.
+* Dataset confirmed ready for preprocessing and feature engineering.
+
+Status:✅ Completed
+
+**Member 2 – ML Engineer (Vaibhav Gautam)**
+
+# Tasks Completed
+* Opened `week1_eda.ipynb` notebook for exploratory data analysis
+* Loaded AI4I 2020 Predictive Maintenance dataset (10,000 rows, 14 columns)
+* Plotted class distribution using Seaborn countplot
+* Calculated class frequencies:
+  * No Failure (0): 9,661 samples — 96.61%
+  * Failure (1): 339 samples — 3.39%
+* Computed class imbalance ratio: **28.5:1**
+* Added markdown commentary explaining:
+  * What class imbalance is
+  * Why it is a challenge for predictive maintenance
+  * How it biases models toward majority class
+  * Future solution: SMOTE will be used in Week 3
+* Fixed and cleaned notebook — removed error cell
+* Cleared all notebook outputs before committing
+* Committed and pushed to GitHub branch `dev/vaibhav-gautam`
+
+# Deliverables
+* `notebooks/week1_eda.ipynb`
+  * Class distribution countplot
+  * Imbalance ratio calculation (28.5:1)
+  * Markdown explanation of class imbalance problem
+
+
+# Outcome
+Successfully completed Day 2 EDA tasks. Dataset imbalance clearly identified and documented. Foundation ready for correlation heatmap analysis on Day 3.
+Status:✅ Completed
+
+**Member 3 – Context & Integration (Vaibhav Gautam)**
+# Tasks Completed
+* Created `src/feature_engineering.py` from scratch
+* Defined centralized `SENSOR_COLUMNS` list:
+  * Air temperature [K]
+  * Process temperature [K]
+  * Rotational speed [rpm]
+  * Torque [Nm]
+  * Tool wear [min]
+* Implemented `sort_and_reset()` function:
+  * Sorts DataFrame by index
+  * Resets index after sorting
+  * Ensures chronological ordering for time-series processing
+* Written `rolling_feature_generator()` skeleton:
+  * Accepts DataFrame and window size parameter
+  * Framework ready for rolling mean, std, variance implementation
+  * Will be fully implemented on Day 3
+* Added proper docstrings and inline comments
+* Committed and pushed to GitHub branch `dev/vaibhav-gautam`
+
+# Deliverables
+* `src/feature_engineering.py`
+  * Sensor column definitions
+  * `sort_and_reset()` utility function
+  * Rolling feature generator skeleton
+  * Full documentation and comments
+
+# Outcome
+Successfully established foundational feature engineering framework. Sensor columns standardized and sorting utility implemented. Rolling feature pipeline skeleton ready for full implementation on Day 3.
+
+Status:✅ Completed
+
+
+**Mamber 4 : Evaluation & Deployment Lead(Tarun Saxena)**
+
+Tasks Completed:
+
+* Created project rules and governance documentation.
+* Added project context memory documentation.
+* Added dataset information memory and reference files.
+* Expanded project context with sprint objectives.
+* Documented dataset metadata and failure type information.
+* Organized repository documentation for team collaboration.
+
+Outcome:
+
+* Project governance framework established.
+* Development guidelines documented for contributors.
+* Dataset metadata and failure type references centralized.
+* Sprint objectives and project context documented for future development.
+
+Status: ✅ Completed
+
+
