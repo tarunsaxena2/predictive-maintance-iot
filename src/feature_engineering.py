@@ -49,4 +49,16 @@ if __name__ == "__main__":
     print("Rolling mean features added successfully!")
     print("New columns:", [col for col in df.columns if 'rolling' in col])
 
+# ============================================
+# MODULE SUMMARY
+# ============================================
+# This module provides the following utilities:
+# 1. SENSOR_COLUMNS — standardized list of all 5 sensor features
+# 2. sort_and_reset() — sorts and resets DataFrame index
+# 3. rolling_mean() — generates rolling mean for all sensor columns
+# Future additions (Day 4):
+# 4. rolling_std() — rolling standard deviation
+# 5. rolling_var() — rolling variance
+# ============================================
+
 print("Feature engineering module loaded successfully")
