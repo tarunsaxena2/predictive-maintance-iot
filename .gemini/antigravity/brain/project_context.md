@@ -34,3 +34,14 @@ Data Collection
 -> Model Training
 -> Evaluation
 -> Deployment
+
+## Deployment Objectives
+
+- Low latency inference
+- Reproducible predictions
+- Model monitoring support
+
+## Success Criteria
+
+- Macro F1 >= 0.85
+- Stable cross-validation performance
