@@ -1,226 +1,287 @@
-# Predictive-Maintenance-IoT
+# 🚀 Predictive Maintenance IoT Project
 
-## Contextual Predictive Maintenance
+## 🔧 Contextual Predictive Maintenance System
 
-### Project Objective
-Predict machine failures using IoT telemetry and machine learning techniques before breakdown occurs.
+### 🎯 Project Objective
 
----
-
-## Problem Statement
-
-Industrial machines generate large amounts of sensor data. Unexpected equipment failures can cause production downtime and financial losses.
-
-This project uses machine learning models to analyze IoT sensor telemetry and predict potential machine failures in advance.
+Predict machine failures using IoT telemetry data and Machine Learning techniques before breakdowns occur, enabling proactive maintenance and reducing operational downtime.
 
 ---
 
-## Dataset
+## 📖 Problem Statement
 
-Dataset Used:
-AI4I 2020 Predictive Maintenance Dataset
+Industrial equipment continuously generates large volumes of sensor telemetry data. Unexpected machine failures can lead to:
 
-Features:
+* Production downtime
+* Increased maintenance costs
+* Reduced operational efficiency
+* Significant financial losses
 
-- Air Temperature [K]
-- Process Temperature [K]
-- Rotational Speed [rpm]
-- Torque [Nm]
-- Tool Wear [min]
-
-Target:
-
-- Machine Failure (0 = No Failure, 1 = Failure)
+This project leverages Machine Learning algorithms to analyze IoT sensor data and predict potential machine failures before they occur, allowing preventive maintenance actions.
 
 ---
 
-## Team Members
+## 📊 Dataset Information
 
-| Member | Role | Name |
-|----------|----------|-------------------|
-| Member 1 | Data Engineer |Tarun Saxena |
-| Member 2 | ML Engineer |Vaibhav Gautam |
-| Member 3 | Context & Integration |Vaibhav Gautam |
-| Member 4 | Evaluation & Deployment Lead | Tarun Saxena |
+### Dataset
+
+**AI4I 2020 Predictive Maintenance Dataset**
+
+### Sensor Features
+
+| Feature                 | Description                 |
+| ----------------------- | --------------------------- |
+| Air Temperature [K]     | Ambient air temperature     |
+| Process Temperature [K] | Machine process temperature |
+| Rotational Speed [rpm]  | Machine rotational speed    |
+| Torque [Nm]             | Applied torque              |
+| Tool Wear [min]         | Tool wear duration          |
+
+### Target Variable
+
+| Variable        | Description                 |
+| --------------- | --------------------------- |
+| Machine Failure | 0 = No Failure, 1 = Failure |
 
 ---
 
-## Target KPI
+## 👥 Team Members
 
-- Macro F1 Score ≥ 0.85
-- Accuracy ≥ 90%
-- Precision ≥ 85%
-- Recall ≥ 85%
+| Member   | Role                           | Name           |
+| -------- | ------------------------------ | -------------- |
+| Member 1 | Data Engineer                  | Tarun Saxena   |
+| Member 2 | ML Engineer                    | Vaibhav Gautam |
+| Member 3 | Context & Integration Engineer | Vaibhav Gautam |
+| Member 4 | Evaluation & Deployment Lead   | Tarun Saxena   |
 
 ---
 
-## Development Environment
+## 🎯 Target KPIs
 
-- Python virtual environment configured
-- Project folders initialized
-- Dependencies installation in progress
+| Metric         | Target |
+| -------------- | ------ |
+| Macro F1 Score | ≥ 0.85 |
+| Accuracy       | ≥ 90%  |
+| Precision      | ≥ 85%  |
+| Recall         | ≥ 85%  |
 
-## Installed Dependencies
+---
 
-- pandas
-- numpy
-- lightgbm
-- imbalanced-learn
-- shap
-- matplotlib
-- seaborn
-- scikit-learn
+## 🛠️ Development Environment
 
-# Week 1 – Day 1 Progress Report
-## Predictive Maintenance IoT Project
+### Environment Setup
 
-### Member 1 – Data Engineer (Tarun Saxena)
+* Python Virtual Environment Configured
+* GitHub Repository Initialized
+* Project Structure Created
+* Jupyter Notebook Environment Configured
 
-#### Tasks Completed
-- Created project folder structure:
-  - data/
-  - notebooks/
-  - src/
-  - models/
-- Set up Python virtual environment.
-- Installed required dependencies:
-  - pandas
-  - numpy
-  - lightgbm
-  - imbalanced-learn
-  - shap
-  - matplotlib
-  - seaborn
-  - scikit-learn
-- Verified environment setup and package installation.
-- Committed changes to GitHub repository.
+### Project Structure
 
+```text
+predictive-maintenance-iot/
+│
+├── data/
+├── notebooks/
+├── src/
+├── models/
+├── docs/
+├── README.md
+└── requirements.txt
+```
 
+---
 
-## Member 2 – ML Engineer (Vaibhav Gautam)
+## 📦 Installed Dependencies
 
-### Tasks Completed
+```text
+pandas
+numpy
+lightgbm
+imbalanced-learn
+shap
+matplotlib
+seaborn
+scikit-learn
+```
 
-- Set up Jupyter Notebook development environment.
-- Verified Jupyter Notebook installation and functionality.
-- Installed and configured **nbstripout** for notebook output cleaning.
-- Enabled nbstripout as a Git pre-commit hook.
-- Created the notebook file:
-  - `week1_eda.ipynb`
-- Added initial notebook structure including:
-  - Project Title
-  - Introduction Section
-  - Dataset Overview Section
-  - Exploratory Data Analysis (EDA) Section
-  - Observations Section
-- Prepared notebook template for future data exploration activities.
-- Verified notebook execution and repository integration.
-- Committed all setup files and notebook skeleton to GitHub.
+---
 
-### Deliverables
+## 🔄 Project Workflow
 
-- Jupyter Notebook environment configured.
-- nbstripout hook installed and activated.
-- `week1_eda.ipynb` notebook created with required headers and structure.
-- Initial EDA workspace ready for Week 1 analysis tasks.
+1. Data Collection & Validation
+2. Exploratory Data Analysis (EDA)
+3. Feature Engineering
+4. Data Fusion & Context Integration
+5. Model Training
+6. Model Evaluation
+7. Explainability using SHAP
+8. Deployment Preparation
 
+---
 
+## 📈 Expected Outcome
 
+Develop an intelligent predictive maintenance system capable of identifying machine failure risks in advance, enabling proactive maintenance and minimizing operational disruptions.
 
-## Member 3 – Context & Integration Engineer (Vaibhav Gautam)
+---
 
-### Tasks Completed
+# 🚀 Predictive Maintenance IoT Project
 
-- Set up Jupyter Notebook environment for project development.
-- Created notebook skeleton:
-  - `week2_fusion.ipynb`
-- Added initial notebook sections:
-  - Project Overview
-  - Data Sources
-  - Data Fusion Strategy
-  - Feature Integration
-  - Results & Observations
-- Installed GeoPandas and supporting geospatial libraries.
-- Verified successful installation of all required packages.
-- Reviewed AI4I Predictive Maintenance Dataset documentation.
-- Studied dataset structure, features, target variables, and failure categories.
-- Identified key attributes for future integration and feature engineering tasks.
-- Prepared notebook framework for Week 2 data fusion activities.
-- Committed notebook skeleton and environment setup files to GitHub.
+## 📅 Week 1 Progress Report
 
-### Deliverables
+---
 
-- Jupyter Notebook environment configured.
-- `week2_fusion.ipynb` notebook skeleton created.
-- GeoPandas and required dependencies installed.
-- AI4I dataset documentation reviewed and understood.
-- Integration workflow prepared for upcoming project phases.
+# Day 1 Progress
 
+## 👨‍💻 Member 1 – Data Engineer (Tarun Saxena)
 
+### ✅ Tasks Completed
 
+* Created project folder structure:
 
-## Member 4 – Evaluation & Deployment Lead (Tarun Saxena)
+  * `data/`
+  * `notebooks/`
+  * `src/`
+  * `models/`
+* Set up Python virtual environment.
+* Installed required dependencies:
 
-### Tasks Completed
+  * pandas
+  * numpy
+  * lightgbm
+  * imbalanced-learn
+  * shap
+  * matplotlib
+  * seaborn
+  * scikit-learn
+* Verified environment setup and package installation.
+* Committed changes to GitHub repository.
 
-- Created GitHub repository:
-  - `predictive-maintenance-iot`
-- Configured repository settings and initialized project workspace.
-- Added `.gitignore` file using Python template.
-- Included exclusions for:
-  - data/
-  - models/
-  - virtual environment files
-  - cache and temporary files
-- Created `README.md` containing:
-  - Project title
-  - Project description
-  - Objectives
-  - Team roles
-  - Technology stack
-- Set up GitHub Kanban Board for project management.
-- Created workflow columns:
-  - To Do
-  - In Progress
-  - In Review
-  - Done
-- Created all project GitHub Issues according to the project task plan.
-- Added appropriate labels to issues for organization and tracking.
-- Assigned issues to respective team members based on responsibilities.
-- Verified issue tracking and board integration.
-- Committed all repository initialization and project management setup files.
+### 📦 Deliverables
 
-### Deliverables
+* Project structure created
+* Virtual environment configured
+* Required packages installed
 
-- GitHub repository successfully created and configured.
-- README documentation added.
-- .gitignore configured for Python project development.
-- Kanban board established for project tracking.
-- All project issues created, labeled, and assigned.
-- Team workflow structure prepared for future development activities.
+### 🎯 Outcome
 
-**Week 1 – Day 2 Progress Report**
+Development environment successfully prepared for project implementation.
 
-**Member 1 – Data Engineer (Tarun Saxena)**
+**Status:** ✅ Completed
 
---#Tasks Completed
+---
 
-* Downloaded the **AI4I 2020 Predictive Maintenance Dataset**.
-* Stored the dataset in the project data directory for analysis.
-* Created a Python data loading script using **Pandas**.
-* Loaded the dataset into a Pandas DataFrame.
-* Performed initial dataset inspection and validation.
+## 🤖 Member 2 – ML Engineer (Vaibhav Gautam)
 
---Dataset Inspection Results
+### ✅ Tasks Completed
 
-* Dataset Shape: **10,000 rows × 14 columns**
-* Verified successful dataset loading.
-* Inspected all column names.
-* Checked data types of all features.
-* Displayed and reviewed the first 5 rows of the dataset.
-* Confirmed the presence of the target variable **Machine Failure**.
+* Set up Jupyter Notebook development environment.
+* Verified Jupyter Notebook installation.
+* Installed and configured **nbstripout**.
+* Enabled Git pre-commit hook.
+* Created notebook:
 
---Key Features Identified
+  * `week1_eda.ipynb`
+* Added notebook sections:
+
+  * Project Title
+  * Introduction
+  * Dataset Overview
+  * EDA
+  * Observations
+
+### 📦 Deliverables
+
+* Jupyter Notebook environment configured
+* nbstripout activated
+* EDA notebook skeleton created
+
+### 🎯 Outcome
+
+EDA workspace successfully prepared for analysis activities.
+
+**Status:** ✅ Completed
+
+---
+
+## 🔗 Member 3 – Context & Integration Engineer (Vaibhav Gautam)
+
+### ✅ Tasks Completed
+
+* Created notebook:
+
+  * `week2_fusion.ipynb`
+* Added sections:
+
+  * Project Overview
+  * Data Sources
+  * Data Fusion Strategy
+  * Feature Integration
+  * Results & Observations
+* Installed GeoPandas and dependencies.
+* Reviewed AI4I Predictive Maintenance dataset documentation.
+
+### 📦 Deliverables
+
+* Fusion notebook skeleton
+* GeoPandas environment configured
+* Dataset documentation reviewed
+
+### 🎯 Outcome
+
+Feature integration framework prepared for Week 2.
+
+**Status:** ✅ Completed
+
+---
+
+## 📊 Member 4 – Evaluation & Deployment Lead (Tarun Saxena)
+
+### ✅ Tasks Completed
+
+* Created GitHub repository:
+
+  * `predictive-maintenance-iot`
+* Added `.gitignore`
+* Created `README.md`
+* Set up GitHub Kanban Board
+* Created project issues and labels
+* Assigned issues to team members
+
+### 📦 Deliverables
+
+* Repository initialized
+* Project documentation added
+* Kanban workflow configured
+
+### 🎯 Outcome
+
+Project management structure established.
+
+**Status:** ✅ Completed
+
+---
+
+# Day 2 Progress
+
+## 👨‍💻 Member 1 – Data Engineer (Tarun Saxena)
+
+### ✅ Tasks Completed
+
+* Downloaded AI4I 2020 Predictive Maintenance Dataset.
+* Loaded dataset using Pandas.
+* Performed initial inspection and validation.
+
+### 📊 Dataset Inspection Results
+
+| Metric          | Value           |
+| --------------- | --------------- |
+| Rows            | 10,000          |
+| Columns         | 14              |
+| Target Variable | Machine Failure |
+
+### 🔑 Key Features
 
 * Product ID
 * Type
@@ -230,119 +291,157 @@ Target:
 * Torque [Nm]
 * Tool Wear [min]
 * Machine Failure
-* TWF, HDF, PWF, OSF, RNF failure indicators
+* TWF, HDF, PWF, OSF, RNF
 
---Tools & Technologies Used
+### 🎯 Outcome
 
-* Python
-* Pandas
-* VS Code
-* Git & GitHub
+Dataset successfully validated and ready for EDA.
 
+**Status:** ✅ Completed
 
+---
 
---Outcome
+## 🤖 Member 2 – ML Engineer (Vaibhav Gautam)
 
-The AI4I 2020 Predictive Maintenance dataset was successfully downloaded, loaded, and inspected. The dataset structure, feature names, data types, and sample records were verified, confirming that the data is ready for data quality assessment and exploratory data analysis in the next phase.
+### ✅ Tasks Completed
 
+* Loaded dataset into EDA notebook.
+* Generated class distribution visualization.
+* Calculated class imbalance ratio.
 
+### 📊 Class Distribution
 
-**Member 2 – ML Engineer (Vaibhav Gautam)**
-# Tasks Completed
-* Opened `week1_eda.ipynb` notebook for exploratory data analysis
-* Loaded AI4I 2020 Predictive Maintenance dataset (10,000 rows, 14 columns)
-* Plotted class distribution using Seaborn countplot
-* Calculated class frequencies:
-  * No Failure (0): 9,661 samples — 96.61%
-  * Failure (1): 339 samples — 3.39%
-* Computed class imbalance ratio: **28.5:1**
-* Added markdown commentary explaining:
-  * What class imbalance is
-  * Why it is a challenge for predictive maintenance
-  * How it biases models toward majority class
-  * Future solution: SMOTE will be used in Week 3
-* Fixed and cleaned notebook — removed error cell
-* Cleared all notebook outputs before committing
-* Committed and pushed to GitHub branch `dev/vaibhav-gautam`
+| Class      | Samples | Percentage |
+| ---------- | ------- | ---------- |
+| No Failure | 9661    | 96.61%     |
+| Failure    | 339     | 3.39%      |
 
-# Deliverables
-* `notebooks/week1_eda.ipynb`
-  * Class distribution countplot
-  * Imbalance ratio calculation (28.5:1)
-  * Markdown explanation of class imbalance problem
+**Imbalance Ratio:** `28.5 : 1`
 
-# Outcome
-Successfully completed Day 2 EDA tasks. Dataset imbalance clearly identified and documented. Foundation ready for correlation heatmap analysis on Day 3.
+### 🎯 Outcome
 
+Class imbalance identified and documented for future SMOTE implementation.
 
-**Member 3 – Context & Integration (Vaibhav Gautam)**
-# Tasks Completed
-* Created `src/feature_engineering.py` from scratch
-* Defined centralized `SENSOR_COLUMNS` list:
-  * Air temperature [K]
-  * Process temperature [K]
-  * Rotational speed [rpm]
-  * Torque [Nm]
-  * Tool wear [min]
-* Implemented `sort_and_reset()` function:
-  * Sorts DataFrame by index
-  * Resets index after sorting
-  * Ensures chronological ordering for time-series processing
-* Written `rolling_feature_generator()` skeleton:
-  * Accepts DataFrame and window size parameter
-  * Framework ready for rolling mean, std, variance implementation
-  * Will be fully implemented on Day 3
-* Added proper docstrings and inline comments
-* Committed and pushed to GitHub branch `dev/vaibhav-gautam`
+**Status:** ✅ Completed
 
-# Deliverables
-* `src/feature_engineering.py`
-  * Sensor column definitions
-  * `sort_and_reset()` utility function
-  * Rolling feature generator skeleton
-  * Full documentation and comments
+---
 
+## 🔗 Member 3 – Context & Integration Engineer (Vaibhav Gautam)
 
-# Outcome
-Successfully established foundational feature engineering framework. Sensor columns standardized and sorting utility implemented. Rolling feature pipeline skeleton ready for full implementation on Day 3.
+### ✅ Tasks Completed
 
+* Created `src/feature_engineering.py`
+* Defined `SENSOR_COLUMNS`
+* Implemented `sort_and_reset()`
+* Added rolling feature generator skeleton
+* Added documentation and comments
 
-**Member 4 – Evaluation & Deployment Lead (Tarun Saxena)**
+### 📦 Deliverables
 
---Tasks Completed
+* Feature engineering framework
+* Sensor column definitions
+* Utility functions
 
-Reviewed and synchronized the project repository.
-Created AGENTS.md file with detailed role definitions for all four team members.
-Documented responsibilities, assigned issues, deliverables, and workflow for each project role.
-Added project governance and GitHub contribution guidelines.
-Updated repository documentation to support team collaboration and project tracking.
-Committed and pushed AGENTS documentation to the repository.
-File Added
-AGENTS.md
+### 🎯 Outcome
 
+Foundation established for rolling feature generation.
 
---Outcome
+**Status:** ✅ Completed
 
-Team structure and responsibilities are clearly defined.
-Project documentation has been improved.
-Collaboration and task ownership are now documented for the entire project team.
+---
 
-### Project stucture
-```text
-predictive-maintenance-iot/
-│
-├── data/
-├── notebooks/
-├── src/
-│   ├── preprocessing/
-│   ├── training/
-│   ├── evaluation/
-│   └── deployment/
-│
-├── models/
-├── reports/
-├── tests/
-│
-├── README.md
-├── requirements.txt
-└── .gitignore
+## 📊 Member 4 – Evaluation & Deployment Lead (Tarun Saxena)
+
+### ✅ Tasks Completed
+
+* Reviewed repository structure.
+* Created `AGENTS.md`.
+* Documented:
+
+  * Team roles
+  * Deliverables
+  * GitHub workflow
+  * Governance guidelines
+
+### 🎯 Outcome
+
+Team collaboration process fully documented.
+
+**Status:** ✅ Completed
+
+---
+
+# Day 3 Progress
+
+## 👨‍💻 Member 1 – Data Engineer (Tarun Saxena)
+
+### ✅ Tasks Completed
+
+* Performed missing value analysis.
+* Checked duplicate records.
+* Validated dataset structure.
+
+### 📊 Data Quality Results
+
+| Check             | Result |
+| ----------------- | ------ |
+| Missing Values    | 0      |
+| Duplicate Records | 0      |
+
+### 🎯 Outcome
+
+Dataset verified and ready for preprocessing and feature engineering.
+
+**Status:** ✅ Completed
+
+---
+
+## 🤖 Member 2 – ML Engineer (Vaibhav Gautam)
+
+### ✅ Tasks Completed
+
+* Continued EDA analysis.
+* Documented class imbalance observations.
+* Prepared notebook for correlation analysis.
+
+### 🎯 Outcome
+
+EDA phase progressing successfully.
+
+**Status:** ✅ Completed
+
+---
+
+## 🔗 Member 3 – Context & Integration Engineer (Vaibhav Gautam)
+
+### ✅ Tasks Completed
+
+* Extended feature engineering framework.
+* Prepared rolling feature pipeline for implementation.
+* Maintained project documentation and comments.
+
+### 🎯 Outcome
+
+Feature engineering workflow ready for next development phase.
+
+**Status:** ✅ Completed
+
+---
+
+## 📊 Member 4 – Evaluation & Deployment Lead (Tarun Saxena)
+
+### ✅ Tasks Completed
+
+* Created governance documentation.
+* Added project context memory files.
+* Documented dataset metadata.
+* Added sprint objectives.
+
+### 🎯 Outcome
+
+Project governance and documentation framework strengthened.
+
+**Status:** ✅ Completed
+
+---
+
