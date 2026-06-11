@@ -548,3 +548,9 @@ Prepare and validate the AI4I Predictive Maintenance dataset for machine learnin
 - L : 6000
 - M : 2997
 - H : 1003
+
+## Deliverables
+
+- data_loader.py
+- cleaned_ai4i.csv
+- dataset review scripts
