@@ -22,3 +22,25 @@ print(df.duplicated().sum())
 df = df.drop_duplicates() # Remove duplicate rows
 print("\nDataset Shape after removing duplicates:")
 print(df.shape)
+
+print("\nType Column Distribution:")
+print(df["Type"].value_counts())
+print("\nAll Columns:")
+print(df.columns.tolist())
+
+from sklearn.preprocessing import LabelEncoder
+
+le = LabelEncoder()
+
+df["Type_enc"] = le.fit_transform(df["Type"])
+
+print("\nType Encoding Mapping:")
+for original, encoded in zip(le.classes_, range(len(le.classes_))):
+    print(f"{original} -> {encoded}")
+
+print("\nEncoded Distribution:")
+print(df["Type_enc"].value_counts().sort_index())
+
+df.to_csv("data/cleaned_ai4i.csv", index=False)
+
+print("\nCleaned dataset saved successfully.")
