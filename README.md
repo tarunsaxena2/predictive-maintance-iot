@@ -531,3 +531,7 @@ Prepare and validate the AI4I Predictive Maintenance dataset for machine learnin
 - Missing values checked
 - Duplicate rows checked
 - Dataset consistency verified
+## Feature Engineering
+
+- Encoded Type column
+- Created Type_enc feature
