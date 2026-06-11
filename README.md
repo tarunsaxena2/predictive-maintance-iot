@@ -515,3 +515,7 @@ Project governance and documentation framework strengthened.
 ---
 
 # Week 1 Summary
+
+## Sprint Goal
+
+Prepare and validate the AI4I Predictive Maintenance dataset for machine learning workflows.
