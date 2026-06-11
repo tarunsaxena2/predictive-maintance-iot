@@ -535,3 +535,10 @@ Prepare and validate the AI4I Predictive Maintenance dataset for machine learnin
 
 - Encoded Type column
 - Created Type_enc feature
+
+## Dataset Statistics
+
+- Rows: 10000
+- Columns: 14
+- Missing Values: 0
+- Duplicate Rows: 0
