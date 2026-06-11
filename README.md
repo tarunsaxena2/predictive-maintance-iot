@@ -445,3 +445,72 @@ Project governance and documentation framework strengthened.
 
 ---
 
+# Day 3 Progress 
+
+### 🔹 Member 1 — Data Engineer(Tarun Saxena)
+**Task Completed:**
+- Encoded categorical `Type` column using `LabelEncoder`.
+- Created new feature: `Type_enc`.
+- Verified encoding accuracy by comparing value counts before and after transformation.
+- Ensured no data loss occurred during preprocessing.
+
+**Deliverables:**
+- Cleaned and encoded dataset.
+- Updated preprocessing workflow.
+
+**Status:** ✅ Completed
+
+---
+
+### 🔹 Member 2 — ML Engineer(Vaibhav Gautam)
+**Task Completed:**
+- Generated distribution plots for all sensor variables.
+- Compared sensor behavior across:
+  - Failure = 0 (Normal Operation)
+  - Failure = 1 (Machine Failure)
+- Saved visualization outputs for future model analysis.
+
+**Deliverables:**
+- Sensor distribution histograms.
+- Failure class comparison analysis.
+
+**Status:** ✅ Completed
+
+---
+
+### 🔹 Member 3 — Context & Integration Engineer(Vaibhav Gautam)
+**Task Completed:**
+- Implemented rolling statistical features:
+  - Rolling Mean
+  - Rolling Standard Deviation
+  - Rolling Variance
+- Applied feature generation to all sensor columns.
+- Removed NaN values generated during rolling window calculations.
+- Validated resulting dataset dimensions.
+
+**Deliverables:**
+- Enhanced feature engineering pipeline.
+- Statistical rolling feature set.
+
+**Status:** ✅ Completed
+
+---
+
+### 🔹 Member 4 — Evaluation & Deployment Lead(Tarun Saxena)
+**Task Completed:**
+- Created centralized `progress_tracker.md`.
+- Monitored task completion across all team members.
+- Reviewed completed pull requests from Week 1 Day 1–3.
+- Verified issue references and repository standards.
+- Merged approved contributions into the main branch.
+- Updated project documentation and sprint tracking.
+
+**Deliverables:**
+- Team progress tracker.
+- Reviewed and merged PRs.
+- Updated project governance records.
+
+**Status:** ✅ Completed
+
+---
+
