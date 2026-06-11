@@ -542,3 +542,9 @@ Prepare and validate the AI4I Predictive Maintenance dataset for machine learnin
 - Columns: 14
 - Missing Values: 0
 - Duplicate Rows: 0
+
+## Product Type Distribution
+
+- L : 6000
+- M : 2997
+- H : 1003
