@@ -525,3 +525,9 @@ Prepare and validate the AI4I Predictive Maintenance dataset for machine learnin
 - Downloaded AI4I Predictive Maintenance Dataset
 - Verified dataset structure
 - Verified column names and data types
+
+## Data Cleaning
+
+- Missing values checked
+- Duplicate rows checked
+- Dataset consistency verified
