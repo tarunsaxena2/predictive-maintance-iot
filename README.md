@@ -519,3 +519,9 @@ Project governance and documentation framework strengthened.
 ## Sprint Goal
 
 Prepare and validate the AI4I Predictive Maintenance dataset for machine learning workflows.
+
+## Data Loading
+
+- Downloaded AI4I Predictive Maintenance Dataset
+- Verified dataset structure
+- Verified column names and data types
