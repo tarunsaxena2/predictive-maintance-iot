@@ -16,3 +16,9 @@ print(df.info())
 
 print("\nMissing Values:")
 print(df.isnull().sum())
+
+print("\nDuplicate Rows:")
+print(df.duplicated().sum())
+df = df.drop_duplicates() # Remove duplicate rows
+print("\nDataset Shape after removing duplicates:")
+print(df.shape)
