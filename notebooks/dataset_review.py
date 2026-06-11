@@ -13,3 +13,6 @@ print(df.columns.tolist())
 
 print("\nDataset Info:")
 print(df.info())
+
+print("\nMissing Values:")
+print(df.isnull().sum())
