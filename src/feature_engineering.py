@@ -25,3 +25,12 @@ def add_rolling_var(df, window=5):
         df[f"{col}_rolling_var"] = df[col].rolling(window).var()
 
     return df
+def generate_rolling_features(df, window=5):
+
+    df = add_rolling_mean(df, window)
+    df = add_rolling_std(df, window)
+    df = add_rolling_var(df, window)
+
+    df = df.dropna()
+
+    return df
