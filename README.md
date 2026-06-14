@@ -87,6 +87,7 @@ predictive-maintenance-iot/
 ├── models/
 ├── docs/
 ├── README.md
+c
 └── requirements.txt
 ```
 
