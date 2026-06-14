@@ -13,3 +13,9 @@ def add_rolling_mean(df, window=5):
         df[f"{col}_rolling_mean"] = df[col].rolling(window).mean()
 
     return df
+
+def add_rolling_std(df, window=5):
+    for col in SENSOR_COLUMNS:
+        df[f"{col}_rolling_std"] = df[col].rolling(window).std()
+
+    return df
