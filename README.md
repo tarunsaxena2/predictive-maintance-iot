@@ -560,3 +560,10 @@ Prepare and validate the AI4I Predictive Maintenance dataset for machine learnin
 ✅ Completed Successfully
 
 ---
+## 📅 Week 2 Progress Report
+
+---
+
+# Day 1 Progress
+
+## 👨‍💻 Member 1 – Data Engineer (Tarun Saxena)
