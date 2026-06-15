@@ -107,3 +107,13 @@ This section will compare baseline model performance against models trained with
 - Shift Information
 
 Status: Pending Integration
+## Result Interpretation
+
+Key observations and performance insights will be documented here after model evaluation.
+
+Items to analyze:
+
+- Impact of external features
+- Feature contribution
+- Performance stability
+- Generalization capability
