@@ -73,3 +73,11 @@ Supporting Metrics:
 - Precision
 - Recall
 - Standard Deviation
+
+## Experiment Log
+
+| Date | Experiment | Status |
+|--------|--------|--------|
+| TBD | Baseline Random Forest | Pending |
+| TBD | Random Forest + External Features | Pending |
+| TBD | LightGBM Baseline | Pending |
