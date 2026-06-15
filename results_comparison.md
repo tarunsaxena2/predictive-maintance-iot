@@ -63,3 +63,13 @@ This document will be maintained throughout the project to track:
 - Model Performance Comparison
 - Cross-Validation Metrics
 - Final Evaluation Summary
+
+## Evaluation Metric
+
+Primary Metric:
+- Macro F1 Score
+
+Supporting Metrics:
+- Precision
+- Recall
+- Standard Deviation
