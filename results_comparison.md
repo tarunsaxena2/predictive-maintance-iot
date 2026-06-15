@@ -48,3 +48,8 @@ This document will track all model evaluation results across the project lifecyc
 # 📊 Results Comparison
 
 This document will track all model evaluation results across the project lifecycle.
+
+## Document Version
+
+Version: 1.0
+Created for Week 2 experiment tracking.
