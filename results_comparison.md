@@ -81,3 +81,16 @@ Supporting Metrics:
 | TBD | Baseline Random Forest | Pending |
 | TBD | Random Forest + External Features | Pending |
 | TBD | LightGBM Baseline | Pending |
+
+## Baseline Model Results
+
+### Random Forest (Internal Features Only)
+
+| Metric | Value |
+|----------|----------|
+| Macro F1 | TBD |
+| Precision | TBD |
+| Recall | TBD |
+| Std Dev | TBD |
+
+Status: Pending Evaluation
