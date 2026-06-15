@@ -94,3 +94,16 @@ Supporting Metrics:
 | Std Dev | TBD |
 
 Status: Pending Evaluation
+
+## External Feature Comparison
+
+This section will compare baseline model performance against models trained with contextual and external features.
+
+### Planned External Features
+
+- Ambient Temperature
+- Humidity
+- Factory Load
+- Shift Information
+
+Status: Pending Integration
