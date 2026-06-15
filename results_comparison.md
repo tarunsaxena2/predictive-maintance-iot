@@ -53,3 +53,13 @@ This document will track all model evaluation results across the project lifecyc
 
 Version: 1.0
 Created for Week 2 experiment tracking.
+
+## Evaluation Ownership
+
+Responsible Role: Evaluation & Deployment Lead
+
+This document will be maintained throughout the project to track:
+- Ablation Study Results
+- Model Performance Comparison
+- Cross-Validation Metrics
+- Final Evaluation Summary
