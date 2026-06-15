@@ -87,6 +87,7 @@ predictive-maintenance-iot/
 ├── models/
 ├── docs/
 ├── README.md
+c
 └── requirements.txt
 ```
 
@@ -566,4 +567,83 @@ Prepare and validate the AI4I Predictive Maintenance dataset for machine learnin
 
 # Day 1 Progress
 
-## 👨‍💻 Member 1 – Data Engineer (Tarun Saxena)
+### 👨‍💻 Member 1 — Data Engineer (Tarun Saxena)
+**Responsibility:** Feature Engineering & Data Preparation
+
+#### Completed Tasks
+- Loaded cleaned dataset with rolling features.
+- Defined the baseline internal feature set (`base_features`).
+- Included encoded machine type (`Type_enc`) for modeling.
+- Saved feature definitions in `src/feature_sets.py`.
+
+#### Outcome
+Created the baseline feature configuration required for future ablation experiments and model training.
+
+---
+
+### 🤖 Member 2 — ML Engineer(Vaibhav Gautam)
+**Responsibility:** Exploratory Data Analysis & Visualization
+
+#### Completed Tasks
+- Analyzed sensor behavior across all machine failure categories.
+- Generated box plots for sensor distributions.
+- Compared sensor patterns across:
+  - Tool Wear Failure (TWF)
+  - Heat Dissipation Failure (HDF)
+  - Power Failure (PWF)
+  - Overstrain Failure (OSF)
+  - Random Failure (RNF)
+
+#### Outcome
+Identified failure-specific sensor characteristics to support feature selection and model development.
+
+---
+
+### 🔗 Member 3 — Context & Integration Engineer(Vaibhav Gautam)
+**Responsibility:** External Context Simulation & Data Fusion
+
+#### Completed Tasks
+- Simulated external environmental signals:
+  - Ambient Temperature (`ambient_temp_C`)
+  - Factory Load Percentage (`factory_load_pct`)
+- Applied reproducible random generation (`random_state=42`).
+- Prepared contextual features for integration with IoT telemetry.
+
+#### Outcome
+Established the external context layer required for contextual predictive maintenance analysis.
+
+---
+
+### 📊 Member 4 — Evaluation & Deployment Lead (Tarun Saxena)
+**Responsibility:** Experiment Tracking & Performance Evaluation
+
+#### Completed Tasks
+- Created `results_comparison.md`.
+- Added evaluation sections:
+  - Ablation Study Results
+  - Model Comparison Table
+  - Week 3 Metrics
+- Designed the framework for tracking model performance improvements.
+
+#### Outcome
+Prepared a centralized evaluation system for documenting experimental results and performance comparisons.
+
+---
+
+## ✅ Day 1 Deliverables
+
+| Team Area | Status |
+|------------|--------|
+| Feature Set Definition | ✅ Completed |
+| Failure Pattern Analysis | ✅ Completed |
+| External Context Simulation | ✅ Completed |
+| Evaluation Framework Setup | ✅ Completed |
+
+---
+
+## 🚀 Team Achievement
+
+The team successfully completed all planned Day 1 activities and established the technical foundation for Week 2. Internal IoT features have been organized, failure-specific sensor behavior has been analyzed, external contextual variables have been simulated, and the evaluation framework has been prepared for upcoming ablation studies.
+
+### 📌 Overall Status
+🟢 **On Schedule – All Day 1 Objectives Successfully Completed**
