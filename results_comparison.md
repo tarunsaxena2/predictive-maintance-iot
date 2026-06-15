@@ -44,3 +44,7 @@ This document will track all model evaluation results across the project lifecyc
 - Results will be updated after each experiment.
 - All metrics are based on cross-validation unless stated otherwise.
 - Macro F1 is the primary evaluation metric.
+
+# 📊 Results Comparison
+
+This document will track all model evaluation results across the project lifecycle.
