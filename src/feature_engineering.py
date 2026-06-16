@@ -34,3 +34,21 @@ def generate_rolling_features(df, window=5):
     df = df.dropna()
 
     return df
+
+# Test function end to end
+if __name__ == "__main__":
+    df = pd.read_csv('../data/ai4i2020.csv')
+    df = sort_and_reset(df)
+    df = generate_rolling_features(df, window=5)
+    print("Feature engineering pipeline completed successfully!")
+
+# ============================================
+# MODULE SUMMARY
+# ============================================
+# 1. SENSOR_COLUMNS — standardized list of all 5 sensor features
+# 2. sort_and_reset() — sorts and resets DataFrame index
+# 3. generate_rolling_features() — generates rolling mean, std
+#    and variance for all sensor columns in single pipeline
+# ============================================
+
+print("Feature engineering module loaded successfully")
