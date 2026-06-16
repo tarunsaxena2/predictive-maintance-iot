@@ -645,5 +645,95 @@ Prepared a centralized evaluation system for documenting experimental results an
 
 The team successfully completed all planned Day 1 activities and established the technical foundation for Week 2. Internal IoT features have been organized, failure-specific sensor behavior has been analyzed, external contextual variables have been simulated, and the evaluation framework has been prepared for upcoming ablation studies.
 
-### 📌 Overall Status
-🟢 **On Schedule – All Day 1 Objectives Successfully Completed**
+# Day 2 Progress
+
+## 👨‍💻 Member 1 – Data Engineer (Tarun Saxena)
+
+### ✅ Random Forest Baseline Evaluation Completed
+
+**Task Summary**
+
+* Trained `RandomForestClassifier` using internal IoT sensor features (`base_features`)
+* Applied **5-Fold StratifiedKFold Cross Validation**
+* Evaluated model performance using **Macro F1 Score**
+* Recorded experimental results in the Ablation Study Notebook
+* Added clear experiment label:
+
+> **Without External Features**
+
+### 📌 Outcome
+
+Established a reliable baseline model performance using only machine telemetry data. This benchmark will be used to measure the impact of contextual external signals in later experiments.
+
+---
+
+## 🤖 Member 2 – ML Engineer (Vaibhav Gautam)
+
+### ✅ External Feature Correlation Analysis Completed
+
+**Task Summary**
+
+* Generated scatter plots for:
+
+  * Ambient Temperature vs Machine Failure
+  * Factory Load vs Machine Failure
+* Performed exploratory visualization of contextual signals
+* Calculated Point-Biserial Correlation between:
+
+  * `ambient_temp_C` and target
+  * `factory_load_pct` and target
+* Documented findings for feature relevance assessment
+
+### 📌 Outcome
+
+Provided statistical and visual evidence regarding the relationship between external environmental factors and machine failure behavior.
+
+---
+
+## 🔗 Member 3 – Context & Integration Lead( Vaibhav Gautam)
+
+### ✅ Contextual Data Fusion Completed
+
+**Task Summary**
+
+* Simulated humidity signal using:
+
+```python
+np.random.normal(loc=60, scale=10)
+```
+
+* Generated realistic `humidity_pct` contextual feature
+* Integrated all external context signals:
+
+  * Ambient Temperature
+  * Factory Load
+  * Humidity
+* Merged contextual dataset with IoT telemetry data using DataFrame index alignment
+* Verified merged dataset dimensions and integrity
+
+### 📌 Outcome
+
+Successfully created a unified contextual dataset combining machine telemetry with environmental and operational signals for advanced predictive modeling.
+
+---
+
+## 🛡️ Member 4 – Evaluation & Deployment Lead (Tarun Saxena)
+
+### ✅ Data Fusion Validation Review Completed
+
+**Task Summary**
+
+* Conducted detailed review of Member 3's contextual fusion notebook
+* Verified successful merge operation
+* Confirmed dataset integrity after integration
+* Ensured:
+
+  * No row loss occurred
+  * Index alignment remained correct
+  * Record counts before and after merge matched
+* Added review observations and validation comments on GitHub Pull Request
+
+### 📌 Outcome
+
+Validated the reliability of the contextual data fusion pipeline and ensured the integrated dataset is deployment-ready for downstream machine learning experiments.
+
