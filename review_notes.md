@@ -92,3 +92,19 @@ df.duplicated().sum()
 ### Recommendation
 
 Include duplicate record validation to ensure contextual feature integration does not introduce unintended duplicate entries.
+
+## Missing Value Validation Recommendation
+
+### Review Observation
+
+No missing value validation was found after contextual feature integration.
+
+### Recommended Validation
+
+```python
+df.isnull().sum()
+```
+
+### Recommendation
+
+Add a missing value check to confirm that contextual features are integrated without introducing null values.
