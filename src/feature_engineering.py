@@ -56,6 +56,22 @@ if __name__ == "__main__":
     df = generate_rolling_features(df, window=5)
     print("Feature engineering pipeline completed successfully!")
 
+def merge_external_context(df):
+    """
+    Simulate and merge external context signals with IoT DataFrame.
+    Adds ambient_temp_C, factory_load_pct, humidity_pct columns.
+    
+    Parameters: df (pd.DataFrame): Input DataFrame
+    Returns: pd.DataFrame: DataFrame with external context merged
+    """
+    import numpy as np
+    np.random.seed(42)
+    df['ambient_temp_C'] = np.random.normal(loc=28, scale=5, size=len(df))
+    df['factory_load_pct'] = np.random.uniform(50, 100, size=len(df))
+    df['humidity_pct'] = np.random.normal(loc=60, scale=10, size=len(df))
+    print(f"External context merged. New shape: {df.shape}")
+    return df
+
 # ============================================
 # MODULE SUMMARY
 # ============================================
