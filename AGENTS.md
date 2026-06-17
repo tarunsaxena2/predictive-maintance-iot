@@ -163,3 +163,9 @@ Target KPI:
 Macro F1 Score >= 0.85
 
 
+## Ownership Rules
+
+- notebooks/week1_eda.ipynb is owned by Member 2.
+- Only Member 2 should edit notebooks/week1_eda.ipynb.
+- Other members should avoid editing this file to prevent merge conflicts.
+
