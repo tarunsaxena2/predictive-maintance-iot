@@ -19,3 +19,8 @@ base_features = [
     "Torque [Nm]_rolling_var",
     "Tool wear [min]_rolling_var"
 ]
+ext_features = base_features + [
+    "ambient_temp_C",
+    "factory_load_pct",
+    "humidity_pct"
+]
