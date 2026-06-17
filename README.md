@@ -603,4 +603,115 @@ with IoT telemetry dataset
 | Tarun Saxena (Member 4)   | ✅ Completed |
 
 ---
+# 📅 Week 2 — Day 3 Progress Report (Wednesday)
+
+## 🚀 Predictive Maintenance IoT Project
+
+---
+
+## 👨‍💻 Member 1 — Tarun Saxena (Data Engineer)
+
+### ✅ Task Completed
+
+* Defined **`ext_features`** list by combining:
+
+  * Base sensor features
+  * `ambient_temp_C`
+  * `factory_load_pct`
+  * `humidity_pct`
+* Trained **Random Forest Classifier** using the extended feature set.
+* Applied **5-Fold Cross Validation** to ensure robust model evaluation.
+* Calculated and recorded **Macro F1 Score** for the **"With External Features"** experiment.
+* Compared performance against baseline feature configuration for feature fusion assessment.
+
+
+### 🎯 Status
+
+**Completed Successfully**
+
+---
+
+## 👨‍💻 Member 2 — Vaibhav Gautam (ML Engineer)
+
+### ✅ Task Completed
+
+* Generated **Seaborn Pair Plot** using:
+
+  * Top 4 important features
+  * `Machine failure` target variable
+* Created **Cross-Feature Correlation Heatmap** between:
+
+  * External context variables
+  * All machine sensor columns
+* Saved all visualizations inside the **`outputs/`** directory.
+* Prepared visual analysis artifacts to support feature fusion insights.
+
+
+
+### 🎯 Status
+
+**Completed Successfully**
+
+---
+
+## 👨‍💻 Member 3 — Vaibhav Gautam (Context & Integration)
+
+### ✅ Task Completed
+
+* Implemented **`merge_external_context(df)`** function in `feature_engineering.py`.
+* Added comprehensive function **docstring** describing:
+
+  * Purpose
+  * Inputs
+  * Outputs
+* Integrated all simulated external signals:
+
+  * `ambient_temp_C`
+  * `factory_load_pct`
+  * `humidity_pct`
+* Tested functionality to verify successful feature merging.
+* Displayed **before and after column counts** to validate integration.
+
+
+
+### 🎯 Status
+
+**Completed Successfully**
+
+---
+
+## 👨‍💻 Member 4 — Tarun Saxena (Eval & Deploy Lead)
+
+### ✅ Task Completed
+
+* Created a structured **Dataset Summary Table** in `week2_fusion.ipynb`.
+* Documented the complete feature fusion workflow, including:
+
+  * Original feature count
+  * Rolling features added
+  * External features added
+  * Total engineered features
+  * Final dataset shape
+* Improved notebook readability and project documentation.
+* Enabled quick verification of feature engineering and fusion pipeline outputs.
+
+
+
+### 🎯 Status
+
+**Completed Successfully**
+
+---
+
+# 📊 Day 3 Summary
+
+| Member         | Role                  | Status      |
+| -------------- | --------------------- | ----------- |
+| Tarun Saxena   | Data Engineer         | ✅ Completed |
+| Vaibhav Gautam | ML Engineer           | ✅ Completed |
+| Vaibhav Gautam | Context & Integration | ✅ Completed |
+| Tarun Saxena   | Eval & Deploy Lead    | ✅ Completed |
+
+---
+
 
