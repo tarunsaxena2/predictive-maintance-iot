@@ -713,5 +713,108 @@ with IoT telemetry dataset
 | Tarun Saxena   | Eval & Deploy Lead    | ✅ Completed |
 
 ---
+# 📅 Week 2 – Day 4 (Thursday) Progress Report
 
+> **Project:** Predictive Maintenance using IoT & External Context Data  
+> **Sprint:** Week 2 – Evaluation & Validation
+
+---
+
+## 👥 Team Contributions
+
+| Member | Role | Status |
+|---------|------|--------|
+| **Tarun Saxena** | Data Engineer | ✅ Completed |
+| **Vaibhav Gautam** | ML Engineer | ✅ Completed |
+| **Vaibhav Gautam** | Context & Integration | ✅ Completed |
+| **Tarun Saxena** | Eval & Deploy Lead | ✅ Completed |
+
+---
+
+
+
+## 🔹 Member 1 — Data Engineer (# 👨‍💻 Tarun Saxena)
+
+### ✅ Completed Tasks
+- Calculated the **Macro F1 Improvement Percentage** using:
+
+```text
+((External F1 - Baseline F1) / Baseline F1) × 100
+```
+
+- Compared baseline and enhanced models.
+- Created a detailed evaluation table containing:
+  - Feature Set
+  - Macro F1
+  - Precision
+  - Recall
+- Updated **ablation_study.ipynb** with complete calculations and documentation.
+
+
+
+---
+
+
+## 🔹 Member 2 — ML Engineer (# 👨‍💻 Vaibhav Gautam)
+
+### ✅ Completed Tasks
+- Generated the final **Top 10 Feature Correlation** bar chart.
+- Included:
+  - Internal sensor features
+  - External contextual features
+- Ranked features by **absolute correlation** with **Machine Failure**.
+- Annotated each bar with correlation values for better interpretability.
+
+
+---
+
+## 🔹 Member 3 — Context & Integration (# 👨‍💻 Vaibhav Gautam)
+
+### ✅ Completed Tasks
+- Verified timestamp synchronization across all merged datasets.
+- Validated rolling statistical features and external contextual data alignment.
+- Displayed the first five rows of the merged DataFrame for verification.
+- Added integrity and validation checks to ensure reliable data fusion before evaluation.
+
+
+
+---
+
+
+
+### Achievements
+- 📈 Performance improvement quantified through Macro F1 comparison.
+- 📊 Feature importance visualized using correlation analysis.
+- 🔄 Data fusion validated through timestamp integrity checks.
+- 📝 Ablation study findings documented for final reporting.
+- 🚀 Repository updated with evaluation notebooks, documentation, and validation outputs.
+
+---
+
+# 🎯 Sprint Status
+
+| Task | Status |
+|------|--------|
+| Model Evaluation | ✅ Completed |
+| F1 Improvement Analysis | ✅ Completed |
+| Feature Correlation Study | ✅ Completed |
+| Data Validation | ✅ Completed |
+| Ablation Study Documentation | ✅ Completed |
+| Repository Update | ✅ Completed |
+
+---
+
+## 🔹 Member 4 — Eval & Deploy Lead (# 👨‍💻 Tarun Saxena)
+
+### ✅ Completed Tasks
+- Compiled the complete Week 2 Ablation Study findings.
+- Wrote a **200-word evaluation summary** in **results_comparison.md**.
+- Explained:
+  - What experiments were performed
+  - Performance improvements observed
+  - Why external contextual features improved prediction quality
+- Finalized documentation for reporting and deployment.
+
+   
+---
 
