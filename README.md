@@ -603,9 +603,7 @@ with IoT telemetry dataset
 | Tarun Saxena (Member 4)   | ✅ Completed |
 
 ---
-# 📅 Week 2 — Day 3 Progress Report (Wednesday)
-
-## 🚀 Predictive Maintenance IoT Project
+# 📅 Week 2 — Day 3 
 
 ---
 
@@ -697,6 +695,7 @@ with IoT telemetry dataset
 
 
 
+
 ### 🎯 Status
 
 **Completed Successfully**
@@ -716,6 +715,12 @@ with IoT telemetry dataset
 # 📅 Week 2 – Day 4 (Thursday) Progress Report
 
 ---
+
+
+
+
+# 📅 Week 2 – Day 4
+
 
 ## 🔹 Member 1 — Data Engineer (# 👨‍💻 Tarun Saxena)
 
@@ -938,4 +943,46 @@ Week 2 successfully established a complete **Contextual Data Fusion and Feature 
 | -------------- | -------------------------------------- | ----------- |
 | Tarun Saxena   | Data Engineer & Eval/Deploy Lead       | ✅ Completed |
 | Vaibhav Gautam | ML Engineer & Context Integration Lead | ✅ Completed |
+
+
+# Week 2 Summary
+
+## Sprint Objective
+
+Week 2 focused on enriching the predictive maintenance dataset by integrating simulated external contextual information with internal IoT telemetry. The objective was to evaluate whether contextual data improves predictive performance through an ablation study.
+
+## External Features Added
+
+The following external contextual variables were added:
+
+- Ambient Temperature (ambient_temp_C)
+- Factory Load Percentage (factory_load_pct)
+- Humidity Percentage (humidity_pct)
+
+These features were merged successfully with the IoT dataset while preserving dataset integrity.
+
+## Feature Engineering
+
+- External context successfully integrated.
+- Dataset alignment verified.
+- No rows lost during merging.
+- Feature fusion pipeline documented.
+- Dataset summary table added.
+
+## Ablation Study
+
+Two Random Forest models were compared:
+
+- Baseline Model (Internal IoT Features)
+- Extended Model (Internal + External Features)
+
+The extended feature set demonstrated better predictive capability than the baseline model, showing that contextual environmental information provides additional insight into machine failure prediction.
+
+## Week 2 Outcome
+
+- External feature simulation completed.
+- Contextual data fusion completed.
+- Ablation study documented.
+- Dataset validation completed.
+- Repository documentation updated successfully.
 
