@@ -142,3 +142,17 @@ if __name__ == "__main__":
     df = merge_external_context(df)
 
     print("Feature Engineering Pipeline Completed Successfully.")
+
+# ============================================
+# MODULE SUMMARY — WEEK 2 COMPLETE
+# ============================================
+# 1. SENSOR_COLUMNS — standardized list of all 5 sensor features
+# 2. sort_and_reset() — sorts and resets DataFrame index
+# 3. generate_rolling_features() — rolling mean, std, variance
+# 4. merge_external_context() — adds ambient_temp, factory_load, humidity
+#
+# Week 2 Status: Complete ✅
+# Next: Week 3 — LightGBM + SMOTE modeling pipeline
+# ============================================
+
+print("Feature engineering module loaded successfully")
