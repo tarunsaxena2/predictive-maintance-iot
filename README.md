@@ -129,521 +129,692 @@ Develop an intelligent predictive maintenance system capable of identifying mach
 
 # 🚀 Predictive Maintenance IoT Project
 
-## 📅 Week 1 Progress Report
+# 🚀 Week 1 Progress Report
+
+## Contextual Predictive Maintenance IoT
+
+### 🎯 Sprint Goal
+
+Set up the project environment, ingest and clean the AI4I dataset, perform exploratory data analysis (EDA), and engineer rolling window features for predictive maintenance modeling.
 
 ---
 
-# Day 1 Progress
+# 📅 Week 1 – Day 1
 
-## 👨‍💻 Member 1 – Data Engineer (Tarun Saxena)
+## Project Initialization & Repository Setup
 
-### ✅ Tasks Completed
+### 👨‍💻 Tarun Saxena (Member 1 – Data Engineer)
 
-* Created project folder structure:
+✅ Created project directory structure:
 
-  * `data/`
-  * `notebooks/`
-  * `src/`
-  * `models/`
-* Set up Python virtual environment.
-* Installed required dependencies:
+* data/
+* notebooks/
+* src/
+* models/
 
-  * pandas
-  * numpy
-  * lightgbm
-  * imbalanced-learn
-  * shap
-  * matplotlib
-  * seaborn
-  * scikit-learn
-* Verified environment setup and package installation.
-* Committed changes to GitHub repository.
+✅ Configured Python virtual environment
 
-### 📦 Deliverables
+✅ Installed required dependencies:
 
-* Project structure created
-* Virtual environment configured
-* Required packages installed
-
-### 🎯 Outcome
-
-Development environment successfully prepared for project implementation.
-
-**Status:** ✅ Completed
+* Pandas
+* NumPy
+* Scikit-Learn
+* LightGBM
+* SHAP
+* Matplotlib
+* Seaborn
+* Imbalanced-Learn
 
 ---
 
-## 🤖 Member 2 – ML Engineer (Vaibhav Gautam)
+### 🤖 Vaibhav Gautam (Member 2 – ML Engineer)
 
-### ✅ Tasks Completed
+✅ Configured Jupyter Notebook environment
 
-* Set up Jupyter Notebook development environment.
-* Verified Jupyter Notebook installation.
-* Installed and configured **nbstripout**.
-* Enabled Git pre-commit hook.
-* Created notebook:
+✅ Installed and configured nbstripout
 
-  * `week1_eda.ipynb`
-* Added notebook sections:
-
-  * Project Title
-  * Introduction
-  * Dataset Overview
-  * EDA
-  * Observations
-
-### 📦 Deliverables
-
-* Jupyter Notebook environment configured
-* nbstripout activated
-* EDA notebook skeleton created
-
-### 🎯 Outcome
-
-EDA workspace successfully prepared for analysis activities.
-
-**Status:** ✅ Completed
+✅ Created Week 1 EDA notebook structure
 
 ---
 
-## 🔗 Member 3 – Context & Integration Engineer (Vaibhav Gautam)
+### 🔗 Vaibhav Gautam (Member 3 – Context & Integration Lead)
 
-### ✅ Tasks Completed
+✅ Created Week 2 Fusion notebook skeleton
 
-* Created notebook:
+✅ Installed GeoPandas and supporting libraries
 
-  * `week2_fusion.ipynb`
-* Added sections:
-
-  * Project Overview
-  * Data Sources
-  * Data Fusion Strategy
-  * Feature Integration
-  * Results & Observations
-* Installed GeoPandas and dependencies.
-* Reviewed AI4I Predictive Maintenance dataset documentation.
-
-### 📦 Deliverables
-
-* Fusion notebook skeleton
-* GeoPandas environment configured
-* Dataset documentation reviewed
-
-### 🎯 Outcome
-
-Feature integration framework prepared for Week 2.
-
-**Status:** ✅ Completed
+✅ Reviewed AI4I dataset documentation
 
 ---
 
-## 📊 Member 4 – Evaluation & Deployment Lead (Tarun Saxena)
+### 🛡️ Tarun Saxena (Member 4 – Eval & Deploy Lead)
 
-### ✅ Tasks Completed
+✅ Created GitHub repository
 
-* Created GitHub repository:
+✅ Added .gitignore
 
-  * `predictive-maintenance-iot`
-* Added `.gitignore`
-* Created `README.md`
-* Set up GitHub Kanban Board
-* Created project issues and labels
-* Assigned issues to team members
+✅ Created README.md
 
-### 📦 Deliverables
+✅ Configured Kanban Board
 
-* Repository initialized
-* Project documentation added
-* Kanban workflow configured
-
-### 🎯 Outcome
-
-Project management structure established.
-
-**Status:** ✅ Completed
+✅ Created and assigned all project GitHub issues
 
 ---
 
-# Day 2 Progress
+# 📅 Week 1 – Day 2
 
-## 👨‍💻 Member 1 – Data Engineer (Tarun Saxena)
+## Dataset Acquisition & Initial Exploration
 
-### ✅ Tasks Completed
+### 👨‍💻 Tarun Saxena (Member 1)
 
-* Downloaded AI4I 2020 Predictive Maintenance Dataset.
-* Loaded dataset using Pandas.
-* Performed initial inspection and validation.
+✅ Downloaded AI4I 2020 Predictive Maintenance Dataset
 
-### 📊 Dataset Inspection Results
+✅ Loaded dataset into Pandas DataFrame
 
-| Metric          | Value           |
-| --------------- | --------------- |
-| Rows            | 10,000          |
-| Columns         | 14              |
-| Target Variable | Machine Failure |
+✅ Inspected:
 
-### 🔑 Key Features
-
-* Product ID
-* Type
-* Air Temperature [K]
-* Process Temperature [K]
-* Rotational Speed [rpm]
-* Torque [Nm]
-* Tool Wear [min]
-* Machine Failure
-* TWF, HDF, PWF, OSF, RNF
-
-### 🎯 Outcome
-
-Dataset successfully validated and ready for EDA.
-
-**Status:** ✅ Completed
+* Dataset Shape
+* Column Names
+* Data Types
+* Sample Records
 
 ---
 
-## 🤖 Member 2 – ML Engineer (Vaibhav Gautam)
+### 🤖 Vaibhav Gautam (Member 2)
 
-### ✅ Tasks Completed
+✅ Visualized class distribution
 
-* Loaded dataset into EDA notebook.
-* Generated class distribution visualization.
-* Calculated class imbalance ratio.
+✅ Calculated class imbalance ratio
 
-### 📊 Class Distribution
-
-| Class      | Samples | Percentage |
-| ---------- | ------- | ---------- |
-| No Failure | 9661    | 96.61%     |
-| Failure    | 339     | 3.39%      |
-
-**Imbalance Ratio:** `28.5 : 1`
-
-### 🎯 Outcome
-
-Class imbalance identified and documented for future SMOTE implementation.
-
-**Status:** ✅ Completed
+✅ Added EDA observations and markdown explanations
 
 ---
 
-## 🔗 Member 3 – Context & Integration Engineer (Vaibhav Gautam)
+### 🔗 Vaibhav Gautam (Member 3)
 
-### ✅ Tasks Completed
+✅ Defined sensor column list
 
-* Created `src/feature_engineering.py`
-* Defined `SENSOR_COLUMNS`
-* Implemented `sort_and_reset()`
-* Added rolling feature generator skeleton
-* Added documentation and comments
+✅ Created sorting utility functions
 
-### 📦 Deliverables
-
-* Feature engineering framework
-* Sensor column definitions
-* Utility functions
-
-### 🎯 Outcome
-
-Foundation established for rolling feature generation.
-
-**Status:** ✅ Completed
+✅ Developed rolling feature generator skeleton
 
 ---
 
-## 📊 Member 4 – Evaluation & Deployment Lead (Tarun Saxena)
+### 🛡️ Tarun Saxena (Member 4)
 
-### ✅ Tasks Completed
+✅ Created AGENTS.md
 
-* Reviewed repository structure.
-* Created `AGENTS.md`.
-* Documented:
+✅ Defined responsibilities for all four team roles
 
-  * Team roles
-  * Deliverables
-  * GitHub workflow
-  * Governance guidelines
-
-### 🎯 Outcome
-
-Team collaboration process fully documented.
-
-**Status:** ✅ Completed
+✅ Configured development branch workflow
 
 ---
 
-# Day 3 Progress
+# 📅 Week 1 – Day 3
 
-## 👨‍💻 Member 1 – Data Engineer (Tarun Saxena)
+## Data Quality Assessment & Feature Engineering
 
-### ✅ Tasks Completed
+### 👨‍💻 Tarun Saxena (Member 1)
 
-* Performed missing value analysis.
-* Checked duplicate records.
-* Validated dataset structure.
+✅ Checked missing values
 
-### 📊 Data Quality Results
+✅ Identified duplicate rows
 
-| Check             | Result |
-| ----------------- | ------ |
-| Missing Values    | 0      |
-| Duplicate Records | 0      |
+✅ Verified dataset quality
 
-### 🎯 Outcome
-
-Dataset verified and ready for preprocessing and feature engineering.
-
-**Status:** ✅ Completed
+✅ Documented findings
 
 ---
 
-## 🤖 Member 2 – ML Engineer (Vaibhav Gautam)
+### 🤖 Vaibhav Gautam (Member 2)
 
-### ✅ Tasks Completed
+✅ Generated correlation heatmap
 
-* Continued EDA analysis.
-* Documented class imbalance observations.
-* Prepared notebook for correlation analysis.
+✅ Analyzed numerical feature relationships
 
-### 🎯 Outcome
-
-EDA phase progressing successfully.
-
-**Status:** ✅ Completed
+✅ Identified top failure predictors
 
 ---
 
-## 🔗 Member 3 – Context & Integration Engineer (Vaibhav Gautam)
+### 🔗 Vaibhav Gautam (Member 3)
 
-### ✅ Tasks Completed
+✅ Implemented rolling mean feature generation
 
-* Extended feature engineering framework.
-* Prepared rolling feature pipeline for implementation.
-* Maintained project documentation and comments.
+✅ Applied rolling window calculations
 
-### 🎯 Outcome
-
-Feature engineering workflow ready for next development phase.
-
-**Status:** ✅ Completed
+✅ Verified output dimensions
 
 ---
 
-## 📊 Member 4 – Evaluation & Deployment Lead (Tarun Saxena)
+### 🛡️ Tarun Saxena (Member 4)
 
-### ✅ Tasks Completed
+✅ Added project governance rules
 
-* Created governance documentation.
-* Added project context memory files.
-* Documented dataset metadata.
-* Added sprint objectives.
+✅ Created project memory documentation
 
-### 🎯 Outcome
-
-Project governance and documentation framework strengthened.
-
-**Status:** ✅ Completed
+✅ Organized project reference files
 
 ---
 
-# Day 3 Progress 
+# 📅 Week 1 – Day 4
 
-### 🔹 Member 1 — Data Engineer(Tarun Saxena)
-**Task Completed:**
-- Encoded categorical `Type` column using `LabelEncoder`.
-- Created new feature: `Type_enc`.
-- Verified encoding accuracy by comparing value counts before and after transformation.
-- Ensured no data loss occurred during preprocessing.
+## Feature Transformation & Advanced Engineering
 
-**Deliverables:**
-- Cleaned and encoded dataset.
-- Updated preprocessing workflow.
+### 👨‍💻 Tarun Saxena (Member 1)
 
-**Status:** ✅ Completed
+✅ Encoded categorical Type feature
+
+✅ Created Type_enc variable
+
+✅ Verified encoding integrity
 
 ---
 
-### 🔹 Member 2 — ML Engineer(Vaibhav Gautam)
-**Task Completed:**
-- Generated distribution plots for all sensor variables.
-- Compared sensor behavior across:
-  - Failure = 0 (Normal Operation)
-  - Failure = 1 (Machine Failure)
-- Saved visualization outputs for future model analysis.
+### 🤖 Vaibhav Gautam (Member 2)
 
-**Deliverables:**
-- Sensor distribution histograms.
-- Failure class comparison analysis.
+✅ Generated sensor distribution plots
 
-**Status:** ✅ Completed
+✅ Compared distributions across failure classes
+
+✅ Saved visual analysis outputs
 
 ---
 
-### 🔹 Member 3 — Context & Integration Engineer(Vaibhav Gautam)
-**Task Completed:**
-- Implemented rolling statistical features:
-  - Rolling Mean
-  - Rolling Standard Deviation
-  - Rolling Variance
-- Applied feature generation to all sensor columns.
-- Removed NaN values generated during rolling window calculations.
-- Validated resulting dataset dimensions.
+### 🔗 Vaibhav Gautam (Member 3)
 
-**Deliverables:**
-- Enhanced feature engineering pipeline.
-- Statistical rolling feature set.
+✅ Implemented:
 
-**Status:** ✅ Completed
+* Rolling Mean
+* Rolling Standard Deviation
+* Rolling Variance
+
+✅ Applied transformations to all sensor columns
+
+✅ Removed generated NaN rows
 
 ---
 
-### 🔹 Member 4 — Evaluation & Deployment Lead(Tarun Saxena)
-**Task Completed:**
-- Created centralized `progress_tracker.md`.
-- Monitored task completion across all team members.
-- Reviewed completed pull requests from Week 1 Day 1–3.
-- Verified issue references and repository standards.
-- Merged approved contributions into the main branch.
-- Updated project documentation and sprint tracking.
+### 🛡️ Tarun Saxena (Member 4)
 
-**Deliverables:**
-- Team progress tracker.
-- Reviewed and merged PRs.
-- Updated project governance records.
+✅ Created team progress tracker
 
-**Status:** ✅ Completed
+✅ Reviewed and merged pull requests
+
+✅ Updated project documentation
 
 ---
 
-# Week 1 Summary
+# 📅 Week 1 – Day 5
 
-## Sprint Goal
+## Pipeline Finalization & Sprint Closure
 
-Prepare and validate the AI4I Predictive Maintenance dataset for machine learning workflows.
+### 👨‍💻 Tarun Saxena (Member 1)
 
-## Data Loading
+✅ Final dataset validation completed
 
-- Downloaded AI4I Predictive Maintenance Dataset
-- Verified dataset structure
-- Verified column names and data types
+✅ Developed data_loader.py
 
-## Data Cleaning
+Functions Added:
 
-- Missing values checked
-- Duplicate rows checked
-- Dataset consistency verified
-## Feature Engineering
+* load_data()
+* clean_data()
 
-- Encoded Type column
-- Created Type_enc feature
-
-## Dataset Statistics
-
-- Rows: 10000
-- Columns: 14
-- Missing Values: 0
-- Duplicate Rows: 0
-
-## Product Type Distribution
-
-- L : 6000
-- M : 2997
-- H : 1003
-
-## Deliverables
-
-- data_loader.py
-- cleaned_ai4i.csv
-- dataset review scripts
-
-## Week 1 Status
-
-✅ Completed Successfully
-
----
-## 📅 Week 2 Progress Report
+✅ Added documentation and docstrings
 
 ---
 
-# Day 1 Progress
+### 🤖 Vaibhav Gautam (Member 2)
 
-### 👨‍💻 Member 1 — Data Engineer (Tarun Saxena)
-**Responsibility:** Feature Engineering & Data Preparation
+✅ Finalized complete EDA notebook
 
-#### Completed Tasks
-- Loaded cleaned dataset with rolling features.
-- Defined the baseline internal feature set (`base_features`).
-- Included encoded machine type (`Type_enc`) for modeling.
-- Saved feature definitions in `src/feature_sets.py`.
+✅ Consolidated all visualizations
 
-#### Outcome
-Created the baseline feature configuration required for future ablation experiments and model training.
+✅ Added EDA summary findings
+
+✅ Cleared notebook outputs
 
 ---
 
-### 🤖 Member 2 — ML Engineer(Vaibhav Gautam)
-**Responsibility:** Exploratory Data Analysis & Visualization
+### 🔗 Vaibhav Gautam (Member 3)
 
-#### Completed Tasks
-- Analyzed sensor behavior across all machine failure categories.
-- Generated box plots for sensor distributions.
-- Compared sensor patterns across:
-  - Tool Wear Failure (TWF)
-  - Heat Dissipation Failure (HDF)
-  - Power Failure (PWF)
-  - Overstrain Failure (OSF)
-  - Random Failure (RNF)
+✅ Completed feature_engineering.py
 
-#### Outcome
-Identified failure-specific sensor characteristics to support feature selection and model development.
+✅ Integrated rolling feature pipeline
+
+✅ Tested end-to-end feature generation process
 
 ---
 
-### 🔗 Member 3 — Context & Integration Engineer(Vaibhav Gautam)
-**Responsibility:** External Context Simulation & Data Fusion
+### 🛡️ Tarun Saxena (Member 4)
 
-#### Completed Tasks
-- Simulated external environmental signals:
-  - Ambient Temperature (`ambient_temp_C`)
-  - Factory Load Percentage (`factory_load_pct`)
-- Applied reproducible random generation (`random_state=42`).
-- Prepared contextual features for integration with IoT telemetry.
+✅ Updated Kanban Board
 
-#### Outcome
-Established the external context layer required for contextual predictive maintenance analysis.
+✅ Closed completed Week 1 issues
+
+✅ Added Week 1 project summary
+
+✅ Reviewed repository structure
 
 ---
 
-### 📊 Member 4 — Evaluation & Deployment Lead (Tarun Saxena)
-**Responsibility:** Experiment Tracking & Performance Evaluation
+# 📊 Week 1 Sprint Summary
 
-#### Completed Tasks
-- Created `results_comparison.md`.
-- Added evaluation sections:
-  - Ablation Study Results
-  - Model Comparison Table
-  - Week 3 Metrics
-- Designed the framework for tracking model performance improvements.
+## Key Deliverables Completed
 
-#### Outcome
-Prepared a centralized evaluation system for documenting experimental results and performance comparisons.
+✅ Project Repository Setup
+
+✅ Team Workflow Configuration
+
+✅ AI4I Dataset Acquisition
+
+✅ Data Quality Validation
+
+✅ Exploratory Data Analysis
+
+✅ Categorical Feature Encoding
+
+✅ Rolling Mean Features
+
+✅ Rolling Standard Deviation Features
+
+✅ Rolling Variance Features
+
+✅ Data Loading Pipeline
+
+✅ Feature Engineering Pipeline
+
+✅ Documentation & Governance Framework
 
 ---
 
-## ✅ Day 1 Deliverables
+## Team Contributions
 
-| Team Area | Status |
-|------------|--------|
-| Feature Set Definition | ✅ Completed |
-| Failure Pattern Analysis | ✅ Completed |
-| External Context Simulation | ✅ Completed |
-| Evaluation Framework Setup | ✅ Completed |
+| Team Member    | Roles                                  | Status      |
+| -------------- | -------------------------------------- | ----------- |
+| Tarun Saxena   | Data Engineer & Eval/Deploy Lead       | ✅ Completed |
+| Vaibhav Gautam | ML Engineer & Context Integration Lead | ✅ Completed |
 
 ---
 
-## 🚀 Team Achievement
+## Sprint Outcome
 
-The team successfully completed all planned Day 1 activities and established the technical foundation for Week 2. Internal IoT features have been organized, failure-specific sensor behavior has been analyzed, external contextual variables have been simulated, and the evaluation framework has been prepared for upcoming ablation studies.
+Successfully established the complete data processing and feature engineering foundation for the Contextual Predictive Maintenance project. The dataset was cleaned, analyzed, transformed, and prepared for contextual feature integration and machine learning experiments planned for Week 2.
 
-### 📌 Overall Status
-🟢 **On Schedule – All Day 1 Objectives Successfully Completed**
+**Sprint Status:** 🟢 Successfully Completed
+
+**Next Sprint:** Week 2 – Contextual Data Fusion & Ablation Study
+# 🚀 Week 2 Progress Report
+
+## Contextual Predictive Maintenance IoT
+
+---
+
+# 📅 Week 2 – Day 1
+
+## Contextual Data Simulation & Experiment Setup
+
+### 👨‍💻 Tarun Saxena (Member 1 – Data Engineer)
+
+✅ Loaded cleaned dataset with rolling features
+
+✅ Defined `base_features` containing internal telemetry features and `Type_enc`
+
+✅ Created `feature_sets.py` for ablation study feature management
+
+**Outcome:** Internal-only feature set prepared for baseline model evaluation.
+
+---
+
+### 🤖 Vaibhav Gautam (Member 2 – ML Engineer)
+
+✅ Generated box plots for sensor distributions across failure categories
+
+✅ Compared sensor behavior for:
+
+* TWF
+* HDF
+* PWF
+* OSF
+* RNF
+
+✅ Identified sensor patterns associated with specific failure types
+
+**Outcome:** Better understanding of failure-specific sensor characteristics.
+
+---
+
+### 🔗 Vaibhav Gautam (Member 3 – Context & Integration Lead)
+
+✅ Simulated external contextual variables:
+
+* Ambient Temperature (`ambient_temp_C`)
+* Factory Load (`factory_load_pct`)
+
+✅ Applied reproducibility using `random_state=42`
+
+**Outcome:** External environmental context dataset prepared.
+
+---
+
+### 🛡️ Tarun Saxena (Member 4 – Evaluation & Deployment Lead)
+
+✅ Created `results_comparison.md`
+
+✅ Added sections:
+
+* Ablation Study Results
+* Model Comparison Table
+* Week 3 Metrics
+
+**Outcome:** Evaluation framework established for upcoming experiments.
+
+---
+
+### 📊 Day 1 Status
+
+| Member                    | Status      |
+| ------------------------- | ----------- |
+| Tarun Saxena (Member 1)   | ✅ Completed |
+| Vaibhav Gautam (Member 2) | ✅ Completed |
+| Vaibhav Gautam (Member 3) | ✅ Completed |
+| Tarun Saxena (Member 4)   | ✅ Completed |
+
+---
+
+# 📅 Week 2 – Day 2
+
+## Contextual Fusion & Baseline Evaluation
+
+### 👨‍💻 Tarun Saxena (Member 1 – Data Engineer)
+
+✅ Trained RandomForestClassifier using 5-Fold Stratified Cross Validation
+
+✅ Evaluated model using Macro F1 Score
+
+✅ Documented baseline experiment:
+
+> Without External Features
+
+**Outcome:** Internal-only benchmark model successfully established.
+
+---
+
+### 🤖 Vaibhav Gautam (Member 2 – ML Engineer)
+
+✅ Generated scatter plots:
+
+* Ambient Temperature vs Machine Failure
+* Factory Load vs Machine Failure
+
+✅ Calculated Point-Biserial Correlation coefficients
+
+✅ Documented feature-target relationships
+
+**Outcome:** Quantified predictive relevance of contextual variables.
+
+---
+
+### 🔗 Vaibhav Gautam (Member 3 – Context & Integration Lead)
+
+✅ Simulated humidity signal
+
+```python
+humidity_pct = np.random.normal(loc=60, scale=10)
+```
+
+✅ Merged:
+
+* Ambient Temperature
+* Factory Load
+* Humidity
+
+with IoT telemetry dataset
+
+✅ Verified merge dimensions and consistency
+
+**Outcome:** Unified contextual dataset successfully created.
+
+---
+
+### 🛡️ Tarun Saxena (Member 4 – Evaluation & Deployment Lead)
+
+✅ Reviewed contextual fusion notebook
+
+✅ Verified:
+
+* Correct index alignment
+* No row loss
+* Merge integrity maintained
+* Dataset consistency preserved
+
+✅ Added GitHub PR review comments
+
+**Outcome:** Contextual data fusion validated and approved.
+
+---
+
+### 📊 Day 2 Status
+
+| Member                    | Status      |
+| ------------------------- | ----------- |
+| Tarun Saxena (Member 1)   | ✅ Completed |
+| Vaibhav Gautam (Member 2) | ✅ Completed |
+| Vaibhav Gautam (Member 3) | ✅ Completed |
+| Tarun Saxena (Member 4)   | ✅ Completed |
+
+---
+# 📅 Week 2 — Day 3 Progress Report (Wednesday)
+
+## 🚀 Predictive Maintenance IoT Project
+
+---
+
+## 👨‍💻 Member 1 — Tarun Saxena (Data Engineer)
+
+### ✅ Task Completed
+
+* Defined **`ext_features`** list by combining:
+
+  * Base sensor features
+  * `ambient_temp_C`
+  * `factory_load_pct`
+  * `humidity_pct`
+* Trained **Random Forest Classifier** using the extended feature set.
+* Applied **5-Fold Cross Validation** to ensure robust model evaluation.
+* Calculated and recorded **Macro F1 Score** for the **"With External Features"** experiment.
+* Compared performance against baseline feature configuration for feature fusion assessment.
+
+
+### 🎯 Status
+
+**Completed Successfully**
+
+---
+
+## 👨‍💻 Member 2 — Vaibhav Gautam (ML Engineer)
+
+### ✅ Task Completed
+
+* Generated **Seaborn Pair Plot** using:
+
+  * Top 4 important features
+  * `Machine failure` target variable
+* Created **Cross-Feature Correlation Heatmap** between:
+
+  * External context variables
+  * All machine sensor columns
+* Saved all visualizations inside the **`outputs/`** directory.
+* Prepared visual analysis artifacts to support feature fusion insights.
+
+
+
+### 🎯 Status
+
+**Completed Successfully**
+
+---
+
+## 👨‍💻 Member 3 — Vaibhav Gautam (Context & Integration)
+
+### ✅ Task Completed
+
+* Implemented **`merge_external_context(df)`** function in `feature_engineering.py`.
+* Added comprehensive function **docstring** describing:
+
+  * Purpose
+  * Inputs
+  * Outputs
+* Integrated all simulated external signals:
+
+  * `ambient_temp_C`
+  * `factory_load_pct`
+  * `humidity_pct`
+* Tested functionality to verify successful feature merging.
+* Displayed **before and after column counts** to validate integration.
+
+
+
+### 🎯 Status
+
+**Completed Successfully**
+
+---
+
+## 👨‍💻 Member 4 — Tarun Saxena (Eval & Deploy Lead)
+
+### ✅ Task Completed
+
+* Created a structured **Dataset Summary Table** in `week2_fusion.ipynb`.
+* Documented the complete feature fusion workflow, including:
+
+  * Original feature count
+  * Rolling features added
+  * External features added
+  * Total engineered features
+  * Final dataset shape
+* Improved notebook readability and project documentation.
+* Enabled quick verification of feature engineering and fusion pipeline outputs.
+
+
+
+### 🎯 Status
+
+**Completed Successfully**
+
+---
+
+# 📊 Day 3 Summary
+
+| Member         | Role                  | Status      |
+| -------------- | --------------------- | ----------- |
+| Tarun Saxena   | Data Engineer         | ✅ Completed |
+| Vaibhav Gautam | ML Engineer           | ✅ Completed |
+| Vaibhav Gautam | Context & Integration | ✅ Completed |
+| Tarun Saxena   | Eval & Deploy Lead    | ✅ Completed |
+
+---
+# 📅 Week 2 – Day 4 (Thursday) Progress Report
+
+> **Project:** Predictive Maintenance using IoT & External Context Data  
+> **Sprint:** Week 2 – Evaluation & Validation
+
+---
+
+## 👥 Team Contributions
+
+| Member | Role | Status |
+|---------|------|--------|
+| **Tarun Saxena** | Data Engineer | ✅ Completed |
+| **Vaibhav Gautam** | ML Engineer | ✅ Completed |
+| **Vaibhav Gautam** | Context & Integration | ✅ Completed |
+| **Tarun Saxena** | Eval & Deploy Lead | ✅ Completed |
+
+---
+
+
+
+## 🔹 Member 1 — Data Engineer (# 👨‍💻 Tarun Saxena)
+
+### ✅ Completed Tasks
+- Calculated the **Macro F1 Improvement Percentage** using:
+
+```text
+((External F1 - Baseline F1) / Baseline F1) × 100
+```
+
+- Compared baseline and enhanced models.
+- Created a detailed evaluation table containing:
+  - Feature Set
+  - Macro F1
+  - Precision
+  - Recall
+- Updated **ablation_study.ipynb** with complete calculations and documentation.
+
+
+
+---
+
+
+## 🔹 Member 2 — ML Engineer (# 👨‍💻 Vaibhav Gautam)
+
+### ✅ Completed Tasks
+- Generated the final **Top 10 Feature Correlation** bar chart.
+- Included:
+  - Internal sensor features
+  - External contextual features
+- Ranked features by **absolute correlation** with **Machine Failure**.
+- Annotated each bar with correlation values for better interpretability.
+
+
+---
+
+## 🔹 Member 3 — Context & Integration (# 👨‍💻 Vaibhav Gautam)
+
+### ✅ Completed Tasks
+- Verified timestamp synchronization across all merged datasets.
+- Validated rolling statistical features and external contextual data alignment.
+- Displayed the first five rows of the merged DataFrame for verification.
+- Added integrity and validation checks to ensure reliable data fusion before evaluation.
+
+
+
+---
+
+
+
+### Achievements
+- 📈 Performance improvement quantified through Macro F1 comparison.
+- 📊 Feature importance visualized using correlation analysis.
+- 🔄 Data fusion validated through timestamp integrity checks.
+- 📝 Ablation study findings documented for final reporting.
+- 🚀 Repository updated with evaluation notebooks, documentation, and validation outputs.
+
+---
+
+# 🎯 Sprint Status
+
+| Task | Status |
+|------|--------|
+| Model Evaluation | ✅ Completed |
+| F1 Improvement Analysis | ✅ Completed |
+| Feature Correlation Study | ✅ Completed |
+| Data Validation | ✅ Completed |
+| Ablation Study Documentation | ✅ Completed |
+| Repository Update | ✅ Completed |
+
+---
+
+## 🔹 Member 4 — Eval & Deploy Lead (# 👨‍💻 Tarun Saxena)
+
+### ✅ Completed Tasks
+- Compiled the complete Week 2 Ablation Study findings.
+- Wrote a **200-word evaluation summary** in **results_comparison.md**.
+- Explained:
+  - What experiments were performed
+  - Performance improvements observed
+  - Why external contextual features improved prediction quality
+- Finalized documentation for reporting and deployment.
+
+   
+---
+

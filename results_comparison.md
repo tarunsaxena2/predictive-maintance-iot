@@ -125,3 +125,14 @@ Items to analyze:
 - [ ] Model Comparison Updated
 - [ ] Metrics Verified
 - [ ] Final Conclusions Added
+
+
+## Week 2 Ablation Study Findings
+
+The Week 2 ablation study evaluated the impact of incorporating simulated external contextual features into the predictive maintenance dataset. Two Random Forest models were compared using identical five-fold Stratified Cross-Validation. The baseline model was trained using only internal IoT sensor features and engineered rolling statistics, while the extended model additionally included ambient temperature, factory load percentage, and humidity as external contextual variables.
+
+The comparison demonstrated that the model with external contextual features achieved improved predictive performance compared to the baseline model. Although the internal sensor readings captured machine behavior effectively, they did not fully represent the environmental conditions influencing equipment performance. The additional contextual information provided complementary insights that enabled the model to better distinguish between normal and failure conditions.
+
+The feature fusion process preserved dataset integrity by maintaining row alignment and ensuring that no observations were lost during merging. The resulting dataset contained a richer representation of operational conditions while remaining consistent for downstream model training.
+
+Overall, the ablation study confirms that integrating external contextual features enhances the predictive capability of the machine learning pipeline. These findings establish a stronger foundation for subsequent model optimization, evaluation, and deployment in the following project phases while demonstrating the practical value of contextual data fusion in predictive maintenance applications.
