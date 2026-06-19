@@ -396,34 +396,34 @@ Functions Added:
 ✅ Reviewed repository structure
 
 ---
+# 📘 WEEK 1 — Combined Sprint Summary
 
-# 📊 Week 1 Sprint Summary
+### **Sprint Goal:** *IoT Telemetry Ingestion & Signal Processing*
 
-## Key Deliverables Completed
+During Week 1, the team successfully established the complete project foundation for the Predictive Maintenance System. The repository, development environment, project structure, Git workflow, Kanban board, GitHub Issues, and documentation were fully configured to support collaborative development.
 
-✅ Project Repository Setup
+The AI4I 2020 Predictive Maintenance dataset was downloaded, inspected, and validated. Comprehensive Exploratory Data Analysis (EDA) was performed, including class imbalance analysis, correlation analysis, sensor distribution visualization, and dataset quality checks for missing values and duplicate records. The categorical **Type** feature was encoded into **Type_enc**, resulting in a clean and model-ready dataset.
 
-✅ Team Workflow Configuration
+On the feature engineering side, rolling window statistics were implemented for all sensor variables. Rolling **Mean**, **Standard Deviation**, and **Variance** features were generated using a configurable window size, then integrated into a reusable feature engineering pipeline for future model training.
 
-✅ AI4I Dataset Acquisition
+Project governance was also completed through documentation updates, AGENTS role definitions, Antigravity project rules, brain memory files, progress tracking, pull request reviews, and Kanban management. By the end of the sprint, all Week 1 GitHub Issues were completed, notebooks were cleaned, documentation was finalized, and the project was prepared for advanced feature fusion and machine learning experiments in Week 2.
 
-✅ Data Quality Validation
+### **Week 1 Deliverables**
 
-✅ Exploratory Data Analysis
+* ✅ Project repository and collaborative development workflow established.
+* ✅ AI4I dataset downloaded, cleaned, validated, and prepared.
+* ✅ Complete Exploratory Data Analysis (EDA) with visualizations and insights.
+* ✅ Class imbalance, correlation, and sensor distribution analysis completed.
+* ✅ Missing values, duplicate records, and categorical encoding handled.
+* ✅ Rolling Mean, Standard Deviation, and Variance features engineered.
+* ✅ Modular data loading and feature engineering pipelines implemented.
+* ✅ Team documentation, Kanban board, progress tracker, and README updated.
+* ✅ All Week 1 tasks successfully completed, reviewed, and merged.
 
-✅ Categorical Feature Encoding
+### **Outcome**
 
-✅ Rolling Mean Features
+Week 1 concluded with a clean, well-documented, and reproducible data processing pipeline. The project now includes a validated dataset, engineered rolling statistical features, and a collaborative development framework, providing a strong foundation for contextual data fusion, feature enhancement, and predictive model development in the upcoming sprint.
 
-✅ Rolling Standard Deviation Features
-
-✅ Rolling Variance Features
-
-✅ Data Loading Pipeline
-
-✅ Feature Engineering Pipeline
-
-✅ Documentation & Governance Framework
 
 ---
 
@@ -693,10 +693,34 @@ with IoT telemetry dataset
 * Improved notebook readability and project documentation.
 * Enabled quick verification of feature engineering and fusion pipeline outputs.
 
+
+
+
+### 🎯 Status
+
+**Completed Successfully**
+
+---
+
+# 📊 Day 3 Summary
+
+| Member         | Role                  | Status      |
+| -------------- | --------------------- | ----------- |
+| Tarun Saxena   | Data Engineer         | ✅ Completed |
+| Vaibhav Gautam | ML Engineer           | ✅ Completed |
+| Vaibhav Gautam | Context & Integration | ✅ Completed |
+| Tarun Saxena   | Eval & Deploy Lead    | ✅ Completed |
+
+---
+# 📅 Week 2 – Day 4 (Thursday) Progress Report
+
 ---
 
 
+
+
 # 📅 Week 2 – Day 4
+
 
 ## 🔹 Member 1 — Data Engineer (# 👨‍💻 Tarun Saxena)
 
@@ -783,6 +807,144 @@ with IoT telemetry dataset
    
 ---
 
+# 📊 Week 2 – Day 5 Progress Report (Finalization)
+
+---
+
+# 👨‍💻 Member 1 – Tarun Saxena (Data Engineer)
+
+### ✅ Assigned Task
+
+* Finalized `ablation_study.ipynb`
+* Cleared notebook outputs
+* Added title, section headers, and conclusion
+* Saved final `ext_features` list in `src/feature_sets.py`
+* Pushed clean notebook to repository
+
+### ✅ Work Completed
+
+* Organized the ablation study notebook with proper documentation.
+* Added a final conclusion summarizing the impact of external features.
+* Updated the final feature list used across the project.
+* Removed unnecessary notebook outputs before committing.
+* Successfully pushed all finalized changes to GitHub.
+
+---
+
+# 👨‍💻 Member 2 – Vaibhav Gautam (ML Engineer)
+
+### ✅ Assigned Task
+
+* Finalized all Week 2 visualization plots
+* Saved plots as PNG files in `outputs/`
+* Cleared visualization notebook outputs
+* Wrote Week 2 EDA summary
+* Pushed clean notebook
+
+### ✅ Work Completed
+
+* Generated all required visualization charts.
+* Exported plots into the `outputs/` directory.
+* Cleaned notebook outputs for submission.
+* Prepared a concise EDA summary highlighting feature trends and data insights.
+* Successfully pushed finalized visualization work.
+
+---
+
+# 👨‍💻 Member 3 – Vaibhav Gautam (Context & Integration)
+
+### ✅ Assigned Task
+
+* Finalized `week2_fusion.ipynb`
+* Completed end-to-end feature integration pipeline
+* Cleared notebook outputs
+* Added summary section
+* Updated `feature_engineering.py`
+* Pushed final notebook
+
+### ✅ Work Completed
+
+* Completed the Week 2 feature fusion pipeline.
+* Integrated preprocessing and engineered features into the workflow.
+* Updated the final version of `feature_engineering.py`.
+* Added a project summary section for better documentation.
+* Removed notebook outputs and committed the clean version.
+
+---
+
+# 👨‍💻 Member 4 – Tarun Saxena (Evaluation & Deploy Lead)
+
+### ✅ Assigned Task
+
+* Updated Kanban Board
+* Moved all Week 2 issues to **Done**
+* Updated README with Week 2 summary
+* Reviewed and merged all Week 2 Pull Requests
+
+### ✅ Work Completed
+
+* Successfully completed Kanban board management.
+* Updated README with:
+
+  * External feature integration summary
+  * Ablation study findings
+  * Week 2 achievements
+* Reviewed all pull requests submitted during Week 2.
+* Merged approved PRs into the project branch.
+* Verified repository status and ensured Week 2 deliverables were complete.
+  ---
+
+  # 📊 WEEK 2 SUMMARY — Contextual Data Fusion & Feature Engineering
+
+## 🎯 Sprint Goal
+
+The primary objective of Week 2 was to enhance the predictive maintenance system by integrating simulated external environmental context with the existing IoT sensor dataset. The team aimed to engineer new contextual features, compare model performance before and after data fusion through an ablation study, and validate that external information improves machine failure prediction.
+
+---
+
+## 📌 Week 2 Overview
+
+During Week 2, the project evolved from relying solely on internal IoT sensor data to incorporating external contextual information. Three realistic environmental variables—**Ambient Temperature**, **Factory Load Percentage**, and **Humidity Percentage**—were simulated using reproducible statistical distributions and merged with the cleaned IoT dataset. The data fusion process was carefully validated to ensure that all records remained aligned and no information was lost.
+
+A structured feature engineering pipeline was developed to support both the baseline and extended feature sets. The baseline model used only internal IoT rolling features, while the extended model combined these features with the newly created environmental variables. Both models were trained using the same Random Forest algorithm and evaluated through **5-Fold Stratified Cross Validation**, ensuring a fair and reliable comparison.
+
+An extensive ablation study was conducted to measure the contribution of external contextual features. Key evaluation metrics, including **Macro F1 Score**, **Precision**, and **Recall**, were compared between the baseline and extended models. The percentage improvement in Macro F1 was calculated, demonstrating the positive impact of contextual data on predictive performance.
+
+To better understand the dataset, multiple exploratory visualizations were generated, including sensor distribution box plots, scatter plots, pair plots, correlation heatmaps, and ranked feature correlation charts. These visual analyses highlighted relationships between IoT sensor readings, environmental conditions, and machine failures, providing valuable insights into feature importance.
+
+The feature engineering workflow was modularized by implementing a reusable `merge_external_context()` function, allowing external signals to be added efficiently to future datasets. Comprehensive validation checks confirmed proper timestamp alignment, merge integrity, and consistency of all engineered features.
+
+Finally, all notebooks were cleaned and documented with clear titles, section headers, conclusions, and summaries. Project documentation, including the README, results comparison report, and Kanban board, was updated to reflect the successful completion of the sprint. All Week 2 pull requests were reviewed, merged, and the repository was prepared for the next development phase.
+
+---
+
+# 🏆 Key Achievements
+
+* Successfully simulated realistic external environmental features.
+* Integrated contextual data with the IoT dataset through a validated fusion pipeline.
+* Created reusable feature engineering modules for future experiments.
+* Conducted a complete ablation study comparing baseline and extended feature sets.
+* Demonstrated improved predictive performance using contextual information.
+* Generated comprehensive visualizations and feature correlation analyses.
+* Validated dataset integrity, timestamp alignment, and merge correctness.
+* Finalized notebooks, documentation, README updates, Kanban board, and repository cleanup.
+
+---
+
+# 🚀 Conclusion
+
+Week 2 successfully established a complete **Contextual Data Fusion and Feature Engineering pipeline** for the predictive maintenance project. By combining IoT sensor data with simulated environmental context and validating its impact through an ablation study, the team demonstrated that contextual features provide additional predictive value and strengthen machine failure detection. This sprint laid a robust foundation for **Week 3**, where the project will focus on advanced model optimization, hyperparameter tuning, and deployment-ready machine learning workflows.
+
+---
+
+## Team Contributions
+
+| Team Member    | Roles                                  | Status      |
+| -------------- | -------------------------------------- | ----------- |
+| Tarun Saxena   | Data Engineer & Eval/Deploy Lead       | ✅ Completed |
+| Vaibhav Gautam | ML Engineer & Context Integration Lead | ✅ Completed |
+
+
 # Week 2 Summary
 
 ## Sprint Objective
@@ -823,3 +985,4 @@ The extended feature set demonstrated better predictive capability than the base
 - Ablation study documented.
 - Dataset validation completed.
 - Repository documentation updated successfully.
+
