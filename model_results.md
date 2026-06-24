@@ -32,3 +32,12 @@ This document tracks all model evaluation experiments and performance metrics.
 - Features Used:
 - Parameters:
 - Observations:
+
+---
+
+## Target KPI
+
+- Required Macro F1 Score: >= 0.85
+- Cross Validation: 5-Fold StratifiedKFold
+- Imbalance Handling: SMOTE
+- Primary Model: LightGBM
