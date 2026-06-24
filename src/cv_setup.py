@@ -1,4 +1,5 @@
 import pandas as pd
+from sklearn.model_selection import StratifiedKFold
 
 df = pd.read_csv("data/fused_dataset.csv")
 
@@ -32,3 +33,12 @@ print(y.value_counts())
 print("\nClass Percentage:")
 
 print(y.value_counts(normalize=True) * 100)
+print("\nCreating StratifiedKFold...")
+
+skf = StratifiedKFold(
+    n_splits=5,
+    shuffle=True,
+    random_state=42
+)
+
+print("StratifiedKFold Created Successfully")
