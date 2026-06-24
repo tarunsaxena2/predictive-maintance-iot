@@ -24,3 +24,11 @@ y = df[target_col]
 print("\nFeature Shape:", X.shape)
 
 print("Target Shape:", y.shape)
+
+print("\nClass Counts:")
+
+print(y.value_counts())
+
+print("\nClass Percentage:")
+
+print(y.value_counts(normalize=True) * 100)
