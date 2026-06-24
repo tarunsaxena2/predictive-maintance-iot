@@ -55,10 +55,15 @@ for fold, (train_idx, test_idx) in enumerate(
     y_train = y.iloc[train_idx]
     y_test = y.iloc[test_idx]
 
-    print(f"Fold {fold}")
+    print(f"\nFold {fold}")
 
     print("Train Shape:", X_train.shape)
-
     print("Test Shape :", X_test.shape)
+
+    print("\nTrain Distribution (%)")
+    print(y_train.value_counts(normalize=True) * 100)
+
+    print("\nTest Distribution (%)")
+    print(y_test.value_counts(normalize=True) * 100)
 
     print("-" * 40)
