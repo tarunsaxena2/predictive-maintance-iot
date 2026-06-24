@@ -42,3 +42,23 @@ skf = StratifiedKFold(
 )
 
 print("StratifiedKFold Created Successfully")
+
+print("\nGenerating Folds...\n")
+
+for fold, (train_idx, test_idx) in enumerate(
+        skf.split(X, y),
+        start=1):
+
+    X_train = X.iloc[train_idx]
+    X_test = X.iloc[test_idx]
+
+    y_train = y.iloc[train_idx]
+    y_test = y.iloc[test_idx]
+
+    print(f"Fold {fold}")
+
+    print("Train Shape:", X_train.shape)
+
+    print("Test Shape :", X_test.shape)
+
+    print("-" * 40)
