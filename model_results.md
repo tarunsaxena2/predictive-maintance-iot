@@ -8,3 +8,5 @@ This document tracks all model evaluation experiments and performance metrics.
 |--------|-------------|-----------|--------|---------|-------|
 | LightGBM + SMOTE (Default) | TBD | TBD | TBD | TBD | Baseline model |
 | LightGBM + SMOTE (Tuned) | TBD | TBD | TBD | TBD | Hyperparameter tuning pending |
+| Random Forest (Base Features) | TBD | TBD | TBD | TBD | Week 2 baseline |
+| Random Forest (Extended Features) | TBD | TBD | TBD | TBD | External features added |
