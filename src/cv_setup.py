@@ -14,3 +14,13 @@ for col in df.columns:
 print("\nData Types:\n")
 
 print(df.dtypes)
+
+target_col = "Machine failure"
+
+X = df.drop(columns=[target_col])
+
+y = df[target_col]
+
+print("\nFeature Shape:", X.shape)
+
+print("Target Shape:", y.shape)
