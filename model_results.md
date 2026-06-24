@@ -14,3 +14,21 @@ This document tracks all model evaluation experiments and performance metrics.
 ---
 
 ## Experiment Notes
+
+### Run 1
+- Date:
+- Features Used:
+- Parameters:
+- Observations:
+
+### Run 2
+- Date:
+- Features Used:
+- Parameters:
+- Observations:
+
+### Run 3
+- Date:
+- Features Used:
+- Parameters:
+- Observations:
