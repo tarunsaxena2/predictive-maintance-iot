@@ -16,22 +16,13 @@ This document tracks all model evaluation experiments and performance metrics.
 ## Experiment Notes
 
 ### Run 1
-- Date:
-- Features Used:
-- Parameters:
-- Observations:
+...
 
 ### Run 2
-- Date:
-- Features Used:
-- Parameters:
-- Observations:
+...
 
 ### Run 3
-- Date:
-- Features Used:
-- Parameters:
-- Observations:
+...
 
 ---
 
@@ -40,4 +31,4 @@ This document tracks all model evaluation experiments and performance metrics.
 - Required Macro F1 Score: >= 0.85
 - Cross Validation: 5-Fold StratifiedKFold
 - Imbalance Handling: SMOTE
-- Primary Model: LightGBM
+- Primary Model: LightGBM  
