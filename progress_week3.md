@@ -22,3 +22,11 @@
 
 
 
+\## Day 3 Status ✅
+
+\- ✅ Member 2: scale\_pos\_weight tuned — best config identified
+
+\- ✅ Member 3: SHAP beeswarm and bar plots generated and saved
+
+\- 🔄 Next: Day 4 — evaluate\_model function, SHAP dependence plots
+
