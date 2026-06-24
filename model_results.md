@@ -3,3 +3,6 @@
 ## Week 3 Model Evaluation
 
 This document tracks all model evaluation experiments and performance metrics.
+
+| Model | CV Macro F1 | Precision | Recall | Std Dev | Notes |
+|--------|-------------|-----------|--------|---------|-------|
