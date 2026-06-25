@@ -106,3 +106,32 @@ for i, score in enumerate(
     print(
         f"Fold {i}: {score:.4f}"
     )
+
+results = {
+
+    "f1_scores":
+    scores["test_f1_macro"].tolist(),
+
+    "f1_mean":
+    scores["test_f1_macro"].mean(),
+
+    "f1_std":
+    scores["test_f1_macro"].std(),
+
+    "precision_mean":
+    scores["test_precision_macro"].mean(),
+
+    "recall_mean":
+    scores["test_recall_macro"].mean()
+}
+
+print("\nResults Dictionary\n")
+
+print(results)
+
+print(
+    f"\nF1 Mean: "
+    f"{results['f1_mean']:.4f}"
+    f"+/-"
+    f"{results['f1_std']:.4f}"
+)
