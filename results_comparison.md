@@ -138,3 +138,7 @@ The feature fusion process preserved dataset integrity by maintaining row alignm
 Overall, the ablation study confirms that integrating external contextual features enhances the predictive capability of the machine learning pipeline. These findings establish a stronger foundation for subsequent model optimization, evaluation, and deployment in the following project phases while demonstrating the practical value of contextual data fusion in predictive maintenance applications.
 
 # Model Results Comparison
+
+## Week 3 Model Comparison
+
+This document compares Random Forest and LightGBM model performance across different feature configurations.
