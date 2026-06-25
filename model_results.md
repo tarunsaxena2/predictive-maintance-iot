@@ -106,3 +106,13 @@ Comparison Metrics:
 - Recall
 - Standard Deviation
 - Model Stability
+
+## KPI Tracking Checklist
+
+- [ ] Cross Validation Completed
+- [ ] Macro F1 Calculated
+- [ ] Precision Calculated
+- [ ] Recall Calculated
+- [ ] Standard Deviation Calculated
+- [ ] KPI Target (>=0.85) Evaluated
+- [ ] Best Model Identified
