@@ -30,3 +30,13 @@
 
 \- 🔄 Next: Day 4 — evaluate\_model function, SHAP dependence plots
 
+
+
+\## Day 4 Status ✅
+
+\- ✅ Member 2: evaluate\_model() function implemented in evaluate.py
+
+\- ✅ Member 3: SHAP dependence plots for Torque and Tool wear generated
+
+\- 🔄 Next: Day 5 — Finalize model.py, finalize SHAP visualizations
+
