@@ -1,6 +1,13 @@
 print("Week 3 Day 3 Started")
 
 import pandas as pd
+from sklearn.model_selection import StratifiedKFold
+from sklearn.model_selection import cross_validate
+
+from imblearn.over_sampling import SMOTE
+from imblearn.pipeline import Pipeline
+
+from lightgbm import LGBMClassifier
 
 print("Week 3 Day 3 Started")
 
@@ -57,3 +64,51 @@ print("n_estimators :", n_estimators_list)
 print("learning_rate :", learning_rate_list)
 
 print("num_leaves :", num_leaves_list)
+
+cv = StratifiedKFold(
+    n_splits=5,
+    shuffle=True,
+    random_state=42
+)
+
+print("\nCross Validation Ready")
+
+def evaluate_model(
+    n_estimators,
+    learning_rate,
+    num_leaves
+):
+
+    model = LGBMClassifier(
+        n_estimators=n_estimators,
+        learning_rate=learning_rate,
+        num_leaves=num_leaves,
+        random_state=42
+    )
+
+    pipeline = Pipeline([
+        ("smote", SMOTE(random_state=42)),
+        ("model", model)
+    ])
+
+    scores = cross_validate(
+        pipeline,
+        X,
+        y,
+        cv=cv,
+        scoring=["f1_macro"],
+        n_jobs=-1
+    )
+
+    mean_f1 = scores["test_f1_macro"].mean()
+
+    return mean_f1
+print("\nTesting Evaluation Function...")
+
+score = evaluate_model(
+    200,
+    0.05,
+    31
+)
+
+print("Mean F1:", round(score, 4))
