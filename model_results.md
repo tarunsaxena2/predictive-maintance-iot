@@ -40,3 +40,11 @@ This document tracks all model evaluation experiments and performance metrics.
 - Metrics: Awaiting evaluation results
 - Target Macro F1: >= 0.85
 - Notes: Results will be updated after Week 3 Day 2 evaluation run.
+
+## Evaluation Status
+
+| Experiment | Status |
+|------------|---------|
+| Default LightGBM + SMOTE CV | In Progress |
+| Hyperparameter Tuning | Pending |
+| Final Model Selection | Pending |
