@@ -172,3 +172,12 @@ Observations:
 - Random Forest results are being reviewed.
 - LightGBM evaluation is ongoing.
 - Final ranking will be determined after all metrics are available.
+
+## Review Status
+
+- Comparison table created
+- Models added for evaluation
+- Comparison framework prepared
+- Awaiting final experiment results
+
+Status: Ready for result integration
