@@ -147,3 +147,10 @@ best_result = results_df.sort_values(
 print("\nBest Configuration:")
 
 print(best_result)
+
+results_df.to_csv(
+    "data/hyperparameter_results.csv",
+    index=False
+)
+
+print("\nResults Saved Successfully")
