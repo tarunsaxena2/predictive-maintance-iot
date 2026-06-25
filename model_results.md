@@ -69,3 +69,13 @@ Assessment:
 - Cross-validation results are pending.
 - Performance evaluation will be updated after model execution.
 - Final assessment will determine whether the KPI target has been achieved.
+
+## Model Evaluation Notes
+
+### Observations
+
+- Default LightGBM + SMOTE pipeline has been configured.
+- Cross-validation execution is pending.
+- Evaluation metrics will be recorded after model testing.
+- Results will be compared against the target Macro F1 score.
+- Findings will be used for model comparison and final selection.
