@@ -96,3 +96,13 @@ scores = cross_validate(
 )
 
 print("Cross Validation Completed")
+
+print("\nPer Fold F1 Scores\n")
+
+for i, score in enumerate(
+    scores["test_f1_macro"],
+    start=1
+):
+    print(
+        f"Fold {i}: {score:.4f}"
+    )
