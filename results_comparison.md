@@ -152,4 +152,13 @@ This document compares Random Forest and LightGBM model performance across diffe
 
 
 
+## Comparison Criteria
 
+The following metrics will be used to compare model performance:
+
+- Macro F1 Score
+- Precision
+- Recall
+- Standard Deviation
+- Training Stability
+- Overall Performance Ranking
