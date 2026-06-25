@@ -136,3 +136,5 @@ The comparison demonstrated that the model with external contextual features ach
 The feature fusion process preserved dataset integrity by maintaining row alignment and ensuring that no observations were lost during merging. The resulting dataset contained a richer representation of operational conditions while remaining consistent for downstream model training.
 
 Overall, the ablation study confirms that integrating external contextual features enhances the predictive capability of the machine learning pipeline. These findings establish a stronger foundation for subsequent model optimization, evaluation, and deployment in the following project phases while demonstrating the practical value of contextual data fusion in predictive maintenance applications.
+
+# Model Results Comparison
