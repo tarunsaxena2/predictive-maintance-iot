@@ -1,5 +1,6 @@
 print("Week 3 Day 2 Started")
 import pandas as pd
+from sklearn.model_selection import StratifiedKFold
 
 df = pd.read_csv("data/fused_dataset.csv")
 
@@ -16,3 +17,12 @@ y = df[target_col]
 print("\nFeature Shape:", X.shape)
 
 print("Target Shape:", y.shape)
+
+cv = StratifiedKFold(
+    n_splits=5,
+    shuffle=True,
+    random_state=42
+)
+
+print("\nCross Validation Ready")
+print("Number of Folds:", cv.n_splits)
