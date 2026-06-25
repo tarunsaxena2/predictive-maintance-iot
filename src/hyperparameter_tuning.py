@@ -154,3 +154,6 @@ results_df.to_csv(
 )
 
 print("\nResults Saved Successfully")
+
+print("\nTotal Combinations Tested:")
+print(len(results_df))
