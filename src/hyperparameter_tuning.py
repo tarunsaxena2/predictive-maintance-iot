@@ -139,4 +139,11 @@ print(
         ascending=False
     ).head(10)
 )
+best_result = results_df.sort_values(
+    by="f1_macro",
+    ascending=False
+).iloc[0]
 
+print("\nBest Configuration:")
+
+print(best_result)
