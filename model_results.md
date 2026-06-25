@@ -48,3 +48,13 @@ This document tracks all model evaluation experiments and performance metrics.
 | Default LightGBM + SMOTE CV | In Progress |
 | Hyperparameter Tuning | Pending |
 | Final Model Selection | Pending |
+
+## Cross Validation Metrics Summary
+
+### Default LightGBM + SMOTE
+
+- Macro F1 Score: Pending
+- Precision: Pending
+- Recall: Pending
+- Standard Deviation: Pending
+- Target KPI: >= 0.85
