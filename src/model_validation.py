@@ -3,6 +3,7 @@ import pandas as pd
 from sklearn.model_selection import StratifiedKFold
 from imblearn.over_sampling import SMOTE
 from lightgbm import LGBMClassifier
+from imblearn.pipeline import Pipeline
 
 df = pd.read_csv("data/fused_dataset.csv")
 
@@ -42,3 +43,14 @@ model = LGBMClassifier(
 
 print("\nLightGBM Ready")
 print("Model Initialized Successfully")
+
+pipeline = Pipeline([
+    ("smote", smote),
+    ("model", model)
+])
+
+print("\nPipeline Created Successfully")
+
+print("Step 1: SMOTE")
+
+print("Step 2: LightGBM")
