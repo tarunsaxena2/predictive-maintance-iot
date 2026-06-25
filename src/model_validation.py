@@ -1,6 +1,7 @@
 print("Week 3 Day 2 Started")
 import pandas as pd
 from sklearn.model_selection import StratifiedKFold
+from imblearn.over_sampling import SMOTE
 
 df = pd.read_csv("data/fused_dataset.csv")
 
@@ -26,3 +27,10 @@ cv = StratifiedKFold(
 
 print("\nCross Validation Ready")
 print("Number of Folds:", cv.n_splits)
+
+smote = SMOTE(
+    random_state=42
+)
+
+print("\nSMOTE Ready")
+print("Random State:", 42)
