@@ -41,3 +41,19 @@ X.columns = (
 
 print("\nFeature Shape:", X.shape)
 print("Target Shape :", y.shape)
+
+# Hyperparameter Grid
+
+n_estimators_list = [200, 500, 800]
+
+learning_rate_list = [0.01, 0.05, 0.1]
+
+num_leaves_list = [15, 31, 63]
+
+print("\nHyperparameter Grid Ready")
+
+print("n_estimators :", n_estimators_list)
+
+print("learning_rate :", learning_rate_list)
+
+print("num_leaves :", num_leaves_list)
