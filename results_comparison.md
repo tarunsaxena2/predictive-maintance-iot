@@ -142,3 +142,6 @@ Overall, the ablation study confirms that integrating external contextual featur
 ## Week 3 Model Comparison
 
 This document compares Random Forest and LightGBM model performance across different feature configurations.
+
+| Model | Macro F1 | Precision | Recall | Std Dev | Status |
+| ----- | -------- | --------- | ------ | ------- | ------ |
