@@ -79,3 +79,13 @@ Assessment:
 - Evaluation metrics will be recorded after model testing.
 - Results will be compared against the target Macro F1 score.
 - Findings will be used for model comparison and final selection.
+
+## Week 3 Results Timeline
+
+| Day | Activity | Status |
+|-----|----------|---------|
+| Day 1 | Create model_results.md tracking document | Completed |
+| Day 2 | Record default LightGBM + SMOTE results | In Progress |
+| Day 3 | Compare RF vs LightGBM results | Pending |
+| Day 4 | Finalize model comparison and KPI assessment | Pending |
+| Day 5 | Complete Week 3 summary and documentation | Pending |
