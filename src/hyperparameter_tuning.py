@@ -1,5 +1,3 @@
-print("Week 3 Day 3 Started")
-
 import pandas as pd
 from sklearn.model_selection import StratifiedKFold
 from sklearn.model_selection import cross_validate
@@ -8,8 +6,6 @@ from imblearn.over_sampling import SMOTE
 from imblearn.pipeline import Pipeline
 
 from lightgbm import LGBMClassifier
-
-print("Week 3 Day 3 Started")
 
 df = pd.read_csv("data/fused_dataset.csv")
 
@@ -80,11 +76,12 @@ def evaluate_model(
 ):
 
     model = LGBMClassifier(
-        n_estimators=n_estimators,
-        learning_rate=learning_rate,
-        num_leaves=num_leaves,
-        random_state=42
-    )
+    n_estimators=n_estimators,
+    learning_rate=learning_rate,
+    num_leaves=num_leaves,
+    random_state=42,
+    verbose=-1
+)
 
     pipeline = Pipeline([
         ("smote", SMOTE(random_state=42)),
@@ -103,17 +100,43 @@ def evaluate_model(
     mean_f1 = scores["test_f1_macro"].mean()
 
     return mean_f1
-print("\nRunning First Hyperparameter Tests...\n")
+results = []
+
+print("\nRunning Hyperparameter Search...\n")
 
 for n_estimators in n_estimators_list:
 
-    score = evaluate_model(
-        n_estimators,
-        0.05,
-        31
-    )
+    for learning_rate in learning_rate_list:
 
-    print(
-        f"n_estimators={n_estimators} | "
-        f"F1={score:.4f}"
-    )
+        for num_leaves in num_leaves_list:
+
+            score = evaluate_model(
+                n_estimators,
+                learning_rate,
+                num_leaves
+            )
+
+            results.append({
+                "n_estimators": n_estimators,
+                "learning_rate": learning_rate,
+                "num_leaves": num_leaves,
+                "f1_macro": score
+            })
+
+            print(
+                f"Trees={n_estimators} | "
+                f"LR={learning_rate} | "
+                f"Leaves={num_leaves} | "
+                f"F1={score:.4f}"
+            )
+
+        results_df = pd.DataFrame(results)
+
+print("\nTop Results:")
+print(
+    results_df.sort_values(
+        by="f1_macro",
+        ascending=False
+    ).head(10)
+)
+
