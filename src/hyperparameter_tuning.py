@@ -103,12 +103,17 @@ def evaluate_model(
     mean_f1 = scores["test_f1_macro"].mean()
 
     return mean_f1
-print("\nTesting Evaluation Function...")
+print("\nRunning First Hyperparameter Tests...\n")
 
-score = evaluate_model(
-    200,
-    0.05,
-    31
-)
+for n_estimators in n_estimators_list:
 
-print("Mean F1:", round(score, 4))
+    score = evaluate_model(
+        n_estimators,
+        0.05,
+        31
+    )
+
+    print(
+        f"n_estimators={n_estimators} | "
+        f"F1={score:.4f}"
+    )
