@@ -162,3 +162,13 @@ The following metrics will be used to compare model performance:
 - Standard Deviation
 - Training Stability
 - Overall Performance Ranking
+
+
+## Preliminary Findings
+
+Current comparison analysis is in progress.
+
+Observations:
+- Random Forest results are being reviewed.
+- LightGBM evaluation is ongoing.
+- Final ranking will be determined after all metrics are available.
