@@ -145,3 +145,5 @@ This document compares Random Forest and LightGBM model performance across diffe
 
 | Model | Macro F1 | Precision | Recall | Std Dev | Status |
 | ----- | -------- | --------- | ------ | ------- | ------ |
+| Random Forest (Base Features) | Pending | Pending | Pending | Pending | Awaiting Results |
+
