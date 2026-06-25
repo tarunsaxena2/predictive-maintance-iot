@@ -148,6 +148,8 @@ This document compares Random Forest and LightGBM model performance across diffe
 | Random Forest (Base Features) | Pending | Pending | Pending | Pending | Awaiting Results |
 | Random Forest (Extended Features) | Pending | Pending | Pending | Pending | Awaiting Results |
 | LightGBM + SMOTE (Default) | Pending | Pending | Pending | Pending | Evaluation Running |
+| LightGBM + SMOTE (Tuned) | Pending | Pending | Pending | Pending | Tuning Pending |
+
 
 
 
