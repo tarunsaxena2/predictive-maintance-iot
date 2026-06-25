@@ -89,3 +89,20 @@ Assessment:
 | Day 3 | Compare RF vs LightGBM results | Pending |
 | Day 4 | Finalize model comparison and KPI assessment | Pending |
 | Day 5 | Complete Week 3 summary and documentation | Pending |
+
+## Model Comparison Preparation
+
+The following models will be compared during Week 3:
+
+- Random Forest (Base Features)
+- Random Forest (Extended Features)
+- LightGBM + SMOTE (Default)
+- LightGBM + SMOTE (Tuned)
+
+Comparison Metrics:
+
+- Macro F1 Score
+- Precision
+- Recall
+- Standard Deviation
+- Model Stability
