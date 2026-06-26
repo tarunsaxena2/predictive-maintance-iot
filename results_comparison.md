@@ -181,3 +181,13 @@ Observations:
 - Awaiting final experiment results
 
 Status: Ready for result integration
+
+# Final Comparison Conclusion
+
+The model comparison framework has been successfully completed and is ready for final evaluation. At this stage, the comparison tables and documentation structure have been prepared for integrating validated experiment results from both the Random Forest and LightGBM pipelines.
+
+The final winning model will be selected based on verified cross-validation metrics, including Macro F1 Score, Precision, Recall, and Standard Deviation. Particular emphasis will be placed on the Macro F1 Score, as it is the primary evaluation metric for this project.
+
+Once all evaluation results are available, the comparison table will be updated to identify the best-performing model, quantify the performance improvement over the baseline, and explain the observed differences. It is expected that the SMOTE + LightGBM pipeline will demonstrate improved performance by addressing class imbalance more effectively through SMOTE while leveraging LightGBM's gradient boosting algorithm to model complex feature interactions. However, the final conclusion will only be based on validated experimental results rather than assumptions.
+
+**Final Status:** Comparison framework completed and awaiting validated evaluation metrics for final winner declaration.
