@@ -18,8 +18,6 @@
 
 \- Top 5 SHAP features: Torque, Tool wear, Rotational speed, Air temp, Process temp
 
-\- 🔄 Next: Day 3 — Tune scale\_pos\_weight, generate SHAP plots
-
 
 
 \## Day 3 Status ✅
@@ -27,8 +25,6 @@
 \- ✅ Member 2: scale\_pos\_weight tuned — best config identified
 
 \- ✅ Member 3: SHAP beeswarm and bar plots generated and saved
-
-\- 🔄 Next: Day 4 — evaluate\_model function, SHAP dependence plots
 
 
 
@@ -38,5 +34,23 @@
 
 \- ✅ Member 3: SHAP dependence plots for Torque and Tool wear generated
 
-\- 🔄 Next: Day 5 — Finalize model.py, finalize SHAP visualizations
+
+
+\## Day 5 Status ✅
+
+\- ✅ Member 2: model.py finalized with save\_model() utility
+
+\- ✅ Member 3: All SHAP visualizations finalized, conclusion written
+
+\- ✅ Week 3 Complete!
+
+
+
+\## Key Results
+
+\- Top Features: Torque \[Nm], Tool wear \[min], Rotational speed \[rpm]
+
+\- External features add complementary signal to internal sensors
+
+\- SMOTE correctly applied inside CV folds — no data leakage
 
