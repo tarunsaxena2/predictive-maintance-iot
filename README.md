@@ -1,5 +1,5 @@
-ata Science & Machine Learning
-📌 Project 1: Contextual Predictive Maintenance (IoT Edge AI)
+🚀 Infotact Technical Internship Program – Advanced Data Science & Machine Learning
+📌 Project : Contextual Predictive Maintenance (IoT Edge AI)
 📖 Project Overview
 
 This project was developed as part of the Infotact Technical Internship Program – Advanced Data Science & Machine Learning (2026). The primary objective is to build an intelligent Contextual Predictive Maintenance System capable of predicting industrial equipment failures before they occur by combining IoT sensor telemetry with external contextual information.
