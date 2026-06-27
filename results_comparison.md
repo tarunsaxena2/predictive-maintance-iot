@@ -136,3 +136,58 @@ The comparison demonstrated that the model with external contextual features ach
 The feature fusion process preserved dataset integrity by maintaining row alignment and ensuring that no observations were lost during merging. The resulting dataset contained a richer representation of operational conditions while remaining consistent for downstream model training.
 
 Overall, the ablation study confirms that integrating external contextual features enhances the predictive capability of the machine learning pipeline. These findings establish a stronger foundation for subsequent model optimization, evaluation, and deployment in the following project phases while demonstrating the practical value of contextual data fusion in predictive maintenance applications.
+
+# Model Results Comparison
+
+## Week 3 Model Comparison
+
+This document compares Random Forest and LightGBM model performance across different feature configurations.
+
+| Model | Macro F1 | Precision | Recall | Std Dev | Status |
+| ----- | -------- | --------- | ------ | ------- | ------ |
+| Random Forest (Base Features) | Pending | Pending | Pending | Pending | Awaiting Results |
+| Random Forest (Extended Features) | Pending | Pending | Pending | Pending | Awaiting Results |
+| LightGBM + SMOTE (Default) | Pending | Pending | Pending | Pending | Evaluation Running |
+| LightGBM + SMOTE (Tuned) | Pending | Pending | Pending | Pending | Tuning Pending |
+
+
+
+## Comparison Criteria
+
+The following metrics will be used to compare model performance:
+
+- Macro F1 Score
+- Precision
+- Recall
+- Standard Deviation
+- Training Stability
+- Overall Performance Ranking
+
+
+## Preliminary Findings
+
+Current comparison analysis is in progress.
+
+Observations:
+- Random Forest results are being reviewed.
+- LightGBM evaluation is ongoing.
+- Final ranking will be determined after all metrics are available.
+
+## Review Status
+
+- Comparison table created
+- Models added for evaluation
+- Comparison framework prepared
+- Awaiting final experiment results
+
+Status: Ready for result integration
+
+# Final Comparison Conclusion
+
+The model comparison framework has been successfully completed and is ready for final evaluation. At this stage, the comparison tables and documentation structure have been prepared for integrating validated experiment results from both the Random Forest and LightGBM pipelines.
+
+The final winning model will be selected based on verified cross-validation metrics, including Macro F1 Score, Precision, Recall, and Standard Deviation. Particular emphasis will be placed on the Macro F1 Score, as it is the primary evaluation metric for this project.
+
+Once all evaluation results are available, the comparison table will be updated to identify the best-performing model, quantify the performance improvement over the baseline, and explain the observed differences. It is expected that the SMOTE + LightGBM pipeline will demonstrate improved performance by addressing class imbalance more effectively through SMOTE while leveraging LightGBM's gradient boosting algorithm to model complex feature interactions. However, the final conclusion will only be based on validated experimental results rather than assumptions.
+
+**Final Status:** Comparison framework completed and awaiting validated evaluation metrics for final winner declaration.
