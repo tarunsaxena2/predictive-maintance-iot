@@ -12,6 +12,7 @@ from lightgbm import LGBMClassifier
 
 print("Evaluate Module Ready")
 
+
 def evaluate_model(X, y, model):
 
     cv = StratifiedKFold(
@@ -38,4 +39,18 @@ def evaluate_model(X, y, model):
         n_jobs=-1
     )
 
-    return scores
+    # Calculate Mean Scores
+    f1_mean = scores["test_f1_macro"].mean()
+    f1_std = scores["test_f1_macro"].std()
+
+    precision_mean = scores["test_precision_macro"].mean()
+
+    recall_mean = scores["test_recall_macro"].mean()
+
+    # Return Results
+    return {
+        "f1_macro": f1_mean,
+        "precision_macro": precision_mean,
+        "recall_macro": recall_mean,
+        "std_dev": f1_std
+    }
