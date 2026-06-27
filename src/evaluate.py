@@ -1,5 +1,3 @@
-import pandas as pd
-
 from sklearn.model_selection import (
     StratifiedKFold,
     cross_validate
@@ -7,10 +5,6 @@ from sklearn.model_selection import (
 
 from imblearn.over_sampling import SMOTE
 from imblearn.pipeline import Pipeline
-
-from lightgbm import LGBMClassifier
-
-print("Evaluate Module Ready")
 
 
 def evaluate_model(X, y, model):
@@ -39,18 +33,55 @@ def evaluate_model(X, y, model):
         n_jobs=-1
     )
 
-    # Calculate Mean Scores
-    f1_mean = scores["test_f1_macro"].mean()
-    f1_std = scores["test_f1_macro"].std()
-
-    precision_mean = scores["test_precision_macro"].mean()
-
-    recall_mean = scores["test_recall_macro"].mean()
-
-    # Return Results
-    return {
-        "f1_macro": f1_mean,
-        "precision_macro": precision_mean,
-        "recall_macro": recall_mean,
-        "std_dev": f1_std
+    results = {
+        "f1_macro": scores["test_f1_macro"].mean(),
+        "precision_macro": scores["test_precision_macro"].mean(),
+        "recall_macro": scores["test_recall_macro"].mean(),
+        "std_dev": scores["test_f1_macro"].std()
     }
+
+    return results
+if __name__ == "__main__":
+
+    import pandas as pd
+    from lightgbm import LGBMClassifier
+
+    df = pd.read_csv("data/fused_dataset.csv")
+
+    target = "Machine failure"
+
+    X = df.drop(columns=[target])
+
+    if "Product ID" in X.columns:
+        X = X.drop(columns=["Product ID"])
+
+    if "Type" in X.columns:
+        X = pd.get_dummies(
+            X,
+            columns=["Type"],
+            drop_first=True
+        )
+
+    X.columns = (
+        X.columns
+        .str.replace("[", "", regex=False)
+        .str.replace("]", "", regex=False)
+        .str.replace("(", "", regex=False)
+        .str.replace(")", "", regex=False)
+        .str.replace(" ", "_", regex=False)
+        .str.replace("/", "_", regex=False)
+    )
+
+    y = df[target]
+
+    model = LGBMClassifier(
+        n_estimators=500,
+        learning_rate=0.1,
+        num_leaves=15,
+        random_state=42
+    )
+
+    results = evaluate_model(X, y, model)
+
+    print("\nEvaluation Results")
+    print(results)
