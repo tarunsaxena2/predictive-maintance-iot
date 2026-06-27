@@ -1,80 +1,325 @@
-# 🚀 Predictive Maintenance IoT Project
+ata Science & Machine Learning
+📌 Project 1: Contextual Predictive Maintenance (IoT Edge AI)
+📖 Project Overview
 
-## 🔧 Contextual Predictive Maintenance System
+This project was developed as part of the Infotact Technical Internship Program – Advanced Data Science & Machine Learning (2026). The primary objective is to build an intelligent Contextual Predictive Maintenance System capable of predicting industrial equipment failures before they occur by combining IoT sensor telemetry with external contextual information.
 
-### 🎯 Project Objective
+Unlike traditional predictive maintenance models that rely only on internal machine sensors, this solution integrates environmental and operational context such as ambient temperature and machine load conditions to improve prediction accuracy and real-world reliability.
 
-Predict machine failures using IoT telemetry data and Machine Learning techniques before breakdowns occur, enabling proactive maintenance and reducing operational downtime.
+🎯 Business Objective
+
+The goal of this project is to transform industrial maintenance from a reactive "Break-Fix" approach into a proactive AI-driven maintenance strategy.
+
+The system helps organizations to:
+
+Reduce unexpected machine downtime.
+Lower maintenance and operational costs.
+Increase equipment reliability.
+Improve maintenance scheduling.
+Enable data-driven decision making through explainable AI.
+💡 Problem Statement
+
+Machine failures are influenced not only by internal sensor readings but also by external environmental conditions. Traditional machine learning models ignore these contextual factors, resulting in reduced prediction performance in real-world deployments.
+
+This project addresses that challenge by developing a Contextual Data Fusion Pipeline that combines:
+
+Internal IoT telemetry
+External environmental variables
+Advanced feature engineering
+Robust ensemble machine learning models
+
+to accurately predict equipment failures before they happen.
+
+🏭 Industrial Use Cases
+👨‍🏭 Fleet / Plant Manager
+Monitor machine health in real time.
+Identify equipment with a high probability of failure.
+Schedule preventive maintenance before breakdowns occur.
+Reduce production downtime.
+👨‍🔬 Reliability Engineer
+Investigate the root cause of predicted failures.
+Analyze feature importance using SHAP values.
+Understand whether vibration, temperature, load, or contextual variables contribute most to failure risk.
+⚙️ Technical Workflow
+
+The project follows a complete end-to-end Machine Learning pipeline:
+
+Data Collection
+IoT Signal Processing
+Feature Engineering
+Contextual Data Fusion
+Handling Imbalanced Data (SMOTE)
+LightGBM Classification
+Cross Validation
+Model Evaluation
+SHAP Explainability
+Noise Robustness Analysis
+Threshold Optimization
+Final Deployment Pipeline
+---
+
+<div align="center">
+
+
+### *AI-Powered Predictive Maintenance using Contextual Data Fusion & Explainable Machine Learning*
+
+<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=25&pause=1000&center=true&vCenter=true&width=700&lines=IoT+Predictive+Maintenance;LightGBM+Classifier;Explainable+AI+with+SHAP;Industrial+Machine+Failure+Prediction;Context-Aware+Machine+Learning" />
+
+<br>
+
+![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge\&logo=python)
+
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Processing-purple?style=for-the-badge\&logo=pandas)
+
+![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-blue?style=for-the-badge\&logo=numpy)
+
+![LightGBM](https://img.shields.io/badge/LightGBM-Gradient%20Boosting-success?style=for-the-badge)
+
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-orange?style=for-the-badge\&logo=scikitlearn)
+
+![SHAP](https://img.shields.io/badge/Explainable-AI-red?style=for-the-badge)
+
+![GitHub](https://img.shields.io/badge/GitHub-Version%20Control-black?style=for-the-badge\&logo=github)
+
+</div>
 
 ---
 
-## 📖 Problem Statement
+# 🌍 Project Vision
 
-Industrial equipment continuously generates large volumes of sensor telemetry data. Unexpected machine failures can lead to:
+Industrial equipment continuously generates thousands of sensor readings every second. However, traditional predictive maintenance systems rely only on internal telemetry and ignore external environmental factors that significantly influence machine behaviour.
 
-* Production downtime
-* Increased maintenance costs
-* Reduced operational efficiency
-* Significant financial losses
+This project presents an intelligent **Contextual Predictive Maintenance Framework** capable of combining internal IoT sensor telemetry with external contextual information such as environmental conditions and operational load to accurately predict equipment failures before they occur.
 
-This project leverages Machine Learning algorithms to analyze IoT sensor data and predict potential machine failures before they occur, allowing preventive maintenance actions.
+The solution follows a complete industry-standard Machine Learning lifecycle—from data ingestion and feature engineering to explainable AI and deployment-ready evaluation.
 
 ---
 
-## 📊 Dataset Information
+# 🎯 Business Objectives
 
-### Dataset
+✔ Reduce unexpected equipment failures
 
-**AI4I 2020 Predictive Maintenance Dataset**
+✔ Minimize maintenance cost
 
-### Sensor Features
+✔ Increase operational efficiency
 
-| Feature                 | Description                 |
-| ----------------------- | --------------------------- |
-| Air Temperature [K]     | Ambient air temperature     |
-| Process Temperature [K] | Machine process temperature |
-| Rotational Speed [rpm]  | Machine rotational speed    |
-| Torque [Nm]             | Applied torque              |
-| Tool Wear [min]         | Tool wear duration          |
+✔ Improve maintenance scheduling
 
-### Target Variable
+✔ Detect anomalies before breakdown
 
-| Variable        | Description                 |
-| --------------- | --------------------------- |
-| Machine Failure | 0 = No Failure, 1 = Failure |
+✔ Provide interpretable AI predictions
+
+✔ Build a deployment-ready ML pipeline
 
 ---
 
-## 👥 Team Members
+# ⭐ Key Features
 
-| Member   | Role                           | Name           |
-| -------- | ------------------------------ | -------------- |
-| Member 1 | Data Engineer                  | Tarun Saxena   |
-| Member 2 | ML Engineer                    | Vaibhav Gautam |
-| Member 3 | Context & Integration Engineer | Vaibhav Gautam |
-| Member 4 | Evaluation & Deployment Lead   | Tarun Saxena   |
-
----
-
-## 🎯 Target KPIs
-
-| Metric         | Target |
-| -------------- | ------ |
-| Macro F1 Score | ≥ 0.85 |
-| Accuracy       | ≥ 90%  |
-| Precision      | ≥ 85%  |
-| Recall         | ≥ 85%  |
+* Contextual Data Fusion
+* Rolling Statistical Feature Engineering
+* Time-Series Signal Processing
+* LightGBM Classification
+* Stratified 5-Fold Cross Validation
+* SMOTE for Class Imbalance
+* SHAP Explainability
+* Precision-Recall Optimization
+* Noise Robustness Evaluation
+* GitHub Sprint Documentation
 
 ---
 
-## 🛠️ Development Environment
+# 🏗 System Architecture
 
-### Environment Setup
+```mermaid
+flowchart TD
 
-* Python Virtual Environment Configured
-* GitHub Repository Initialized
-* Project Structure Created
-* Jupyter Notebook Environment Configured
+A[IoT Sensor Data]
+
+B[Data Cleaning]
+
+C[Feature Engineering]
+
+D[Contextual Data Fusion]
+
+E[SMOTE]
+
+F[LightGBM]
+
+G[SHAP Explainability]
+
+H[Threshold Optimization]
+
+I[Failure Prediction]
+
+A --> B
+
+B --> C
+
+C --> D
+
+D --> E
+
+E --> F
+
+F --> G
+
+G --> H
+
+H --> I
+```
+
+---
+
+# 🔬 Machine Learning Pipeline
+
+```mermaid
+graph LR
+
+A[Raw Dataset]
+
+B[Cleaning]
+
+C[Feature Engineering]
+
+D[Scaling]
+
+E[SMOTE]
+
+F[LightGBM]
+
+G[Prediction]
+
+H[Evaluation]
+
+I[SHAP]
+
+A --> B --> C --> D --> E --> F --> G --> H --> I
+```
+
+---
+
+# 📂 Dataset Overview
+
+| Attribute | Description                 |
+| --------- | --------------------------- |
+| Dataset   | AI4I Predictive Maintenance |
+| Domain    | Manufacturing & Automotive  |
+| Samples   | Industrial Machine Records  |
+| Target    | Machine Failure             |
+| Type      | Binary Classification       |
+| Learning  | Supervised Machine Learning |
+
+---
+
+# 🛠 Technology Stack
+
+| Category         | Technology    |
+| ---------------- | ------------- |
+| Programming      | Python        |
+| Analysis         | Pandas, NumPy |
+| Visualization    | Matplotlib    |
+| Machine Learning | Scikit-Learn  |
+| Model            | LightGBM      |
+| Explainability   | SHAP          |
+| Version Control  | Git & GitHub  |
+
+
+
+---
+
+# 📈 Model Evaluation
+
+| Metric         | Target    |
+| -------------- | --------- |
+| Macro F1 Score | ≥ 0.85    |
+| Precision      | High      |
+| Recall         | High      |
+| ROC-AUC        | Excellent |
+| PR Curve       | Optimized |
+
+---
+
+# 🧠 Explainable AI
+
+The model predictions are interpreted using **SHAP** to identify the contribution of every feature.
+
+This allows engineers to understand:
+
+* Why the prediction was generated
+* Which sensor caused the anomaly
+* External factors influencing failure
+
+---
+
+# 🧪 Noise Sensitivity Analysis
+
+Real industrial environments contain noisy sensor signals.
+
+To evaluate deployment robustness, synthetic noise is injected into the testing dataset.
+
+The model is analysed for:
+
+* Stability
+* Performance degradation
+* Threshold sensitivity
+* False Alarm Reduction
+
+---
+
+# 📅 Development Roadmap
+
+| Week   | Objective                                      |
+| ------ | ---------------------------------------------- |
+| Week 1 | IoT Telemetry & Signal Processing              |
+| Week 2 | Contextual Data Fusion & Feature Engineering   |
+| Week 3 | LightGBM + SMOTE + Cross Validation            |
+| Week 4 | Noise Analysis + Threshold Optimization + SHAP |
+
+---
+
+# 👨‍💻 Team Contributions
+
+| Member                            | Responsibilities                                                                                                                                          |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Tarun Saxena (Member 1 & 4)**   | Project Planning, Feature Engineering, Model Evaluation, GitHub Documentation, Sprint Management, SHAP Analysis, Final Deployment, README, Kanban Updates |
+| **Vaibhav Gautam (Member 2 & 3)** | Data Preprocessing, Contextual Data Fusion, LightGBM Training, SMOTE Implementation, Cross Validation, Performance Optimization                           |
+
+---
+
+# 🚀 Future Enhancements
+
+* Real-Time IoT Streaming
+* Edge AI Deployment
+* Live Predictive Dashboard
+* REST API Integration
+* Docker Deployment
+* Cloud Monitoring
+* MLOps Pipeline
+* Automated Retraining
+
+---
+
+# 🏆 Internship Outcome
+
+This project successfully demonstrates the implementation of a modern **Context-Aware Predictive Maintenance Framework** that combines IoT telemetry, contextual intelligence, explainable AI, and robust machine learning techniques.
+
+The solution is designed following industry best practices, making it scalable, interpretable, and deployment-ready for smart manufacturing and automotive predictive maintenance applications.
+
+---
+
+<div align="center">
+
+## ⭐ *Predict Early • Maintain Smart • Reduce Downtime*
+
+### **Infotact Technical Internship Program 2026**
+
+**Advanced Data Science & Machine Learning**
+
+Made with ❤️ using **Python • LightGBM • SHAP • Scikit-Learn • GitHub**
+
+</div>
+
+---
 
 ### Project Structure
 
@@ -986,3 +1231,195 @@ The extended feature set demonstrated better predictive capability than the base
 - Dataset validation completed.
 - Repository documentation updated successfully.
 
+# 🚀 Week 3 Progress Report – Imbalanced Classification & LightGBM Modeling
+
+**Sprint Goal:** Develop a robust **LightGBM + SMOTE** pipeline using **5-Fold Stratified Cross-Validation**, achieve **Macro F1 Score ≥ 0.85**, and generate **SHAP Explainability** for model interpretation.
+
+---
+
+# 📅 Day 1 – Project Initialization & Pipeline Setup
+
+## 👨‍💻 Member 1 – Tarun Saxena (Data Engineer)
+
+* Loaded the final fused dataset containing internal and external features.
+* Configured **5-Fold Stratified Cross-Validation**.
+* Verified balanced class distribution across all folds.
+* Validated dataset integrity before model training.
+
+## 👨‍💻 Member 2 – Vaibhav Gautam (ML Engineer)
+
+* Developed the **SMOTE + LightGBM** pipeline.
+* Imported and configured the Imbalanced-Learn Pipeline.
+* Initialized the default **LightGBM Classifier**.
+* Added documentation for the complete pipeline.
+
+## 👨‍💻 Member 3 – Vaibhav Gautam (Context & Integration)
+
+* Prepared the Week 3 modeling notebook.
+* Loaded feature matrix (**X**) and target labels (**y**).
+* Verified dataset dimensions and removed missing values.
+* Confirmed class imbalance statistics.
+
+## 👨‍💻 Member 4 – Tarun Saxena (Evaluation & Deployment)
+
+* Created **model_results.md** for experiment tracking.
+* Designed the results table for evaluation metrics.
+* Organized documentation for upcoming experiments.
+* Updated the repository with the initial evaluation framework.
+
+**✅ Day 1 Outcome:** Project pipeline successfully initialized and experiment tracking established.
+
+---
+
+# 📅 Day 2 – Model Training & Initial Evaluation
+
+## 👨‍💻 Member 1 – Tarun Saxena (Data Engineer)
+
+* Executed **5-Fold Cross-Validation**.
+* Recorded Macro F1, Precision, Recall, and Standard Deviation.
+* Stored fold-wise evaluation metrics for analysis.
+
+## 👨‍💻 Member 2 – Vaibhav Gautam (ML Engineer)
+
+* Verified that **SMOTE** was applied only to training folds.
+* Compared class distribution before and after oversampling.
+* Confirmed there was no data leakage.
+
+## 👨‍💻 Member 3 – Vaibhav Gautam (Context & Integration)
+
+* Trained the initial LightGBM model.
+* Generated SHAP values using TreeExplainer.
+* Identified the top five most influential features.
+
+## 👨‍💻 Member 4 – Tarun Saxena (Evaluation & Deployment)
+
+* Updated **model_results.md** with baseline experiment results.
+* Documented default LightGBM + SMOTE performance.
+* Verified progress toward the target Macro F1 Score.
+
+**✅ Day 2 Outcome:** Baseline model successfully evaluated with reliable cross-validation results.
+
+---
+
+# 📅 Day 3 – Model Optimization & Explainability
+
+## 👨‍💻 Member 1 – Tarun Saxena (Data Engineer)
+
+* Performed manual hyperparameter tuning.
+* Evaluated multiple combinations of estimators, learning rates, and leaf sizes.
+* Identified the best-performing configuration.
+
+## 👨‍💻 Member 2 – Vaibhav Gautam (ML Engineer)
+
+* Tuned **class_weight** and **scale_pos_weight** parameters.
+* Compared model performance before and after optimization.
+* Improved imbalance handling strategy.
+
+## 👨‍💻 Member 3 – Vaibhav Gautam (Context & Integration)
+
+* Generated SHAP Summary (Beeswarm) plot.
+* Created SHAP Feature Importance Bar plot.
+* Documented the contribution of internal and external features.
+
+## 👨‍💻 Member 4 – Tarun Saxena (Evaluation & Deployment)
+
+* Prepared the **Random Forest vs LightGBM** comparison report.
+* Recorded available model performance results.
+* Updated project documentation with comparison metrics.
+
+**✅ Day 3 Outcome:** Optimized LightGBM model and completed SHAP explainability analysis.
+
+---
+
+# 📅 Day 4 – Final Evaluation & Performance Analysis
+
+## 👨‍💻 Member 1 – Tarun Saxena (Data Engineer)
+
+* Executed final cross-validation using the best hyperparameters.
+* Verified achievement of the target **Macro F1 Score**.
+* Recorded final evaluation metrics.
+
+## 👨‍💻 Member 2 – Vaibhav Gautam (ML Engineer)
+
+* Developed the reusable **evaluate_model()** function.
+* Standardized model evaluation workflow.
+* Validated evaluation consistency.
+
+## 👨‍💻 Member 3 – Vaibhav Gautam (Context & Integration)
+
+* Generated SHAP Dependence plots.
+* Completed feature interaction analysis.
+* Documented model interpretability findings.
+
+## 👨‍💻 Member 4 – Tarun Saxena (Evaluation & Deployment)
+
+* Finalized the comparison report.
+* Selected the best-performing model.
+* Documented why **LightGBM + SMOTE** outperformed Random Forest baselines.
+
+**✅ Day 4 Outcome:** Final model validated with comprehensive evaluation and interpretability.
+
+---
+
+# 📅 Day 5 – Documentation & Sprint Completion
+
+## 👨‍💻 Member 1 – Tarun Saxena (Data Engineer)
+
+* Finalized evaluation artifacts.
+* Verified clean notebook outputs.
+* Ensured all evaluation results were properly documented.
+
+## 👨‍💻 Member 2 – Vaibhav Gautam (ML Engineer)
+
+* Finalized the optimized LightGBM pipeline.
+* Added the **save_model()** utility.
+* Prepared the model for deployment.
+
+## 👨‍💻 Member 3 – Vaibhav Gautam (Context & Integration)
+
+* Finalized all SHAP visualizations.
+* Cleaned notebook outputs.
+* Completed the final interpretability conclusion.
+
+## 👨‍💻 Member 4 – Tarun Saxena (Evaluation & Deployment)
+
+* Updated the Kanban Board by closing all Week 3 issues.
+* Added the complete Week 3 Summary to the README.
+* Reviewed and merged all Week 3 Pull Requests.
+* Finalized documentation for sprint completion.
+
+**✅ Day 5 Outcome:** All deliverables successfully completed, reviewed, documented, and merged into the project repository.
+
+---
+
+# 📊 Week 3 Sprint Statistics
+
+| Category        | Details                                       |
+| --------------- | --------------------------------------------- |
+| Sprint Theme    | Imbalanced Classification & LightGBM Modeling |
+| Duration        | 5 Days                                        |
+| Team Members    | 4                                             |
+| Member 1        | **Tarun Saxena**                              |
+| Member 2        | **Vaibhav Gautam**                            |
+| Member 3        | **Vaibhav Gautam**                            |
+| Member 4        | **Tarun Saxena**                              |
+| Total Commits   | **20**                                        |
+| Final Model     | **LightGBM + SMOTE**                          |
+| Validation      | **5-Fold Stratified Cross-Validation**        |
+| Target Achieved | **Macro F1 ≥ 0.85**                           |
+| Explainability  | **SHAP TreeExplainer**                        |
+| Sprint Status   | ✅ **Successfully Completed**                  |
+
+---
+
+## 🏆 Week 3 Conclusion
+
+Week 3 successfully delivered a complete **LightGBM-based predictive maintenance pipeline** with **SMOTE**, rigorous **cross-validation**, **hyperparameter optimization**, and **SHAP explainability**. **Tarun Saxena (Members 1 & 4)** led the data engineering, evaluation, documentation, and deployment activities, while **Vaibhav Gautam (Members 2 & 3)** handled model development, optimization, explainability, and integration. Together, the team achieved all sprint objectives and prepared the project for **Week 4 – Noise Sensitivity Analysis & Threshold Optimization**.
+
+
+## Team Contributions
+
+| Team Member    | Roles                                  | Status      |
+| -------------- | -------------------------------------- | ----------- |
+| Tarun Saxena   | Data Engineer & Eval/Deploy Lead       | ✅ Completed |
+| Vaibhav Gautam | ML Engineer & Context Integration Lead | ✅ Completed |
