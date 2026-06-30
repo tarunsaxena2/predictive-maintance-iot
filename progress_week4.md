@@ -10,3 +10,13 @@
 
 \- 🔄 Next: Day 2 — Overlaid PR curves, threshold vs F1/Precision/Recall plots
 
+
+
+\## Day 2 Status ✅
+
+\- ✅ Member 2: Overlaid PR curves for clean/low/medium/high noise saved
+
+\- ✅ Member 3: Threshold vs F1/Precision/Recall plots with optimal point marked
+
+\- 🔄 Next: Day 3 — Noise robustness bar chart, AUC-PR summary table
+
