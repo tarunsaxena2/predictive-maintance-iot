@@ -20,3 +20,13 @@
 
 \- 🔄 Next: Day 3 — Noise robustness bar chart, AUC-PR summary table
 
+
+
+\## Day 3 Status ✅
+
+\- ✅ Member 2: AUC-PR summary table built for all noise levels
+
+\- ✅ Member 3: Optimal threshold identified, confusion matrix generated
+
+\- 🔄 Next: Day 4 — Finalize PR curve analysis, write retrain.py
+
