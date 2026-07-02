@@ -30,3 +30,13 @@
 
 \- 🔄 Next: Day 4 — Finalize PR curve analysis, write retrain.py
 
+
+
+\## Day 4 Status ✅
+
+\- ✅ Member 2: PR curve analysis finalized with deployment summary
+
+\- ✅ Member 3: retrain.py implemented and tested end-to-end
+
+\- 🔄 Next: Day 5 — Final cleanup, README, tag v1.0.0 release
+
