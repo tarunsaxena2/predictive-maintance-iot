@@ -71,14 +71,13 @@ if __name__ == "__main__":
     print(pipeline)
 
 # ============================================
-# MODEL SUMMARY — WEEK 3 COMPLETE
+# MODEL SUMMARY — 
 # ============================================
 # build_pipeline() — SMOTE + LightGBM pipeline
 # save_model() — saves trained model to models/
 # load_model() — loads trained model from models/
 # Best config: n_estimators=500, lr=0.05, num_leaves=31
 # scale_pos_weight=20 (best from Day 3 tuning)
-# Week 3 Status: Complete ✅
 # ============================================
 
 print("Model module loaded successfully")

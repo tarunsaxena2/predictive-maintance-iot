@@ -133,7 +133,7 @@ def merge_external_context(df):
 
 if __name__ == "__main__":
 
-    df = pd.read_csv("../data/ai4i2020.csv")
+    df = pd.read_csv("data/ai4i2020.csv")
 
     df = sort_and_reset(df)
 
@@ -144,15 +144,12 @@ if __name__ == "__main__":
     print("Feature Engineering Pipeline Completed Successfully.")
 
 # ============================================
-# MODULE SUMMARY — WEEK 2 COMPLETE
+# MODULE SUMMARY —
 # ============================================
 # 1. SENSOR_COLUMNS — standardized list of all 5 sensor features
 # 2. sort_and_reset() — sorts and resets DataFrame index
 # 3. generate_rolling_features() — rolling mean, std, variance
-# 4. merge_external_context() — adds ambient_temp, factory_load, humidity
-#
-# Week 2 Status: Complete ✅
-# Next: Week 3 — LightGBM + SMOTE modeling pipeline
+# 4. merge_external_context() — adds ambient_temp, factory_load, humidity features
 # ============================================
 
 print("Feature engineering module loaded successfully")
