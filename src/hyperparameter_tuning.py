@@ -158,5 +158,4 @@ print("\nResults Saved Successfully")
 print("\nTotal Combinations Tested:")
 print(len(results_df))
 
-print("\nWeek 3 Day 3 Completed Successfully")
 print("Best Model Ready For Next Stage")

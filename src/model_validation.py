@@ -1,4 +1,3 @@
-print("Week 3 Day 2 Started")
 import pandas as pd
 from sklearn.model_selection import StratifiedKFold
 from imblearn.over_sampling import SMOTE

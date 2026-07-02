@@ -156,5 +156,3 @@ if mean_f1 >= 0.85:
 else:
     print("FAILED: Macro F1 < 0.85")
     print("Try tuning max_depth and min_child_samples.")
-
-print("\nWeek 3 Day 4 Completed Successfully")
