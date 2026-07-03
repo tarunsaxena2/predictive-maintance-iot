@@ -1460,3 +1460,501 @@ Week 3 successfully delivered a complete **LightGBM-based predictive maintenance
 | -------------- | -------------------------------------- | ----------- |
 | Tarun Saxena   | Data Engineer & Eval/Deploy Lead       | ✅ Completed |
 | Vaibhav Gautam | ML Engineer & Context Integration Lead | ✅ Completed |
+
+## 📅Day 1 (Monday)
+
+## Noise Sensitivity Analysis & Dashboard Initialization
+
+---
+
+## 👨‍💻 Member 1 – Tarun Saxena (Data Engineer)
+
+### ✅ Task Completed
+
+* Loaded the final trained **LightGBM** model.
+* Implemented the `inject_noise(X_test, noise_level)` function.
+* Added **Gaussian Noise** (mean = 0, std = noise_level) to all numerical features.
+* Preserved dataset shape and feature consistency after noise injection.
+* Verified the function using multiple noise levels for robustness testing.
+
+### 🎯 Outcome
+
+Successfully developed a reusable Gaussian noise injection utility for evaluating model robustness under simulated sensor noise.
+
+---
+
+## 🤖 Member 2 – Vaibhav Gautam (ML Engineer)
+
+### ✅ Task Completed
+
+* Loaded the final trained model.
+* Generated probability predictions using `predict_proba()` on the clean test dataset.
+* Computed the **Precision–Recall Curve** using `precision_recall_curve()`.
+* Calculated the **Area Under Precision–Recall Curve (AUC-PR)**.
+* Prepared the notebook for further robustness comparisons.
+
+### 🎯 Outcome
+
+Successfully established the baseline Precision–Recall performance of the model on the clean test dataset.
+
+---
+
+## 🔗 Member 3 – Vaibhav Gautam (Context & Integration Lead)
+
+### ✅ Task Completed
+
+* Loaded the best-performing trained model.
+* Generated prediction probabilities for the test dataset.
+* Implemented a threshold sweep from **0.10 to 0.90** with an interval of **0.05**.
+* Computed **Precision**, **Recall**, and **F1 Score** at every threshold.
+* Stored evaluation results for later visualization and threshold optimization.
+
+### 🎯 Outcome
+
+Successfully generated threshold-wise evaluation metrics for selecting the optimal deployment threshold.
+
+---
+
+## 🛡️ Member 4 – Tarun Saxena (Evaluation & Deployment Lead)
+
+### ✅ Task Completed
+
+* Created `final_dashboard.ipynb`.
+* Added structured notebook sections:
+
+  * Project Summary
+  * Dataset Stats
+  * Model Performance
+  * SHAP Insights
+  * Robustness Analysis
+  * Conclusion
+* Organized notebook layout using Markdown headers.
+* Pushed the dashboard skeleton to the GitHub repository.
+
+### 🎯 Outcome
+
+Successfully established the final project dashboard structure for documenting all evaluation results and deployment insights.
+
+---
+
+## 📅 Day 2 (Tuesday)
+
+## 👨‍💻 Member 1 – Tarun Saxena (Data Engineer)
+
+### ✅ Task Completed
+
+* Evaluated model robustness under three Gaussian noise levels:
+
+  * Low Noise (σ = 0.05)
+  * Medium Noise (σ = 0.15)
+  * High Noise (σ = 0.30)
+* Applied the `inject_noise()` function to the test dataset.
+* Generated predictions for each noisy dataset.
+* Calculated Macro F1 Score for every noise level.
+* Created a degradation table showing:
+
+  * Noise Level
+  * Macro F1
+  * Percentage Drop from the clean dataset
+
+### 🎯 Outcome
+
+Successfully quantified the impact of increasing sensor noise on model performance and established the baseline robustness evaluation.
+
+---
+
+## 🤖 Member 2 – Vaibhav Gautam (ML Engineer)
+
+### ✅ Task Completed
+
+* Generated Precision–Recall curves for:
+
+  * Clean Test Set
+  * Low Noise Dataset
+  * Medium Noise Dataset
+  * High Noise Dataset
+* Displayed all curves on a single comparison graph.
+* Added:
+
+  * Different colors
+  * Legend
+  * Plot title
+* Saved the visualization as **pr_curves_comparison.png**
+
+### 🎯 Outcome
+
+Successfully compared model precision–recall performance across different noise conditions using a unified visualization.
+
+---
+
+## 🔗 Member 3 – Vaibhav Gautam (Context & Integration Lead)
+
+### ✅ Task Completed
+
+* Plotted Threshold vs F1 Score.
+* Plotted Threshold vs Precision.
+* Plotted Threshold vs Recall.
+* Combined all three plots into a single figure using subplots.
+* Visually analyzed model behavior across thresholds.
+* Identified the most suitable threshold for deployment.
+
+### 🎯 Outcome
+
+Successfully visualized threshold sensitivity and identified the candidate threshold for maximizing prediction performance.
+
+---
+
+## 🛡️ Member 4 – Tarun Saxena (Evaluation & Deployment Lead)
+
+### ✅ Task Completed
+
+* Added **Project Summary** section to `final_dashboard.ipynb`.
+* Documented:
+
+  * Project Goal
+  * Team Members
+  * Technology Stack
+  * Dataset Description
+  * Project Timeline
+* Applied formatted Markdown styling for improved readability.
+
+### 🎯 Outcome
+
+Successfully completed the introductory section of the dashboard, providing a structured overview of the project and development timeline.
+
+---
+
+# 📅 Day 3 (Wednesday)
+
+## Robustness Visualization & Performance Reporting
+
+---
+
+## 👨‍💻 Member 1 – Tarun Saxena (Data Engineer)
+
+### ✅ Task Completed
+
+* Created a Noise Robustness Bar Chart.
+* Plotted Noise Level against Macro F1 Score.
+* Added a horizontal target line at **F1 = 0.85**.
+* Annotated the percentage performance drop under high noise.
+* Saved the chart as **noise_robustness.png**.
+
+### 🎯 Outcome
+
+Successfully visualized the degradation in model performance under varying noise conditions and validated robustness against the deployment target.
+
+---
+
+## 🤖 Member 2 – Vaibhav Gautam (ML Engineer)
+
+### ✅ Task Completed
+
+* Computed AUC-PR scores for:
+
+  * Clean Test Set
+  * Low Noise
+  * Medium Noise
+  * High Noise
+* Prepared a robustness summary table containing:
+
+  * Test Condition
+  * AUC-PR
+  * Macro F1
+  * Precision@Optimal
+  * Recall@Optimal
+* Added the summary table to the evaluation notebook.
+
+### 🎯 Outcome
+
+Successfully summarized model performance across all testing conditions, enabling straightforward comparison of robustness metrics.
+
+---
+
+## 🔗 Member 3 – Vaibhav Gautam (Context & Integration Lead)
+
+### ✅ Task Completed
+
+* Selected the threshold with the highest F1 Score.
+* Calculated final:
+
+  * Precision
+  * Recall
+  * Macro F1
+* Generated the Confusion Matrix using the selected threshold.
+* Wrote a justification explaining why the chosen threshold is optimal for deployment.
+
+### 🎯 Outcome
+
+Successfully finalized the deployment threshold supported by quantitative metrics and confusion matrix analysis.
+
+---
+
+## 🛡️ Member 4 – Tarun Saxena (Evaluation & Deployment Lead)
+
+### ✅ Task Completed
+
+* Added the **Model Performance** section to `final_dashboard.ipynb`.
+* Included:
+
+  * Cross-Validation Results Table
+  * Random Forest vs LightGBM Comparison
+  * SHAP Top Features Bar Chart
+  * Optimal Threshold
+  * Final Evaluation Metrics
+* Improved notebook structure and presentation.
+
+### 🎯 Outcome
+
+Successfully documented the final model performance and comparison results within the dashboard for deployment reporting.
+
+---
+
+
+## 📅 Day 4 (Thursday)
+
+---
+
+## 👨‍💻 Member 1 – Tarun Saxena (Data Engineer)
+
+### ✅ Task Completed
+
+* Finalized the complete noise robustness analysis.
+* Compared Macro F1 scores across clean, low, medium, and high noise datasets.
+* Evaluated whether the model maintained **Macro F1 ≥ 0.85** under moderate noise conditions.
+* Wrote a comprehensive deployment readiness conclusion (~150 words).
+* Documented the implications of noise robustness for real-world industrial deployment.
+
+### 🎯 Outcome
+
+Successfully demonstrated that the trained model remained stable under moderate sensor noise, confirming its suitability for practical predictive maintenance applications.
+
+---
+
+## 🤖 Member 2 – Vaibhav Gautam (ML Engineer)
+
+### ✅ Task Completed
+
+* Finalized the Precision–Recall curve analysis notebook.
+* Cleared all notebook outputs before submission.
+* Reviewed AUC-PR results for clean and noisy datasets.
+* Wrote a deployment summary (~100 words) explaining the significance of AUC-PR in industrial maintenance.
+* Verified all evaluation figures and notebook documentation.
+
+### 🎯 Outcome
+
+Successfully completed the Precision–Recall evaluation notebook with clear deployment insights and a clean repository-ready notebook.
+
+---
+
+## 🔗 Member 3 – Vaibhav Gautam (Context & Integration Lead)
+
+### ✅ Task Completed
+
+* Developed `retrain.py` for complete model reproducibility.
+* Implemented:
+
+  * Raw dataset loading
+  * Data cleaning
+  * Rolling feature engineering
+  * External context integration
+  * LightGBM model training
+* Verified that the pipeline executed successfully from start to finish without errors.
+* Improved code organization and reproducibility.
+
+### 🎯 Outcome
+
+Successfully created an end-to-end retraining pipeline enabling reproducible model training from raw data.
+
+---
+
+## 🛡️ Member 4 – Tarun Saxena (Evaluation & Deployment Lead)
+
+### ✅ Task Completed
+
+* Added the **Robustness Analysis** section to `final_dashboard.ipynb`.
+* Included:
+
+  * Noise injection evaluation results
+  * Precision–Recall curve comparison
+  * Threshold tuning analysis
+  * Recommended deployment threshold
+* Organized results using Markdown tables and visual summaries.
+* Improved dashboard readability for final presentation.
+
+### 🎯 Outcome
+
+Successfully completed the robustness analysis dashboard, providing comprehensive deployment recommendations based on model evaluation.
+
+---
+
+# 📅 Week 4 – Day 5 (Friday)
+
+## Final Documentation, Repository Cleanup & Project Release
+
+---
+
+## 👨‍💻 Member 1 – Tarun Saxena (Data Engineer)
+
+### ✅ Task Completed
+
+* Conducted the final review of:
+
+  * `data_loader.py`
+  * `feature_engineering.py`
+  * `evaluate.py`
+* Added missing function docstrings.
+* Performed final PEP8 code cleanup.
+* Verified consistent formatting and code quality across all source modules.
+* Pushed finalized source files to the repository.
+
+### 🎯 Outcome
+
+Successfully completed the final source code review, ensuring maintainability, readability, and production-ready quality.
+
+---
+
+## 🤖 Member 2 – Vaibhav Gautam (ML Engineer)
+
+### ✅ Task Completed
+
+* Reviewed all Week 4 evaluation notebooks.
+* Cleared notebook outputs.
+* Verified that all generated PNG files were saved inside the `outputs/` directory.
+* Confirmed notebook reproducibility.
+* Pushed all finalized notebooks to GitHub.
+
+### 🎯 Outcome
+
+Successfully finalized all evaluation notebooks and prepared them for repository submission.
+
+---
+
+## 🔗 Member 3 – Vaibhav Gautam (Context & Integration Lead)
+
+### ✅ Task Completed
+
+* Cleared outputs from the threshold tuning notebook.
+* Reviewed and finalized `retrain.py`.
+* Applied final updates to `feature_engineering.py`.
+* Verified compatibility across the complete preprocessing and training pipeline.
+* Pushed all final Week 4 project files.
+
+### 🎯 Outcome
+
+Successfully completed the integration pipeline review and ensured reproducibility across the project.
+
+---
+
+## 🛡️ Member 4 – Tarun Saxena (Evaluation & Deployment Lead)
+
+### ✅ Task Completed
+
+* Finalized the project `README.md`.
+* Added:
+
+  * Project Overview
+  * Dataset Information
+  * Installation & Setup Instructions
+  * Notebook Execution Guide
+  * Final Results Summary
+  * Macro F1 Performance
+  * Optimal Threshold
+  * SHAP Findings
+  * Team Credits
+* Cleared dashboard notebook outputs.
+* Closed all GitHub Issues.
+* Moved all Kanban tasks to **Done**.
+* Merged all development branches into **main**.
+* Created the final release tag **v1.0.0**.
+
+### 🎯 Outcome
+
+Successfully completed project deployment, documentation, repository cleanup, and official Version **1.0.0** release.
+
+---
+
+# 🏁 Week 4 Sprint Status
+
+| Sprint Details              | Status                  |
+| --------------------------- | ----------------------- |
+| Noise Sensitivity Analysis  | ✅ Completed             |
+| Threshold Tuning            | ✅ Completed             |
+| Precision–Recall Evaluation | ✅ Completed             |
+| Robustness Analysis         | ✅ Completed             |
+| Final Dashboard             | ✅ Completed             |
+| README & Documentation      | ✅ Completed             |
+| Repository Cleanup          | ✅ Completed             |
+| GitHub Issues Closed        | ✅ Completed             |
+| Kanban Updated              | ✅ Completed             |
+| Final Release (v1.0.0)      | ✅ Successfully Released |
+
+
+## 📊 WEEK 4 SUMMARY — Noise Sensitivity Analysis, Threshold Optimization & Final Project Delivery
+
+### 🎯 Sprint Goal
+
+The primary objective of Week 4 was to evaluate the robustness of the final **LightGBM predictive maintenance model** under varying levels of Gaussian noise, optimize the decision threshold for deployment, and prepare a production-ready project repository. The sprint focused on validating model reliability through noise sensitivity analysis, Precision–Recall evaluation, threshold tuning, and compiling all project results into a comprehensive final dashboard.
+
+---
+
+## 📌 Week 4 Overview
+
+During Week 4, the team performed a complete robustness assessment of the trained LightGBM model by introducing **Gaussian noise** into the test dataset at multiple intensity levels. A reusable `inject_noise()` function was implemented to simulate realistic sensor disturbances, enabling evaluation of the model under low, medium, and high noise conditions. Macro F1 scores were recorded for each scenario, and the degradation in predictive performance was analyzed to determine the model’s resilience in real-world industrial environments.
+
+The model’s classification capability was further evaluated using **Precision–Recall curves** and **AUC-PR** scores on both clean and noisy datasets. Comparative Precision–Recall visualizations highlighted how increasing noise influenced prediction quality while demonstrating the model’s overall stability. To optimize deployment performance, an extensive threshold sweep was conducted across values ranging from **0.10 to 0.90**, with Precision, Recall, and F1 Score computed at every threshold. Threshold performance curves and confusion matrix analysis were used to identify the optimal operating threshold that provided the best balance between precision and recall.
+
+In parallel, a comprehensive **final_dashboard.ipynb** notebook was developed to consolidate the entire project into a single reporting interface. The dashboard included sections covering the project overview, dataset statistics, model performance, SHAP explainability, robustness analysis, threshold tuning results, and deployment recommendations. Supporting visualizations such as robustness charts, Precision–Recall comparisons, SHAP feature importance plots, and evaluation summaries were integrated to improve interpretability and presentation quality.
+
+The sprint also emphasized reproducibility and deployment readiness. An end-to-end **`retrain.py`** script was implemented to automate data loading, preprocessing, feature engineering, contextual feature integration, and LightGBM model training. Finally, the repository underwent a complete cleanup, including notebook output removal, documentation updates, README finalization, source code review, GitHub Issue closure, Kanban completion, branch merging, and the creation of the official **v1.0.0** release.
+
+---
+
+# 🏆 Key Achievements
+
+* ✅ Implemented Gaussian noise injection for robustness evaluation.
+* ✅ Evaluated model performance under multiple noise levels.
+* ✅ Generated Precision–Recall curves and computed AUC-PR scores.
+* ✅ Performed threshold optimization using Precision, Recall, and F1 Score analysis.
+* ✅ Identified the optimal deployment threshold with confusion matrix evaluation.
+* ✅ Built a comprehensive final dashboard summarizing the complete project.
+* ✅ Developed an end-to-end retraining pipeline (`retrain.py`) for reproducibility.
+* ✅ Finalized README, documentation, repository cleanup, and project release.
+* ✅ Closed all GitHub Issues and completed Kanban board tasks.
+* ✅ Released the production-ready project as **Version 1.0.0**.
+
+---
+
+# 🚀 Conclusion
+
+Week 4 successfully completed the final phase of the Contextual Predictive Maintenance project by validating model robustness, optimizing deployment decisions, and preparing a production-ready repository. The comprehensive robustness analysis demonstrated that the LightGBM model maintained strong predictive performance even under moderate sensor noise, while threshold tuning improved classification reliability for real-world industrial applications. With complete documentation, automated retraining, a consolidated dashboard, and an organized GitHub repository, the project concluded as a fully reproducible, interpretable, and deployment-ready predictive maintenance solution.
+
+---
+
+## Team Contributions
+
+| Team Member        | Roles                                      | Status      |
+| ------------------ | ------------------------------------------ | ----------- |
+| **Tarun Saxena**   | Data Engineer & Evaluation/Deployment Lead | ✅ Completed |
+| **Vaibhav Gautam** | ML Engineer & Context Integration Lead     | ✅ Completed |
+
+---
+
+# 📈 Week 4 Sprint Statistics
+
+| Category                   | Details                                             |
+| -------------------------- | --------------------------------------------------- |
+| **Sprint Theme**           | Noise Sensitivity Analysis & Threshold Optimization |
+| **Duration**               | 5 Days                                              |
+| **Team Members**           | 4                                                   |
+| **Member 1**               | **Tarun Saxena**                                    |
+| **Member 2**               | **Vaibhav Gautam**                                  |
+| **Member 3**               | **Vaibhav Gautam**                                  |
+| **Member 4**               | **Tarun Saxena**                                    |
+| **Total Commits**          | **20**                                              |
+| **Final Model**            | **LightGBM + SMOTE**                                |
+| **Robustness Evaluation**  | Gaussian Noise Injection                            |
+| **Threshold Optimization** | 0.10 – 0.90 Sweep                                   |
+| **Explainability**         | SHAP Analysis                                       |
+| **Final Release**          | **v1.0.0**                                          |
+| **Sprint Status**          | ✅ **Successfully Completed**                        |
