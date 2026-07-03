@@ -371,6 +371,43 @@ scikit-learn
 Develop an intelligent predictive maintenance system capable of identifying machine failure risks in advance, enabling proactive maintenance and minimizing operational disruptions.
 
 ---
+## Results Summary
+
+### Final Model
+The final predictive maintenance model was built using a **LightGBM classifier** integrated with **SMOTE (Synthetic Minority Over-sampling Technique)** to effectively address class imbalance. Model performance was evaluated using **5-Fold Stratified Cross-Validation**.
+
+### Model Performance
+
+| Metric | Value |
+|--------|-------:|
+| Macro F1 Score | **0.9908** |
+| Precision | **0.9951** |
+| Recall | **0.9866** |
+
+### Optimal Threshold
+
+The final decision threshold was selected after threshold tuning to achieve the best balance between **Precision** and **Recall**, improving the model's reliability for predictive maintenance applications.
+
+### SHAP Findings
+
+SHAP (SHapley Additive exPlanations) analysis was used to interpret the model predictions. The most influential features contributing to machine failure prediction were:
+
+- Rotational Speed
+- Torque
+- Tool Wear
+- Air Temperature
+- Process Temperature
+
+These features had the greatest impact on the model's decision-making process and helped explain prediction outcomes.
+
+### Robustness Analysis
+
+The trained model was evaluated under different levels of Gaussian noise to assess its robustness. Performance remained consistently high under moderate noise conditions, indicating that the model is suitable for practical industrial predictive maintenance scenarios.
+
+### Conclusion
+
+The combination of **Feature Engineering**, **External Context Features**, **SMOTE**, and **LightGBM** resulted in a highly accurate predictive maintenance system with excellent generalization capability. The final model achieved a **Macro F1 Score of 0.9908**, making it suitable for reliable machine failure prediction.
+---
 
 # 🚀 Predictive Maintenance IoT Project
 
