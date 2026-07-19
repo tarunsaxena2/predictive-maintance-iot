@@ -395,6 +395,7 @@ predictive-maintance-iot-main/
     ├── shap_dependence_toolwear.png
     ├── shap_dependence_torque.png
     └── shap_final_summary.png
+```
 ---
 
 ## 📦 Installed Dependencies
