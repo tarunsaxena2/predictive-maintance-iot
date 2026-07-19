@@ -139,22 +139,127 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-    #MainMenu {visibility: hidden;} footer {visibility: hidden;}
-    .block-container {padding-top: 1.6rem; padding-bottom: 2rem;}
-    .kpi-card {background: linear-gradient(135deg, #101826 0%, #1b2536 100%);
-        border: 1px solid #26324a; border-radius: 14px; padding: 18px 20px;}
-    .kpi-label {font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em;
-        color: #8fa2c7; margin-bottom: 6px;}
-    .kpi-value {font-size: 1.9rem; font-weight: 700; color: #f2f5fb;}
-    .kpi-sub {font-size: 0.78rem; color: #6fdc9a; margin-top: 4px;}
-    .section-title {font-size: 1.25rem; font-weight: 700; margin-top: 0.4rem;
-        margin-bottom: 0.6rem; color: #f2f5fb;}
-    .badge {display: inline-block; padding: 3px 10px; border-radius: 999px;
-        font-size: 0.72rem; font-weight: 600; letter-spacing: 0.03em;}
-    .badge-live {background: #123d2a; color: #6fdc9a; border: 1px solid #1f6b46;}
-    .badge-demo {background: #3d2e12; color: #f0c674; border: 1px solid #6b511f;}
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+    :root{
+        --bg-0:#080B10; --bg-1:#0D1219; --panel:#11161E; --panel-alt:#151B24;
+        --border:#212A36; --border-soft:#1A222C;
+        --text-hi:#EAF0F7; --text-mid:#A9B6C9; --text-dim:#697788;
+        --cyan:#2FD9CB; --amber:#FFB020; --danger:#FF5C6C; --success:#3ED598;
+    }
+
+    html, body, [class*="css"]{ font-family:'IBM Plex Sans', sans-serif; }
+    #MainMenu {visibility: hidden;} footer {visibility: hidden;} header[data-testid="stHeader"]{background: transparent;}
+
+    .stApp{
+        background-color: var(--bg-0);
+        background-image:
+            radial-gradient(1100px 550px at 100% -8%, rgba(47,217,203,0.10), transparent 60%),
+            radial-gradient(900px 500px at -5% 8%, rgba(255,176,32,0.07), transparent 55%),
+            radial-gradient(1000px 600px at 50% 115%, rgba(47,217,203,0.05), transparent 60%),
+            repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 64px),
+            repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 64px),
+            linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 100%);
+        background-attachment: fixed;
+    }
+    .stApp::before{
+        content:""; position: fixed; inset:0; pointer-events:none; z-index:0;
+        background: radial-gradient(1600px 900px at 50% 0%, transparent 40%, rgba(4,6,9,0.55) 100%);
+    }
+    .block-container {padding-top: 1.4rem; padding-bottom: 3rem; max-width: 1400px; position: relative; z-index: 1;}
+
+    /* ---------- Sidebar : control-panel look ---------- */
+    section[data-testid="stSidebar"]{
+        background: linear-gradient(180deg, rgba(10,13,19,0.92) 0%, rgba(12,16,23,0.92) 100%);
+        backdrop-filter: blur(6px);
+        border-right: 1px solid var(--border-soft);
+    }
+    section[data-testid="stSidebar"] .stRadio label{
+        font-family:'JetBrains Mono', monospace; font-size: 0.86rem; color: var(--text-mid);
+    }
+    section[data-testid="stSidebar"] hr{ border-color: var(--border-soft); }
+
+    /* ---------- Page header (console readout) ---------- */
+    .console-header{
+        display:flex; align-items:center; gap:14px; padding: 4px 0 14px 0;
+        border-bottom: 1px solid var(--border-soft); margin-bottom: 22px;
+    }
+    .console-icon{
+        width:46px; height:46px; min-width:46px; border-radius:10px;
+        background: linear-gradient(135deg, rgba(47,217,203,0.16), rgba(47,217,203,0.02));
+        border: 1px solid rgba(47,217,203,0.35);
+        display:flex; align-items:center; justify-content:center; font-size:1.35rem;
+    }
+    .console-eyebrow{
+        font-family:'JetBrains Mono', monospace; font-size:0.68rem; letter-spacing:0.16em;
+        text-transform:uppercase; color: var(--cyan); margin-bottom: 2px;
+    }
+    .console-title{ font-size:1.55rem; font-weight:700; color: var(--text-hi); line-height:1.25; }
+    .console-sub{ font-size:0.86rem; color: var(--text-dim); margin-top:2px; }
+
+    /* ---------- KPI / gauge cards ---------- */
+    .kpi-card {
+        position: relative; background: linear-gradient(160deg, rgba(17,22,30,0.92) 0%, rgba(21,27,36,0.92) 100%);
+        backdrop-filter: blur(4px);
+        border: 1px solid var(--border); border-left: 3px solid var(--cyan);
+        border-radius: 10px; padding: 16px 18px; box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+        transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+    }
+    .kpi-card:hover{ transform: translateY(-2px); border-color: rgba(47,217,203,0.55); box-shadow: 0 10px 24px rgba(0,0,0,0.35); }
+    .kpi-label {font-family:'JetBrains Mono', monospace; font-size: 0.68rem; text-transform: uppercase;
+        letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 8px;}
+    .kpi-value {font-family:'JetBrains Mono', monospace; font-size: 1.9rem; font-weight: 700; color: var(--text-hi);}
+    .kpi-sub {font-size: 0.75rem; color: var(--success); margin-top: 5px;}
+
+    /* ---------- Section titles ---------- */
+    .section-title {
+        font-size: 1.05rem; font-weight: 600; margin-top: 0.6rem; margin-bottom: 0.7rem;
+        color: var(--text-hi); display:flex; align-items:center; gap:8px;
+    }
+    .section-title::before{
+        content:""; width:3px; height:16px; background: var(--amber); border-radius:2px; display:inline-block;
+    }
+
+    /* ---------- Status badge with LED ---------- */
+    .badge {display: inline-flex; align-items:center; gap:6px; padding: 4px 12px; border-radius: 999px;
+        font-family:'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em;}
+    .badge-dot{ width:7px; height:7px; border-radius:50%; }
+    .badge-live {background: rgba(62,213,152,0.10); color: #7CF0BE; border: 1px solid rgba(62,213,152,0.35);}
+    .badge-live .badge-dot{ background:#3ED598; box-shadow:0 0 8px #3ED598; animation: pulse 1.8s infinite; }
+    .badge-demo {background: rgba(255,176,32,0.10); color: #FFCB6B; border: 1px solid rgba(255,176,32,0.35);}
+    .badge-demo .badge-dot{ background:#FFB020; box-shadow:0 0 8px #FFB020; }
+    @keyframes pulse{ 0%{opacity:1;} 50%{opacity:0.35;} 100%{opacity:1;} }
+
+    /* ---------- Buttons / inputs ---------- */
+    .stButton>button, .stFormSubmitButton>button{
+        background: linear-gradient(135deg, #1A9E93 0%, #17847B 100%);
+        color:#04140F; font-weight:700; border:none; border-radius:8px; letter-spacing:0.02em;
+        transition: filter .15s ease;
+    }
+    .stButton>button:hover, .stFormSubmitButton>button:hover{ filter: brightness(1.12); }
+    div[data-baseweb="tab-list"]{ gap: 4px; }
+    button[data-baseweb="tab"]{ font-family:'JetBrains Mono', monospace; font-size:0.82rem; }
+
+    ::-webkit-scrollbar{ width:10px; height:10px; }
+    ::-webkit-scrollbar-track{ background: var(--bg-0); }
+    ::-webkit-scrollbar-thumb{ background: #232C38; border-radius: 6px; }
 </style>
 """, unsafe_allow_html=True)
+
+
+def console_header(icon: str, title: str, subtitle: str = "", eyebrow: str = "SYSTEM MODULE"):
+    """Renders a consistent, styled page header (icon chip + eyebrow + title + subtitle)."""
+    sub_html = f'<div class="console-sub">{subtitle}</div>' if subtitle else ""
+    st.markdown(f"""
+    <div class="console-header">
+        <div class="console-icon">{icon}</div>
+        <div>
+            <div class="console-eyebrow">{eyebrow}</div>
+            <div class="console-title">{title}</div>
+            {sub_html}
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
 
 # =================================================================
@@ -250,8 +355,15 @@ if load_error:
 # =================================================================
 # SIDEBAR
 # =================================================================
-st.sidebar.markdown("## 🛠️ Predictive Maintenance")
-st.sidebar.caption("Contextual IoT Edge AI · Infotact Internship 2026")
+st.sidebar.markdown("""
+<div style="padding: 6px 0 14px 0; border-bottom: 1px solid #1A222C; margin-bottom: 14px;">
+    <div style="font-size: 1.15rem; font-weight: 700; color: #EAF0F7;">🛠️ Predictive Maintenance</div>
+    <div style="font-family:'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em;
+        text-transform: uppercase; color: #697788; margin-top: 4px;">
+        Contextual IoT Edge AI · Infotact 2026
+    </div>
+</div>
+""", unsafe_allow_html=True)
 
 page = st.sidebar.radio(
     "Navigate",
@@ -262,11 +374,20 @@ page = st.sidebar.radio(
     ],
 )
 
-st.sidebar.markdown("---")
+st.sidebar.markdown("<div style='height:14px'></div>", unsafe_allow_html=True)
 badge_cls = "badge-live" if model_is_real else "badge-demo"
 badge_txt = "TRAINED MODEL LOADED" if model_is_real else "TRAINED LIVE THIS SESSION"
-st.sidebar.markdown(f'<span class="badge {badge_cls}">{badge_txt}</span>', unsafe_allow_html=True)
-st.sidebar.caption(f"Data: `{data_path}`\n\nModel: `{model_path or 'in-memory (run src/retrain.py to persist)'}`")
+st.sidebar.markdown(
+    f'<span class="badge {badge_cls}"><span class="badge-dot"></span>{badge_txt}</span>',
+    unsafe_allow_html=True,
+)
+st.sidebar.markdown(f"""
+<div style="font-family:'JetBrains Mono', monospace; font-size:0.72rem; color:#7C8A9E;
+    margin-top:10px; line-height:1.7;">
+    DATA &nbsp;<span style="color:#A9B6C9;">{data_path}</span><br>
+    MODEL &nbsp;<span style="color:#A9B6C9;">{model_path or 'in-memory (run src/retrain.py to persist)'}</span>
+</div>
+""", unsafe_allow_html=True)
 if not model_is_real:
     st.sidebar.info("Run `python src/retrain.py` once to save a real model to `models/` "
                      "so the dashboard loads instantly next time.", icon="💡")
@@ -276,8 +397,8 @@ if not model_is_real:
 # PAGE: OVERVIEW
 # =================================================================
 if page == "📊 Overview":
-    st.title("Contextual Predictive Maintenance — Dashboard")
-    st.caption("AI-Powered Predictive Maintenance using Contextual Data Fusion & Explainable Machine Learning")
+    console_header("📊", "Contextual Predictive Maintenance", eyebrow="OVERVIEW",
+                    subtitle="AI-powered predictive maintenance using contextual data fusion & explainable machine learning")
 
     y_pred_default = (y_proba >= 0.5).astype(int)
     c1, c2, c3, c4 = st.columns(4)
@@ -304,7 +425,7 @@ if page == "📊 Overview":
                                   line=dict(color="#2c3a55", width=3), showlegend=False))
         fig.add_trace(go.Scatter(x=list(range(len(stages))), y=[0]*len(stages), mode="markers+text",
                                   text=stages, textposition="top center",
-                                  marker=dict(size=20, color="#4c8bf5"), showlegend=False))
+                                  marker=dict(size=20, color="#2FD9CB"), showlegend=False))
         fig.update_layout(height=220, margin=dict(l=10, r=10, t=40, b=10),
                            xaxis=dict(visible=False), yaxis=dict(visible=False, range=[-1, 1]),
                            plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)")
@@ -313,7 +434,7 @@ if page == "📊 Overview":
         st.markdown('<div class="section-title">Class Balance</div>', unsafe_allow_html=True)
         counts = y.value_counts().rename({0: "Healthy", 1: "Failure"})
         fig = px.pie(values=counts.values, names=counts.index, hole=0.55,
-                     color=counts.index, color_discrete_map={"Healthy": "#2ecc71", "Failure": "#e74c3c"})
+                     color=counts.index, color_discrete_map={"Healthy": "#3ED598", "Failure": "#FF5C6C"})
         fig.update_layout(height=220, margin=dict(l=10, r=10, t=10, b=10), paper_bgcolor="rgba(0,0,0,0)")
         st.plotly_chart(fig, use_container_width=True)
 
@@ -334,9 +455,9 @@ if page == "📊 Overview":
 # PAGE: DATASET EXPLORER
 # =================================================================
 elif page == "🔍 Dataset Explorer":
-    st.title("Dataset Explorer")
-    st.caption(f"Source: `{data_path}` · Raw shape: {raw_df.shape[0]:,} rows × {raw_df.shape[1]} cols "
-               f"· Engineered features: {X.shape[1]}")
+    console_header("🔍", "Dataset Explorer", eyebrow="DATA",
+                    subtitle=f"Source: {data_path} · Raw shape: {raw_df.shape[0]:,} rows × {raw_df.shape[1]} cols "
+                             f"· Engineered features: {X.shape[1]}")
 
     tab1, tab2, tab3, tab4 = st.tabs(["Raw Data", "Engineered Features", "Sensor Distributions", "Correlation"])
 
@@ -353,7 +474,7 @@ elif page == "🔍 Dataset Explorer":
         chosen = st.selectbox("Feature", RAW_FEATURES + EXTERNAL_CONTEXT_FEATURES, index=0)
         fig = px.histogram(full_df, x=chosen, color=full_df[TARGET_COL].map({0: "Healthy", 1: "Failure"}),
                             barmode="overlay", opacity=0.7, nbins=40,
-                            color_discrete_map={"Healthy": "#2ecc71", "Failure": "#e74c3c"})
+                            color_discrete_map={"Healthy": "#3ED598", "Failure": "#FF5C6C"})
         fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", legend_title="Status")
         st.plotly_chart(fig, use_container_width=True)
 
@@ -369,8 +490,8 @@ elif page == "🔍 Dataset Explorer":
 # PAGE: MODEL PERFORMANCE
 # =================================================================
 elif page == "🎯 Model Performance":
-    st.title("Model Performance")
-    st.caption("SMOTE + LightGBM pipeline, evaluated on the full engineered dataset.")
+    console_header("🎯", "Model Performance", eyebrow="EVALUATION",
+                    subtitle="SMOTE + LightGBM pipeline, evaluated on the full engineered dataset")
 
     threshold = st.slider("Decision threshold", 0.05, 0.95, 0.50, 0.01)
     y_pred = (y_proba >= threshold).astype(int)
@@ -417,8 +538,8 @@ elif page == "🎯 Model Performance":
 # PAGE: SHAP EXPLAINABILITY
 # =================================================================
 elif page == "🧠 Explainability (SHAP)":
-    st.title("Explainability — SHAP")
-    st.caption("Which sensors and contextual features drive the model's failure predictions.")
+    console_header("🧠", "Explainability — SHAP", eyebrow="INTERPRETABILITY",
+                    subtitle="Which sensors and contextual features drive the model's failure predictions")
 
     lgbm_model = pipeline.named_steps.get("lgbm", pipeline)
     if shap is None:
@@ -452,9 +573,9 @@ elif page == "🧠 Explainability (SHAP)":
 # PAGE: NOISE ROBUSTNESS
 # =================================================================
 elif page == "🌊 Noise Robustness":
-    st.title("Noise Sensitivity Analysis")
-    st.caption("Gaussian noise (mean 0, std = noise level × feature std) injected into sensor "
-               "readings to simulate real-world signal drift — same idea as the Week 4 robustness study.")
+    console_header("🌊", "Noise Sensitivity Analysis", eyebrow="ROBUSTNESS",
+                    subtitle="Gaussian noise (mean 0, std = noise level × feature std) injected into sensor "
+                             "readings to simulate real-world signal drift — same idea as the Week 4 robustness study")
 
     noise_levels = [0.0, 0.05, 0.15, 0.30]
     rows = []
@@ -471,8 +592,8 @@ elif page == "🌊 Noise Robustness":
     noise_df["% Drop vs Clean"] = (noise_df["Macro F1"].iloc[0] - noise_df["Macro F1"]) / noise_df["Macro F1"].iloc[0] * 100
 
     fig = go.Figure()
-    fig.add_trace(go.Bar(x=noise_df["Noise Level (σ)"].astype(str), y=noise_df["Macro F1"], marker_color="#4c8bf5"))
-    fig.add_hline(y=NOISE_TARGET_F1, line_dash="dash", line_color="#e74c3c", annotation_text="Target F1 = 0.85")
+    fig.add_trace(go.Bar(x=noise_df["Noise Level (σ)"].astype(str), y=noise_df["Macro F1"], marker_color="#2FD9CB"))
+    fig.add_hline(y=NOISE_TARGET_F1, line_dash="dash", line_color="#FF5C6C", annotation_text="Target F1 = 0.85")
     fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", height=420,
                        xaxis_title="Noise Level (σ)", yaxis_title="Macro F1 Score")
     st.plotly_chart(fig, use_container_width=True)
@@ -498,8 +619,8 @@ elif page == "🌊 Noise Robustness":
 # PAGE: LIVE PREDICTION
 # =================================================================
 elif page == "⚡ Live Prediction":
-    st.title("Live Failure Prediction")
-    st.caption("Enter current sensor + contextual readings to get a failure-risk estimate from the real pipeline.")
+    console_header("⚡", "Live Failure Prediction", eyebrow="INFERENCE",
+                    subtitle="Enter current sensor + contextual readings to get a failure-risk estimate from the real pipeline")
 
     with st.form("predict_form"):
         c1, c2, c3 = st.columns(3)
@@ -543,14 +664,20 @@ elif page == "⚡ Live Prediction":
             fig = go.Figure(go.Indicator(
                 mode="gauge+number", value=proba * 100, number={"suffix": "%"},
                 title={"text": "Failure Probability"},
-                gauge={"axis": {"range": [0, 100]}, "bar": {"color": "#e74c3c" if proba > 0.5 else "#2ecc71"},
+                gauge={"axis": {"range": [0, 100]}, "bar": {"color": "#FF5C6C" if proba > 0.5 else "#3ED598"},
                        "steps": [{"range": [0, 50], "color": "#123d2a"}, {"range": [50, 100], "color": "#3d1212"}]},
             ))
             fig.update_layout(height=320, paper_bgcolor="rgba(0,0,0,0)", font_color="#f2f5fb")
             st.plotly_chart(fig, use_container_width=True)
         with c2:
-            verdict = "⚠️ High Risk — schedule maintenance" if proba > 0.5 else "✅ Healthy — no action needed"
-            st.subheader(verdict)
+            if proba > 0.5:
+                verdict, vcolor, vbg = "⚠️ High Risk — schedule maintenance", "#FF5C6C", "rgba(255,92,108,0.10)"
+            else:
+                verdict, vcolor, vbg = "✅ Healthy — no action needed", "#3ED598", "rgba(62,213,152,0.10)"
+            st.markdown(f"""<div style="background:{vbg}; border:1px solid {vcolor}44;
+                border-left:3px solid {vcolor}; border-radius:10px; padding:14px 18px;
+                font-weight:700; color:{vcolor}; font-size:1.05rem; margin-bottom:14px;">{verdict}</div>""",
+                unsafe_allow_html=True)
             if shap is not None:
                 try:
                     lgbm_model = pipeline.named_steps.get("lgbm", pipeline)
@@ -569,34 +696,48 @@ elif page == "⚡ Live Prediction":
 # PAGE: ABOUT
 # =================================================================
 else:
-    st.title("About This Project")
-    st.markdown(f"""
-**Contextual Predictive Maintenance (IoT Edge AI)**
-*Infotact Technical Internship Program — Advanced Data Science & Machine Learning (2026)*
+    console_header("ℹ️", "About This Project", eyebrow="REFERENCE",
+                    subtitle="Infotact Technical Internship Program — Advanced Data Science & Machine Learning (2026)")
 
+    st.markdown("""
 This system predicts industrial equipment failures before they occur by fusing
 internal IoT sensor telemetry (air/process temperature, rotational speed, torque,
 tool wear) with simulated external contextual signals (ambient temperature,
 factory load, humidity).
-
-**Pipeline (`src/retrain.py`):** Load `data/ai4i2020.csv` → encode `Type` →
-simulate external context → SMOTE (train fold only) → LightGBM classifier →
-evaluate on a held-out test split → save to `models/`.
-
-**This session**
-| | |
-|---|---|
-| Dataset | `{data_path}` ({len(full_df):,} rows) |
-| Model source | {"Loaded from `" + model_path + "`" if model_is_real else "Trained live this session"} |
-| Failure rate | {y.mean()*100:.2f}% |
-
-**Team**
-- **Tarun Saxena** — Data Engineer & Evaluation/Deployment Lead
-- **Vaibhav Gautam** — ML Engineer & Context Integration Lead
-
-**Tech Stack:** Python · Pandas · NumPy · LightGBM · Scikit-Learn ·
-Imbalanced-Learn (SMOTE) · SHAP · Streamlit · Plotly
-
-**Repository:** github.com/tarunsaxena2/predictive-maintance-iot
 """)
-    st.caption(f"Dashboard rendered {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+
+    st.markdown('<div class="section-title">Pipeline</div>', unsafe_allow_html=True)
+    st.markdown("""
+`data/ai4i2020.csv` → encode `Type` → simulate external context → SMOTE (train fold only)
+→ LightGBM classifier → evaluate on a held-out test split → save to `models/`
+""")
+
+    st.markdown('<div class="section-title">This Session</div>', unsafe_allow_html=True)
+    sc1, sc2, sc3 = st.columns(3)
+    for col, label, value, sub in [
+        (sc1, "Dataset", f"{len(full_df):,} rows", data_path),
+        (sc2, "Model Source", "Trained model" if model_is_real else "Trained live", model_path or "in-memory session"),
+        (sc3, "Failure Rate", f"{y.mean()*100:.2f}%", "of records flagged"),
+    ]:
+        with col:
+            st.markdown(f"""<div class="kpi-card"><div class="kpi-label">{label}</div>
+                <div class="kpi-value" style="font-size:1.3rem;">{value}</div>
+                <div class="kpi-sub" style="color:#7C8A9E;">{sub}</div></div>""",
+                unsafe_allow_html=True)
+
+    st.markdown('<div class="section-title">Team</div>', unsafe_allow_html=True)
+    tc1, tc2 = st.columns(2)
+    with tc1:
+        st.markdown("""<div class="kpi-card"><div class="kpi-label">Data Engineer & Evaluation/Deployment Lead</div>
+            <div class="kpi-value" style="font-size:1.2rem;">Tarun Saxena</div></div>""", unsafe_allow_html=True)
+    with tc2:
+        st.markdown("""<div class="kpi-card"><div class="kpi-label">ML Engineer & Context Integration Lead</div>
+            <div class="kpi-value" style="font-size:1.2rem;">Vaibhav Gautam</div></div>""", unsafe_allow_html=True)
+
+    st.markdown('<div class="section-title">Tech Stack</div>', unsafe_allow_html=True)
+    st.write("`Python` · `Pandas`/`NumPy` · `LightGBM` · `Scikit-Learn` · "
+             "`Imbalanced-Learn (SMOTE)` · `SHAP` · `Streamlit` · `Plotly`")
+
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.caption(f"Repository: github.com/tarunsaxena2/predictive-maintance-iot · "
+               f"Dashboard rendered {datetime.now().strftime('%Y-%m-%d %H:%M')}")
