@@ -324,18 +324,77 @@ Made with ❤️ using **Python • LightGBM • SHAP • Scikit-Learn • GitHu
 ### Project Structure
 
 ```text
-predictive-maintenance-iot/
+predictive-maintance-iot-main/
+├── app.py                          # Main application entry point
+├── requirements.txt                # Python dependencies
+├── README.md
+├── model_results.md
+├── results_comparison.md
+├── progress_tracker.md
+├── progress_week3.md
+├── progress_week4.md
+├── review_checklist.md
+├── review_notes.md
+├── review_summary.md
+├── test_feature_set.py
+├── test_loader.py
+├── test_rolling.py
 │
 ├── data/
-├── notebooks/
-├── src/
+│   └── ai4i2020.csv                # AI4I 2020 predictive maintenance dataset
+│
 ├── models/
-├── docs/
-├── README.md
-c
-└── requirements.txt
-```
-
+│   └── .gitkeep                    # Trained model artifacts (generated)
+│
+├── notebooks/
+│   ├── week1_eda.ipynb             # Week 1 - exploratory data analysis
+│   ├── week2_eda.ipynb             # Week 2 - EDA continued
+│   ├── week2_fusion.ipynb          # Week 2 - feature/sensor fusion
+│   ├── week3_modeling.ipynb        # Week 3 - model building
+│   ├── week4_robustness.ipynb      # Week 4 - robustness/noise testing
+│   ├── ablation_study.ipynb        # Feature ablation experiments
+│   ├── final_dashboard.ipynb       # Final results dashboard
+│   └── dataset_review.py
+│
+├── src/
+│   ├── data_loader.py              # Data loading utilities
+│   ├── feature_engineering.py      # Feature creation/transformation
+│   ├── feature_sets.py             # Defined feature groups
+│   ├── encode_type.py              # Categorical encoding
+│   ├── cv_setup.py                 # Cross-validation setup
+│   ├── model.py                    # Model definition
+│   ├── model_validation.py         # Validation logic
+│   ├── hyperparameter_tuning.py    # Hyperparameter search
+│   ├── final_cv.py                 # Final cross-validation run
+│   ├── evaluate.py                 # Evaluation metrics
+│   ├── retrain.py                  # Model retraining script
+│   ├── recover_fused_dataset.py    # Dataset recovery/fusion utility
+│   ├── check_columns.py            # Data validation helper
+│   └── project_info.py
+│
+├── tests/
+│   └── test_evaluate.py            # Unit tests for evaluation module
+│
+└── outputs/                        # Generated plots & visualizations
+    ├── Correlation_Heatmap.png
+    ├── Machine_Failure_Distribution.png
+    ├── Sensor_Distribution_by_Machine_Failur.png
+    ├── Sensor_Distributions_by_Failure_Subtype.png
+    ├── External_Feature_Correlations_vs_Machine_Failure.png
+    ├── cross_feature_heatmap.png
+    ├── feature_correlation_bar.png
+    ├── pairplot.png
+    ├── confusion_matrix_optimal.png
+    ├── pr_curve_clean.png
+    ├── pr_curve_final.png
+    ├── pr_curves_comparison.png
+    ├── threshold_tuning.png
+    ├── noise_robustness.png
+    ├── shap_bar.png
+    ├── shap_beeswarm.png
+    ├── shap_dependence_toolwear.png
+    ├── shap_dependence_torque.png
+    └── shap_final_summary.png
 ---
 
 ## 📦 Installed Dependencies
