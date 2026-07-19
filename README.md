@@ -399,7 +399,7 @@ predictive-maintance-iot-main/
 
 ## 📦 Installed Dependencies
 
-```text
+
 pandas
 numpy
 lightgbm
@@ -408,7 +408,7 @@ shap
 matplotlib
 seaborn
 scikit-learn
-```
+
 
 ---
 
